@@ -30,7 +30,7 @@ public class BinarySearch {
      * @param target 索引数字
      * @return
      */
-    public int binary(int[] array, int target){
+    public int search(int[] array, int target){
 
         int low = 0;
         int mid;
@@ -42,7 +42,7 @@ public class BinarySearch {
             mid = (low + high) / 2;
             // System.out.println("第" + j + "次查找，查找范围为 " + low + "---" + high + ", 中位数为" + mid + "---" +  array[mid]);
 
-            if (array[mid] == target) return target;
+            if (array[mid] == target) return mid;
             if (target < array[mid]) high = mid - 1;
             if (target > array[mid]) low = mid + 1;
             j++;
@@ -75,7 +75,7 @@ public class BinarySearch {
 
         int input = sc.nextInt();
 
-        int index = binarySearch.binary(arr, input);
+        int index = binarySearch.search(arr, input);
 
         if (index == -1){
             System.out.println("查无此数！");

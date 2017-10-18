@@ -38,13 +38,14 @@ public class BinarySearch {
 
         int j = 1;
         while (low <= high){
-
             mid = (low + high) / 2;
-            // System.out.println("第" + j + "次查找，查找范围为 " + low + "---" + high + ", 中位数为" + mid + "---" +  array[mid]);
-
-            if (array[mid] == target) return mid;
-            if (target < array[mid]) high = mid - 1;
-            if (target > array[mid]) low = mid + 1;
+            if (array[mid] == target){
+                return mid;
+            }else if (target < array[mid]){
+                high = mid - 1;
+            }else {
+                low = mid + 1;
+            }
             j++;
         }
         return -1;

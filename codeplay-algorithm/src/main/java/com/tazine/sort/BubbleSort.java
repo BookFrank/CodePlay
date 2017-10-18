@@ -59,8 +59,12 @@ public class BubbleSort {
     };
 
 
+    /**
+     * 整型冒泡排序
+     * @param array
+     * @return
+     */
     public int[] sort(int[] array){
-
         int temp;
         for (int i=1; i<array.length; i++){
             for (int j=0; j<array.length-i; j++){
@@ -77,17 +81,13 @@ public class BubbleSort {
     public double[] sort(double[] array){
         double temp;
         for (int i=1; i<array.length; i++){
-            System.out.println();
             for (int j=0; j < array.length - i; j++){
-                System.out.println(j + "---" + (j+1));
-                if (array[j + 1] < array[j])
-                {
+                if (array[j + 1] < array[j]) {
                     temp = array[j];
                     array[j] = array[j + 1];
                     array[j + 1] = temp;
                 }
             }
-
         }
         return array;
     }

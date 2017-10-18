@@ -29,11 +29,16 @@ public class BucketSort {
         // 声明全部的桶
         int[] buckets = new int[range];
 
-        for (int i : scores) buckets[i]++;
+        for (int i : scores) {
+            buckets[i]++;
+        }
 
         for (int j=0; j<buckets.length; j++){
-            if (buckets[j] > 0)
-                while (buckets[j]-- != 0) System.out.println(j);
+            if (buckets[j] > 0) {
+                while (buckets[j]-- != 0) {
+                    System.out.println(j);
+                }
+            }
         }
         return array;
     }
@@ -48,11 +53,16 @@ public class BucketSort {
     public int[] descBucket(int[] array, int range){
 
         int[] buckets = new int[range];
-        for (int i : array) buckets[i]++;
+        for (int i : array) {
+            buckets[i]++;
+        }
 
         for (int i=buckets.length-1; i>=0; i--){
-            if (buckets[i] > 0)
-                while (buckets[i]-- != 0) System.out.println(i);
+            if (buckets[i] > 0) {
+                while (buckets[i]-- != 0) {
+                    System.out.println(i);
+                }
+            }
         }
         return array;
     }

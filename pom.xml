@@ -7,6 +7,9 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>codeplay-algorithm</module>
+      <module>codeplay-ssh</module>
+      <module>codeplay-web</module>
+    <module>codeplay-io</module>
   </modules>
 
   <packaging>pom</packaging>

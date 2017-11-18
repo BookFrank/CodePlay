@@ -20,6 +20,7 @@ public class TimeServer {
             System.out.println(" The time server starts at port: " + port);
             while (true){
                 Socket socket = serverSocket.accept();
+                new Thread(new TimeServerHandler(socket)).start();
             }
 
         } catch (IOException e) {

@@ -2,6 +2,9 @@ package com.tazine.daemon;
 
 import java.io.*;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 class DaemonThread extends Thread {
 
@@ -42,11 +45,14 @@ class DaemonThread extends Thread {
 
 
 /**
- * Created by lina on 2017/11/18.
+ * Created on 2017/11/18.
+ * @author Frank
  */
 public class MainThread {
 
     public static void main(String[] args) {
+
+        ExecutorService executors = new ThreadPoolExecutor();
 
         Scanner scanner = new Scanner(System.in);
 

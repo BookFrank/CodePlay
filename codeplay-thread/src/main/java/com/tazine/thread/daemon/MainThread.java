@@ -1,11 +1,12 @@
-package com.tazine.daemon;
+package com.tazine.thread.daemon;
 
 import java.io.*;
 import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
+/**
+ * 守护线程：不断向外做 IO 输出
+ * @author Frank
+ */
 class DaemonThread extends Thread {
 
     private String name;
@@ -45,14 +46,14 @@ class DaemonThread extends Thread {
 
 
 /**
- * Created on 2017/11/18.
+ * 守护线程与用户线程，当用户线程退出后，守护线程也会随着退出.
  * @author Frank
  */
 public class MainThread {
 
     public static void main(String[] args) {
 
-        ExecutorService executors = new ThreadPoolExecutor();
+//        ExecutorService executors = new ThreadPoolExecutor();
 
         Scanner scanner = new Scanner(System.in);
 

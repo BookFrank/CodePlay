@@ -1,5 +1,5 @@
 package com.tazine.thread;
-
+import java.util.concurrent.*;
 /**
  * Volatile关键词：能够实现可见性，但是无法实现原子性
  * @author Frank
@@ -13,7 +13,7 @@ public class VolatileDemo {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                
+
             }
         }).start();
 

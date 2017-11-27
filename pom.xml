@@ -1,24 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.tazine</groupId>
-  <artifactId>CodePlay</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>codeplay-algorithm</module>
-      <module>codeplay-ssh</module>
-      <module>codeplay-web</module>
-    <module>codeplay-io</module>
-  </modules>
+    <groupId>com.tazine</groupId>
+    <artifactId>CodePlay</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>codeplay-algorithm</module>
+        <module>codeplay-base</module>
+        <module>codeplay-ssh</module>
+        <module>codeplay-io</module>
+        <module>codeplay-thread</module>
+    </modules>
 
-  <packaging>pom</packaging>
+    <packaging>pom</packaging>
 
-  <name>CodePlay</name>
-  <url>http://maven.apache.org</url>
+    <name>CodePlay</name>
+    <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 </project>

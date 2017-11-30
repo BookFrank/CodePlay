@@ -11,6 +11,7 @@
         <module>codeplay-ssh</module>
         <module>codeplay-io</module>
         <module>codeplay-thread</module>
+        <module>codeplay-encode</module>
     </modules>
 
     <packaging>pom</packaging>

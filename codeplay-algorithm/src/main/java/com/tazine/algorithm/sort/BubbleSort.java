@@ -1,4 +1,4 @@
-package com.tazine.sort;
+package com.tazine.algorithm.sort;
 
 import java.util.ArrayList;
 import java.util.List;

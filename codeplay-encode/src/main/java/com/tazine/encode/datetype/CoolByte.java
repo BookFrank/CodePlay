@@ -44,7 +44,6 @@ public class CoolByte {
 
             br.close();
             inputStream.close();
-
         } catch (Exception e) {
             e.printStackTrace();
         }

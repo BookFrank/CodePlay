@@ -1,4 +1,4 @@
-package com.tazine.search;
+package com.tazine.algorithm.search;
 
 /**
  * Created on 2017/06/08.

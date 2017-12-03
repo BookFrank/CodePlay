@@ -62,11 +62,12 @@ public class JavaEncode {
         //System.out.println(a & 0xFF);
 
         System.out.println("当前的字符集为：" + Charset.defaultCharset());
-        String str = "中国";
+        String str = "中";
         String[] encoding = { "Unicode", "UnicodeBig", "UnicodeLittle", "UnicodeBigUnmarked",
                 "UnicodeLittleUnmarked", "UTF-16", "UTF-16BE", "UTF-16LE" };
 
         for (int i = 0; i < encoding.length; i++) {
+            System.out.println();
             //System.out.println(Integer.parseInt(bytes2HexString(str.getBytes(encoding[i])),16));
             //System.out.printf("%-22s %s%n", encoding[i], bytes2HexString(str.getBytes(encoding[i])));
         }

@@ -1,4 +1,4 @@
-package com.tazine.sort;
+package com.tazine.algorithm.sort;
 
 /**
  * 简化版桶排序

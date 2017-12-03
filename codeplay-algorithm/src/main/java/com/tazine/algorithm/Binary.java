@@ -1,4 +1,4 @@
-package com.tazine.exercise;
+package com.tazine.algorithm;
 
 import java.util.Arrays;
 

@@ -3,7 +3,6 @@ package com.tazine.encode.datetype;
 import java.io.UnsupportedEncodingException;
 
 /**
- *
  * 有关 char 的那些事
  * @author Frank
  */

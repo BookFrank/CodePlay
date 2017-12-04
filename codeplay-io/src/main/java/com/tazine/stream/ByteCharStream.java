@@ -14,8 +14,36 @@ public class ByteCharStream {
     public static void main(String[] args) {
         System.out.println("当前系统编码为：" + Charset.defaultCharset());
         ByteCharStream stream = new ByteCharStream();
+
         stream.byteStream();
-        stream.charStream();
+//        stream.charStream();
+//        stream.bufferStream();
+    }
+
+
+    private void bufferStream(){
+
+        try {
+            File file = new File("/Users/lina/demo.txt");
+
+            FileOutputStream outputStream = new FileOutputStream(file);
+
+            PrintWriter writer = new PrintWriter(outputStream);
+
+            BufferedOutputStream buffer = new BufferedOutputStream(outputStream);
+
+            buffer.write("中".getBytes());
+
+            buffer.flush(); //
+
+            buffer.close();
+
+            outputStream.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**
@@ -29,6 +57,7 @@ public class ByteCharStream {
 
             String a = "中";
             outputStream.write(a.getBytes()); // 字节流只能写入字节
+            // outputStream.flush(); FileOutputStream继承了flush()方法，但是OutputStream的flush方法什么也没做
             outputStream.close();
 
 
@@ -65,7 +94,8 @@ public class ByteCharStream {
             FileOutputStream outputStream = new FileOutputStream(file);
             OutputStreamWriter writer = new OutputStreamWriter(outputStream);
             writer.write(a);
-            writer.flush();
+            //writer.flush();
+            writer.close(); // 调用close 方法时会自动触发 flush，因此close和flush只要保证有一个就可以
             outputStream.close();
 
             FileInputStream inputStream = new FileInputStream(file);

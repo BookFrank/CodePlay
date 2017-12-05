@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by ly on 2017/10/13.
  * 冒泡排序
  * 冒泡排序的核心部分是双重嵌套循环。不难看出冒泡排序的时间复杂度是O(N2)
+ *
+ * @author Frank
  */
 public class BubbleSort {
 
@@ -43,7 +44,7 @@ public class BubbleSort {
         }
     }
 
-    private static List<Member> members = new ArrayList<Member>(){
+    private static List<Member> members = new ArrayList<Member>() {
         {
             add(new Member("赵", 5.0));
             add(new Member("钱", 12.5));
@@ -61,27 +62,28 @@ public class BubbleSort {
 
     /**
      * 整型冒泡排序
+     *
      * @param array
      * @return
      */
-    public int[] sort(int[] array){
+    public int[] sort(int[] array) {
         int temp;
-        for (int i=1; i<array.length; i++){
-            for (int j=0; j<array.length-i; j++){
-                if (array[j] > array[j+1]){
+        for (int i = 1; i < array.length; i++) {
+            for (int j = 0; j < array.length - i; j++) {
+                if (array[j] > array[j + 1]) {
                     temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
             }
         }
         return array;
     }
 
-    public double[] sort(double[] array){
+    public double[] sort(double[] array) {
         double temp;
-        for (int i=1; i<array.length; i++){
-            for (int j=0; j < array.length - i; j++){
+        for (int i = 1; i < array.length; i++) {
+            for (int j = 0; j < array.length - i; j++) {
                 if (array[j + 1] < array[j]) {
                     temp = array[j];
                     array[j] = array[j + 1];
@@ -92,6 +94,25 @@ public class BubbleSort {
         return array;
     }
 
+    private void bubble() {
+        int[] arr = new int[]{63, 4, 24, 1, 3, 13};
+        System.out.println("冒泡排序的过程是：");
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+                System.out.print(arr[j] + "");
+            }
+            System.out.print("[");
+            for (int j = arr.length - i; j < arr.length; j++) {
+                System.out.print(arr[j] + " ");
+            }
+            System.out.println("]");
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -110,12 +131,24 @@ public class BubbleSort {
 //            System.out.println(it.next().getScore());
 //        }
 
-        int[] a = { 2,1,4,5,3 };
-        int temp;
-
-        for (int i : a){
-            //System.out.println(i);
+        int[] arr = new int[]{63, 4, 24, 1, 3, 13};
+        System.out.println("冒泡排序的过程是：");
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+                System.out.print(arr[j] + " ");
+            }
+            System.out.print("[");
+            for (int j = arr.length - i; j < arr.length; j++) {
+                System.out.print(arr[j] + " ");
+            }
+            System.out.println("]");
         }
+
 
     }
 

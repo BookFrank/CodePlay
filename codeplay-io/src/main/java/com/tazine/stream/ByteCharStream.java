@@ -11,17 +11,34 @@ import java.nio.charset.Charset;
  */
 public class ByteCharStream {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println("当前系统编码为：" + Charset.defaultCharset());
         ByteCharStream stream = new ByteCharStream();
 
-        stream.byteStream();
-//        stream.charStream();
-//        stream.bufferStream();
+        //stream.byteStream();
+        //stream.charStream();
+        //stream.bufferStream();
+        stream.testFlush();
     }
 
 
-    private void bufferStream(){
+    /**
+     * 不使用close | flush导致的数据丢失情况
+     * @throws FileNotFoundException
+     */
+    private void testFlush() throws FileNotFoundException {
+        File file = new File("/Users/lina/demo.txt");
+        PrintWriter pw = new PrintWriter(file);
+        String s = "";
+        for (int i = 0; i < 2000; i++) {
+            s = "我是要写入到记事本文件的内容" + i + "\r\n";
+            pw.write(s);
+        }
+        // pw.close();
+        // 如果不调用 flush() 或者 close()，会导致一部分数据被丢弃，文件中的i没有到达1999
+    }
+
+    private void bufferStream() {
 
         try {
             File file = new File("/Users/lina/demo.txt");

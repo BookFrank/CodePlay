@@ -18,12 +18,48 @@ public class ByteCharStream {
         //stream.byteStream();
         //stream.charStream();
         //stream.bufferStream();
-        stream.testFlush();
+        //stream.testFlush();
+        stream.readStream();
+    }
+
+
+    /**
+     * InputStream 的 read()
+     */
+    private void readStream() {
+
+        try {
+            FileOutputStream outputStream = new FileOutputStream(new File("/Users/lina/demo.txt"));
+
+            outputStream.write("中".getBytes());
+            outputStream.close();
+
+            FileInputStream inputStream = new FileInputStream(new File("/Users/lina/demo.txt"));
+
+            Reader reader = new InputStreamReader(inputStream);
+
+            while (inputStream.available() > 0) {
+                System.out.print(inputStream.read() + " ");
+            }
+            System.out.println(); // 228 184 173
+
+            for (byte b : "中".getBytes()) {
+                System.out.print((b & 0xff) + " ");
+            }
+
+            byte[] b = new byte[2];
+            while (inputStream.available() > 0) {
+                System.out.println(inputStream.read(b)); // 返回的 int 值为读取到的字节总数
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
     /**
      * 不使用close | flush导致的数据丢失情况
+     *
      * @throws FileNotFoundException
      */
     private void testFlush() throws FileNotFoundException {

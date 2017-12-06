@@ -8,10 +8,10 @@
     <modules>
         <module>codeplay-algorithm</module>
         <module>codeplay-base</module>
-        <module>codeplay-ssh</module>
         <module>codeplay-io</module>
         <module>codeplay-thread</module>
         <module>codeplay-encode</module>
+        <module>codeplay-collection</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -1,4 +1,4 @@
-package com.tazine.thread;
+package com.tazine.thread.action;
 
 /**
  * Created by lina on 2017/12/6.

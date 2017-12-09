@@ -3,12 +3,12 @@ package com.tazine.encode.datetype;
 import java.io.UnsupportedEncodingException;
 
 /**
- * 有关 char 的那些事
+ * char 相关
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class CoolChar {
-
 
     public static void main(String[] args) throws UnsupportedEncodingException {
 

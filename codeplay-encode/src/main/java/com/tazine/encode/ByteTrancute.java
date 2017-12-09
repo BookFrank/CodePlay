@@ -3,9 +3,10 @@ package com.tazine.encode;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created on 2017/12/1.
+ * byte 类型转换
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class ByteTrancute {
 

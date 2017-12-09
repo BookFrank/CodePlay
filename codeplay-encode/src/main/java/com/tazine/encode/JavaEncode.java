@@ -4,9 +4,10 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 /**
- * Created on 2017/11/30.
  * 探究 JAVA 编码
+ *
  * @author Frank
+ * @since 1.0.0
  */
 public class JavaEncode {
 
@@ -63,8 +64,8 @@ public class JavaEncode {
 
         System.out.println("当前的字符集为：" + Charset.defaultCharset());
         String str = "中";
-        String[] encoding = { "Unicode", "UnicodeBig", "UnicodeLittle", "UnicodeBigUnmarked",
-                "UnicodeLittleUnmarked", "UTF-16", "UTF-16BE", "UTF-16LE" };
+        String[] encoding = {"Unicode", "UnicodeBig", "UnicodeLittle", "UnicodeBigUnmarked",
+                "UnicodeLittleUnmarked", "UTF-16", "UTF-16BE", "UTF-16LE"};
 
         for (int i = 0; i < encoding.length; i++) {
             System.out.println();
@@ -72,12 +73,12 @@ public class JavaEncode {
             //System.out.printf("%-22s %s%n", encoding[i], bytes2HexString(str.getBytes(encoding[i])));
         }
         byte[] bs = str.getBytes();
-        for (byte b : bs){
+        for (byte b : bs) {
             System.out.println(b & 0xff);
 //            System.out.println(bytes2HexString(str.getBytes()));
         }
         String[] aa = new String[]{"e4", "b8", "ad", "e5", "9b", "bd"};
-        for (String as : aa){
+        for (String as : aa) {
             //System.out.println(Integer.parseInt(as,16));
         }
 
@@ -94,6 +95,5 @@ public class JavaEncode {
         }
         return new String(chs);
     }
-
 
 }

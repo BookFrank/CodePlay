@@ -4,6 +4,7 @@ package com.tazine.thread.action;
  * 线程的加入 join
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class JoinDemo {
 

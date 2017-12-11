@@ -1,9 +1,10 @@
-package com.tazine.thread;
-
-import com.tazine.thread.action.ThreadState;
+package com.tazine.thread.action;
 
 /**
+ * 获取线程状态
+ *
  * @author Frank
+ * @since 1.0.0
  */
 public class ThreadApp {
 

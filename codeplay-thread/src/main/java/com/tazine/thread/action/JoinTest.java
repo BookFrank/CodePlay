@@ -4,6 +4,7 @@ package com.tazine.thread.action;
  * 线程插队
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class JoinTest {
 
@@ -26,10 +27,7 @@ public class JoinTest {
                 e.printStackTrace();
             }
         }
-
     }
-
-
 }
 
 class EmergencyCar implements Runnable {

@@ -1,7 +1,10 @@
 package com.tazine.thread.action;
 
 /**
- * Created by lina on 2017/12/6.
+ * 线程状态
+ *
+ * @author Frank
+ * @since 1.0.0
  */
 public class ThreadState extends Thread{
 

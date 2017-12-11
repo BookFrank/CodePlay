@@ -2,7 +2,9 @@ package com.tazine.thread.action;
 
 /**
  * 线程的中断
+ *
  * @author Frank
+ * @since 1.0.0
  */
 public class InterruptDemo {
 
@@ -17,13 +19,13 @@ public class InterruptDemo {
 }
 
 
-class InterruptThread extends Thread{
+class InterruptThread extends Thread {
 
     private boolean isCountinue = true;
 
     @Override
     public void run() {
-        while (isCountinue){
+        while (isCountinue) {
             System.out.println("InterruptThread is running......");
             try {
                 sleep(1000);
@@ -34,7 +36,7 @@ class InterruptThread extends Thread{
         }
     }
 
-    private void setCountinue(boolean flag){
+    private void setCountinue(boolean flag) {
         isCountinue = flag;
     }
 }

@@ -1,4 +1,4 @@
-package com.tazine.gc;
+package com.tazine.jvm.gc;
 
 /**
  * Created by lina on 2017/9/27.

@@ -12,6 +12,7 @@
         <module>codeplay-thread</module>
         <module>codeplay-encode</module>
         <module>codeplay-collection</module>
+        <module>codeplay-java8</module>
     </modules>
 
     <packaging>pom</packaging>

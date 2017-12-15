@@ -1,4 +1,4 @@
-package com.tazine.base.classObj;
+package com.tazine.base.classes;
 
 /**
  * 查看 class loader 如何工作
@@ -19,7 +19,7 @@ public class ClassLoaderTest {
         System.out.println("new A(), A 对象创建完成");
 
         try {
-            //Class<B> b = (Class<B>) Class.forName("com.tazine.base.classObj.B");
+            //Class<B> b = (Class<B>) Class.forName("com.tazine.base.classes.B");
             Class<B> b = B.class;
             B bb = b.newInstance();
             bb.test();

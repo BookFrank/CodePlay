@@ -1,4 +1,4 @@
-package com.tazine.base.classObj;
+package com.tazine.base.classes;
 
 /**
  * Created by lina on 2017/12/14.

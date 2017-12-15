@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>codeplay-collection</artifactId>
+    <artifactId>codeplay-container</artifactId>
     <packaging>jar</packaging>
 
-    <name>codeplay-collection</name>
+    <name>codeplay-container</name>
     <url>http://maven.apache.org</url>
 
     <properties>

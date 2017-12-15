@@ -1,4 +1,4 @@
-package com.tazine.collection;
+package com.tazine.container;
 
 import java.util.*;
 

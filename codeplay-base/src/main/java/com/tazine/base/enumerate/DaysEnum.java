@@ -22,6 +22,7 @@ public enum DaysEnum {
 
     /**
      * 枚举常量在创建时，会自动调用构造方法
+     *
      * @param id
      * @param desc
      * @param matchKey
@@ -32,17 +33,10 @@ public enum DaysEnum {
         this.matchKey = matchKey;
     }
 
-    public int getId() {
-        return this.id;
+    public static void main(String[] args) {
+        getOptionById(2);
     }
 
-    public String getDesc() {
-        return this.desc;
-    }
-
-    public String getMatchKey() {
-        return this.matchKey;
-    }
 
     public static int[] getAllIds() {
         DaysEnum[] optionArr = DaysEnum.values();
@@ -74,7 +68,15 @@ public enum DaysEnum {
         return null;
     }
 
-    public static void main(String[] args) {
-        getOptionById(2);
+    public int getId() {
+        return this.id;
+    }
+
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public String getMatchKey() {
+        return this.matchKey;
     }
 }

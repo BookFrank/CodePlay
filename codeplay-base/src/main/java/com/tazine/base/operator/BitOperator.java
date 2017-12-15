@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.operator;
 
 /**
  * 位运算相关操作 & 相关应用

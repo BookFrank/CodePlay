@@ -11,7 +11,7 @@
         <module>codeplay-io</module>
         <module>codeplay-thread</module>
         <module>codeplay-encode</module>
-        <module>codeplay-collection</module>
+        <module>codeplay-container</module>
         <module>codeplay-java8</module>
     </modules>
 
@@ -24,4 +24,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

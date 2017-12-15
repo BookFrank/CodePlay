@@ -13,6 +13,7 @@
         <module>codeplay-encode</module>
         <module>codeplay-container</module>
         <module>codeplay-java8</module>
+        <module>codeplay-third</module>
     </modules>
 
     <packaging>pom</packaging>

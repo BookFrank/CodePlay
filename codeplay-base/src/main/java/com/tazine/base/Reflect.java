@@ -1,5 +1,7 @@
 package com.tazine.base;
 
+import com.tazine.base.operator.BitOperator;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 

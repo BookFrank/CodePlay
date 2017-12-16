@@ -1,13 +1,13 @@
-package com.tazine.stream;
+package com.tazine.io.stream;
 
 import java.io.*;
 import java.nio.charset.Charset;
 
 /**
- * Created on 2017/12/4.
  * 流：字节流 & 字符流
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class ByteCharStream {
 

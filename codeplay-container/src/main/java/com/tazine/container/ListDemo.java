@@ -14,7 +14,35 @@ import java.util.ListIterator;
 public class ListDemo {
 
     public static void main(String[] args) {
-        listIter();
+        contain();
+    }
+
+    static void contain() {
+        Integer i1 = new Integer(10);
+        Integer i2 = new Integer(10);
+        List<Integer> list1 = new ArrayList<Integer>();
+        list1.add(i1);
+        if (list1.contains(i2)) {
+            System.out.println("list1.contains(i2) : true");
+        }
+
+        String s1 = new String("apple");
+        String s2 = new String("apple");
+        List<String> list2 = new ArrayList<>();
+        list2.add(s1);
+        if (list2.contains(s2)) {
+            System.out.println("list2.contains(s2) : true");
+        }
+
+        Player p1 = new Player(10);
+        Player p2 = new Player(10);
+        List<Player> plist = new ArrayList<>();
+        plist.add(p1);
+        if (plist.contains(p2)) {
+            System.out.println("自定义类型相等");
+        } else {
+            System.out.println("自定义类型不相等");
+        }
     }
 
     private static void listIter() {
@@ -32,5 +60,12 @@ public class ListDemo {
         while (it.hasPrevious()) {
             System.out.print(it.previous() + " ");
         }
+    }
+}
+
+class Player {
+    private int age;
+    public Player(int age) {
+        this.age = age;
     }
 }

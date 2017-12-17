@@ -12,7 +12,7 @@ public class JavaGoTo {
         goto1();
         goto2();
     }
-    
+
     static void goto1() {
         L:
         for (int i = 0; i < 10; i++) {

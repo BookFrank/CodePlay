@@ -9,6 +9,7 @@
         <module>codeplay-algorithm</module>
         <module>codeplay-base</module>
         <module>codeplay-io</module>
+        <module>codeplay-jvm</module>
         <module>codeplay-thread</module>
         <module>codeplay-encode</module>
         <module>codeplay-container</module>

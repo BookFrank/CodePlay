@@ -1,16 +1,18 @@
 package com.tazine.jvm.gc;
 
 /**
- * Created by ly on 2017/9/27.
  * 因为在GC时会执行对象的finalize方法，可以用来自救
  * 1. 对象在被GC时可以自我拯救
  * 2. 这种自救的机会只有一次，因为finalize方法最多只会被系统调用一次
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class FinalizeEscapeGC {
 
     public static FinalizeEscapeGC SAVE_HOOK = null;
 
-    public void isAlive(){
+    public void isAlive() {
         System.out.println("Yes, i am still alive!");
     }
 
@@ -21,7 +23,7 @@ public class FinalizeEscapeGC {
         FinalizeEscapeGC.SAVE_HOOK = this;
     }
 
-    public static void main(String[] args) throws Throwable{
+    public static void main(String[] args) throws Throwable {
         SAVE_HOOK = new FinalizeEscapeGC();
 
         // 对象第一次成功拯救自己
@@ -29,9 +31,9 @@ public class FinalizeEscapeGC {
         System.gc();
 
         Thread.sleep(500);
-        if (null != SAVE_HOOK){
+        if (null != SAVE_HOOK) {
             SAVE_HOOK.isAlive();
-        }else {
+        } else {
             System.out.println("I am dead");
         }
 
@@ -39,13 +41,10 @@ public class FinalizeEscapeGC {
         System.gc();
 
         Thread.sleep(500);
-        if (null != SAVE_HOOK){
+        if (null != SAVE_HOOK) {
             SAVE_HOOK.isAlive();
-        }else {
+        } else {
             System.out.println("I am dead");
         }
-
     }
-
-
 }

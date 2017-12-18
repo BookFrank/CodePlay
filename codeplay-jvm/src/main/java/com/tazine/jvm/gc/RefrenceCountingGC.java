@@ -1,7 +1,6 @@
 package com.tazine.jvm.gc;
 
 /**
- * Created by ly on 2017/9/27.
  * 引用计数GC算法
  */
 public class RefrenceCountingGC {
@@ -15,11 +14,9 @@ public class RefrenceCountingGC {
         a.instance = b;
         b.instance = a;
 
-        a=null;
-        b=null;
+        a = null;
+        b = null;
 
         System.gc();
     }
-
-
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 守护线程与用户线程，当用户线程退出后，守护线程也会随着退出.
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class DaemonThreadDemo {

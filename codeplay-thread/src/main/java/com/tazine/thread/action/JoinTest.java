@@ -1,15 +1,14 @@
 package com.tazine.thread.action;
 
 /**
- * 线程插队
+ * 线程的插队
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class JoinTest {
 
     public static void main(String[] args) {
-
         Thread thread = new Thread(new EmergencyCar());
         thread.start();
 
@@ -31,7 +30,7 @@ public class JoinTest {
 }
 
 class EmergencyCar implements Runnable {
-
+    @Override
     public void run() {
         for (int i = 1; i < 6; i++) {
             try {
@@ -39,7 +38,7 @@ class EmergencyCar implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("紧急情况：" + i + " 号车出发");
+            System.out.println(" 紧急情况：" + i + " 号车出发");
         }
     }
 }

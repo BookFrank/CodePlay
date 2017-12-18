@@ -3,11 +3,10 @@ package com.tazine.thread.action;
 /**
  * 获取线程状态
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class ThreadApp {
-
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -30,6 +29,4 @@ public class ThreadApp {
         Thread.sleep(1000);
         System.out.println("当前线程状态为：" + thread.getState());
     }
-
-
 }

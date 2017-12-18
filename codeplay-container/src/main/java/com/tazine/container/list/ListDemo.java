@@ -1,4 +1,4 @@
-package com.tazine.container;
+package com.tazine.container.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,6 +12,12 @@ import java.util.ListIterator;
  * @since 1.0.0
  */
 public class ListDemo {
+
+    /*
+        list.contains() 方法最终还是使用 Object.equals()方法比较
+        包装类型（Integer、String）使用 equals 比较的是值
+        自定义类型比较的是 reference 地址
+     */
 
     public static void main(String[] args) {
         contain();

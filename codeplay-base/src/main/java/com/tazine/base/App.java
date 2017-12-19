@@ -1,4 +1,4 @@
-package com.tazine;
+package com.tazine.base;
 
 import java.util.Enumeration;
 import java.util.Hashtable;

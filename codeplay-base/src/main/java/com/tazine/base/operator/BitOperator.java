@@ -4,6 +4,7 @@ package com.tazine.base.operator;
  * 位运算相关操作 & 相关应用
  *
  * @author Frank
+ * @since 1.0.0
  */
 public class BitOperator {
 
@@ -56,6 +57,4 @@ public class BitOperator {
         // 127的二进制补码表示为 0111 1111 = 2的七次方 - 1
         // 按位取反得 1000 0000 ，对其求原码的 1000 0000 = -128
     }
-
-
 }

@@ -1,13 +1,15 @@
 package com.tazine.algorithm.sort;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
  * 冒泡排序
  * 冒泡排序的核心部分是双重嵌套循环。不难看出冒泡排序的时间复杂度是O(N2)
  *
- * @author Frank
+ * @author frank
+ * @since 1.0.0
  */
 public class BubbleSort {
 
@@ -116,22 +118,22 @@ public class BubbleSort {
 
     public static void main(String[] args) {
 
-//        for (int i=0; i<members.size(); i++){
-//            for (int j=0; j<members.size(); j++){
-//                if (members.get(i).getScore() > members.get(j).getScore()){
-//                    Member member = members.get(i);
-//                    members.set(i, members.get(j));
-//                    members.set(j, member);
-//                }
-//            }
-//        }
-//
-//        Iterator<Member> it = members.iterator();
-//        while (it.hasNext()){
-//            System.out.println(it.next().getScore());
-//        }
+        for (int i = 0; i < members.size(); i++) {
+            for (int j = 0; j < members.size(); j++) {
+                if (members.get(i).getScore() > members.get(j).getScore()) {
+                    Member member = members.get(i);
+                    members.set(i, members.get(j));
+                    members.set(j, member);
+                }
+            }
+        }
 
-        int[] arr = new int[]{63, 4, 24, 1, 3, 13};
+        Iterator<Member> it = members.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next().getName() + " - " + it.next().getScore());
+        }
+
+        int[] arr = {63, 4, 24, 1, 3, 13};
         System.out.println("冒泡排序的过程是：");
         for (int i = 1; i < arr.length; i++) {
             for (int j = 0; j < arr.length - i; j++) {

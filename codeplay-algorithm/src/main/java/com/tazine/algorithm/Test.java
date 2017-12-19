@@ -1,6 +1,7 @@
 package com.tazine.algorithm;
 
-import java.util.HashMap;
+
+import java.util.Arrays;
 
 /**
  *
@@ -9,24 +10,24 @@ public class Test {
 
     public static void main(String[] args) {
 
+        int[] a = {2, 1, 4, 3, 5};
 
-        int[] a = new int[]{3,5,7,2,9};
+        System.out.println(Arrays.toString(a));
+        for(int i=1; i<a.length; i++){
 
-        int[] bucket = new int[10];
+            for (int j=0; j<a.length-i; j++){
 
-        for (int i : a){
-            System.out.print(" " + i);
-            bucket[i] = 1;
-        }
+                if (a[j] > a[j+1]){
+                    int tmp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = tmp;
+                }
 
-        System.out.println();
-        for (int i = 0;i<bucket.length;i++){
-            if (bucket[i] == 1){
-                System.out.print(" " + i);
             }
+
         }
 
-        HashMap aa = new HashMap();
+        System.out.println(Arrays.toString(a));
 
     }
 

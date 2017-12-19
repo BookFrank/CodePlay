@@ -15,11 +15,12 @@ Practice makes perfect.
 | ------------------- | --------------------- |
 | codeplay-algorithm  | 主要是一些排序、查找算法          |
 | codeplay-base       | Java中一些常用类（反射、Class等） |
-| codeplay-collection | 集合框架相关                |
+| codeplay-container  | 容器相关（集合框架）                |
 | codeplay-encode     | 字符编码相关                |
 | codeplay-io         | IO 流相关                |
 | codeplay-java8      | Java 1.8 的一些新特性       |
 | codeplay-jvm        | JVM 相关                |
+| codeplay-third      | 第三方类库实践             |
 | codeplay-thread     | 线程相关                  |
 
 ## 三. 感谢 ##

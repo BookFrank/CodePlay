@@ -1,4 +1,4 @@
-package com.tazine.encode.datetype;
+package com.tazine.encode.datatype;
 
 import java.io.*;
 import java.nio.charset.Charset;

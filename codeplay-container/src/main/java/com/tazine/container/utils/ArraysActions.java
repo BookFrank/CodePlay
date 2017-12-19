@@ -32,7 +32,6 @@ public class ArraysActions {
         List<String> strings = new ArrayList<>();
         strings.addAll(Arrays.asList("kobe", "james", "iverson", "jordan"));
 
-
     }
 
 }

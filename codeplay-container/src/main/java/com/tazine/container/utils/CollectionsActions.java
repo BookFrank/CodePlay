@@ -1,5 +1,6 @@
-package com.tazine.container.collections;
+package com.tazine.container.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -7,13 +8,13 @@ import java.util.List;
 /**
  * Collections 类的方法
  */
-public class CollectionsDemo {
+public class CollectionsActions {
 
     public static void main(String[] args) {
 
-//        List<Integer> list = new ArrayList<>();
-        List<Integer> list = Arrays.asList(1, 3, 2, 4, 5);
-//        Collections.addAll(list, Arrays.asList(1,3,2,4,5));
+        List<Integer> list = new ArrayList<>();
+
+        Collections.addAll(list, 3, 1, 2, 5, 4);
 
         System.out.println(list);
 

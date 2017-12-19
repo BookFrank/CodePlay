@@ -1,6 +1,8 @@
 package com.tazine.container.utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 数组相关操作
@@ -25,6 +27,12 @@ public class ArraysActions {
         // Dynamic initialization
         ArraysActions[] d = new ArraysActions[]{new ArraysActions(), new ArraysActions()};
         System.out.println(Arrays.toString(d));
+
+        List<Integer> list = Arrays.asList(2, 1, 4, 3, 5);
+        List<String> strings = new ArrayList<>();
+        strings.addAll(Arrays.asList("kobe", "james", "iverson", "jordan"));
+
+
     }
 
 }

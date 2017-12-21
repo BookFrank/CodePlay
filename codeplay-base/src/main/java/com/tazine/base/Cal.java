@@ -11,12 +11,8 @@ public class Cal {
 
     public static void main(String[] args) {
 
-        int a = 4;
-        int b = ++a;
-        int c = a++;
+        System.out.println("Hello Word 2");
 
-        System.out.println("b = " + b);
-        System.out.println("c = " + c);
     }
 
 }

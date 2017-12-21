@@ -32,6 +32,9 @@ public class ArraysActions {
         List<String> strings = new ArrayList<>();
         strings.addAll(Arrays.asList("kobe", "james", "iverson", "jordan"));
 
+        int[]  ints = {1,2,3,4,5};
+        System.out.println(Arrays.toString(Arrays.copyOf(ints,4)));
+
     }
 
 }

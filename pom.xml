@@ -16,6 +16,7 @@
         <module>codeplay-java8</module>
         <module>codeplay-third</module>
         <module>codeplay-design-pattern</module>
+        <module>codeplay-data-structure</module>
     </modules>
 
     <packaging>pom</packaging>

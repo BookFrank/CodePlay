@@ -33,18 +33,19 @@ public class ListTest {
         list.add(a);
         list.add(b);
         list.add(c);
-        System.out.println(list.contains(c));
+        //System.out.println(list.contains(c));
 
+        System.out.println(list.size());
         list.printList();
+        list.clear();
         //list.remove(b);
         //list.reverse();
+        //list.reversePrint();
 
-        list.reversePrint();
-
-        list.reversePrint1(list.head);
+        //list.reversePrint1(list.head);
 
 //        list.printList();
-        //list.debug();
+        list.debug();
 
 
 

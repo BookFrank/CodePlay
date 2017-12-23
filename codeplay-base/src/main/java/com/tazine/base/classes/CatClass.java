@@ -14,7 +14,7 @@ public class CatClass extends Animal {
     public static void main(String[] args) {
 
         try {
-            Class c = Class.forName("com.tazine.base.classes.CatClass");
+            Class<?> c = Class.forName("com.tazine.base.classes.CatClass");
 
             Animal cat = (Animal) c.newInstance();
 

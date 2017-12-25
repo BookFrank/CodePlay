@@ -13,7 +13,14 @@ import java.lang.reflect.Type;
 public class Kobe extends NbaPlayer implements BrandInterface {
 
     public Kobe(String name, int age) {
-        super(name, age);
+
+    }
+
+    public Kobe() {
+    }
+
+    public void exec(String str){
+        System.out.println("反射传递参数为" + str);
     }
 
     public static void main(String[] args) {
@@ -23,6 +30,13 @@ public class Kobe extends NbaPlayer implements BrandInterface {
 
         System.out.println(clz.getPackage());
         System.out.println(clz.getName());
+        try {
+            Object kobeIns = clz.newInstance();
+            Method method = clz.getMethod("exec",String.class);
+            method.invoke(kobeIns,"GOAT");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         Class superClz = clz.getSuperclass();
         System.out.println(superClz.getPackage());

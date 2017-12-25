@@ -8,11 +8,6 @@ public class NbaPlayer implements BrandInterface{
     private String name;
     private int age;
 
-    public NbaPlayer(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
     private void play(){
         System.out.println(this.name + " 可以打篮球");
     }

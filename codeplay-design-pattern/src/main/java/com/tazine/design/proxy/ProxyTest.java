@@ -1,5 +1,6 @@
 package com.tazine.design.proxy;
 
+import com.tazine.design.proxy.CGLib.CGLibProxy;
 import com.tazine.design.proxy.dynamic.DynamicProxy;
 import com.tazine.design.proxy.dynamic.SimpDynamicProxy;
 import com.tazine.design.proxy.stative.HelloProxy;
@@ -38,5 +39,10 @@ public class ProxyTest {
         DynamicProxy dynamicProxy = new DynamicProxy(hello);
         Hello helloProxy = dynamicProxy.getProxy(Hello.class);
         helloProxy.say("DynamicProxy");
+        System.out.println();
+
+        // CGLib 动态代理：方法级别的代理
+        Hello cgProxy = CGLibProxy.getInstance().getProxy(HelloImpl.class);
+        cgProxy.say("Frank");
     }
 }

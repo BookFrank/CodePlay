@@ -1,4 +1,4 @@
-package com.tazine.design.proxy.dynamic.example01;
+package com.tazine.design.proxy;
 
 /**
  * HelloImpl

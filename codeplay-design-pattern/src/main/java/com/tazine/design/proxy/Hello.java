@@ -1,7 +1,7 @@
-package com.tazine.design.proxy.dynamic.example01;
+package com.tazine.design.proxy;
 
 /**
- * HelloInterface
+ * Hello Interface
  *
  * @author frank
  * @since 1.0.0

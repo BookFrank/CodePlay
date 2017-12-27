@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.reflect;
 
 import com.tazine.base.operator.BitOperator;
 

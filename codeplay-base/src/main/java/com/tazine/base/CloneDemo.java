@@ -1,26 +1,29 @@
 package com.tazine.base;
 
 /**
- * Created by lina on 2017/12/21.
+ * CloneDemo
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class CloneDemo {
 
     public static void main(String[] args) throws CloneNotSupportedException {
 
         Player kobe = new Player("kobe", 24);
-        System.out.println("kobe : " + kobe.getName() +"-" + kobe.getNum());
+        System.out.println("kobe : " + kobe.getName() + "-" + kobe.getNum());
 
         try {
             Player james = (Player) kobe.clone();
             james.setName("james");
-            System.out.println("james : " + james.getName() +"-" + james.getNum());
+            System.out.println("james : " + james.getName() + "-" + james.getNum());
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
 
         Team team = new Team("Lakers");
-        Player p1 = new Player("frank",25,team);
-        Player p2 = new Player("daniel",5);
+        Player p1 = new Player("frank", 25, team);
+        Player p2 = new Player("daniel", 5);
         Player p3 = p1;
         Player p4 = (Player) p1.clone();
         System.out.println(p1.toString());
@@ -39,7 +42,7 @@ public class CloneDemo {
     }
 }
 
-class Player implements Cloneable{
+class Player implements Cloneable {
 
     private String name;
     private int num;
@@ -86,7 +89,7 @@ class Player implements Cloneable{
     }
 }
 
-class Team{
+class Team {
     private String name;
 
     public Team(String name) {

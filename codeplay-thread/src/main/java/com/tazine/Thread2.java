@@ -3,11 +3,11 @@ package com.tazine;
 /**
  * Created by lina on 2017/8/23.
  */
-public class MyThread extends Thread {
+public class Thread2 extends Thread {
 
     private App app;
 
-    public MyThread(App app) {
+    public Thread2(App app) {
         this.app = app;
     }
 
@@ -15,7 +15,7 @@ public class MyThread extends Thread {
     public void run() {
         System.out.println("线程答应");
         try {
-            app.add();
+            app.minus();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

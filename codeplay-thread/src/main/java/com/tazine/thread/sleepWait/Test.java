@@ -1,4 +1,4 @@
-package com.tazine.sleepWait;
+package com.tazine.thread.sleepWait;
 
 import com.tazine.App;
 

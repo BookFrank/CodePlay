@@ -1,4 +1,4 @@
-package com.tazine.unstable;
+package com.tazine.thread.unstable;
 
 /**
  * Created by ly on 2017/8/31.

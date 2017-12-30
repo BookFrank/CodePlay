@@ -1,4 +1,6 @@
-package com.tazine;
+package com.tazine.thread;
+
+import com.tazine.thread.App;
 
 /**
  * Created by lina on 2017/8/23.

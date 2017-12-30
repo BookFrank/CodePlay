@@ -1,6 +1,6 @@
 package com.tazine.thread.sleepWait;
 
-import com.tazine.App;
+import com.tazine.thread.App;
 
 /**
  * Created by ly on 2017/8/25.

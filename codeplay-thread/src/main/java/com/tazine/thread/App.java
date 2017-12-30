@@ -1,4 +1,4 @@
-package com.tazine;
+package com.tazine.thread;
 
 /**
  * Hello world!

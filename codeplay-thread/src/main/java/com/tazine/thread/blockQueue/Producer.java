@@ -1,4 +1,4 @@
-package com.tazine.blockQueue;
+package com.tazine.thread.blockQueue;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;

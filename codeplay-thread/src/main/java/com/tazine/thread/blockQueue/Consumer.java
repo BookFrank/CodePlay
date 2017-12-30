@@ -1,4 +1,4 @@
-package com.tazine.blockQueue;
+package com.tazine.thread.blockQueue;
 
 /**
  * Created by lina on 2017/8/30.

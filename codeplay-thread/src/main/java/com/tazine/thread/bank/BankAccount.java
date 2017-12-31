@@ -1,17 +1,17 @@
 package com.tazine.thread.bank;
 
 /**
- * 银行账户
+ *
  *
  * @author frank
  * @since 1.0.0
  */
-public class Account {
+public class BankAccount {
 
     private String name;
     private double balance;
 
-    public Account(String name, double balance) {
+    public BankAccount(String name, double balance) {
         this.name = name;
         this.balance = balance;
     }

@@ -1,4 +1,4 @@
-package com.tazine.algorithm.topk;
+package com.tazine.algorithm.search.topk;
 
 import java.util.*;
 

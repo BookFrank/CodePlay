@@ -2,7 +2,9 @@ package com.tazine.thread;
 
 /**
  * Volatile关键词：能够实现可见性，但是无法实现原子性
- * @author Frank
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class VolatileDemo {
 
@@ -11,7 +13,7 @@ public class VolatileDemo {
     public static void main(String[] args) {
 
         int i = 10;
-        while (i-- > 0){
+        while (i-- > 0) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {

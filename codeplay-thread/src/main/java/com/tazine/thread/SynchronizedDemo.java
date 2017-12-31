@@ -2,34 +2,36 @@ package com.tazine.thread;
 
 /**
  * synchronized 可以实现原子性与可见性
- * @author Frank
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class SynchronizedDemo {
 
-    private boolean ready =false;
+    private boolean ready = false;
 
     private int result = 0;
     private int number = 1;
 
-    private void write(){
+    private void write() {
         ready = true;
         number = 2;
     }
 
-    private void read(){
-        if (ready){
-            result = number*3;
+    private void read() {
+        if (ready) {
+            result = number * 3;
         }
         System.out.println("Result的值为：" + result);
     }
 
 
-    private class ReadWriteThread extends Thread{
+    private class ReadWriteThread extends Thread {
         @Override
         public void run() {
-            if (ready){
+            if (ready) {
                 read();
-            }else {
+            } else {
                 write();
             }
             try {
@@ -46,7 +48,6 @@ public class SynchronizedDemo {
         s.new ReadWriteThread().start();
         s.new ReadWriteThread().start();
     }
-
 
 
 }

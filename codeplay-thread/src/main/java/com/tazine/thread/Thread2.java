@@ -1,9 +1,7 @@
 package com.tazine.thread;
 
-import com.tazine.thread.App;
-
 /**
- * Created by lina on 2017/8/23.
+ *
  */
 public class Thread2 extends Thread {
 

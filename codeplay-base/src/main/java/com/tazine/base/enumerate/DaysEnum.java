@@ -3,7 +3,7 @@ package com.tazine.base.enumerate;
 /**
  * 星期枚举
  *
- * @author 李扬
+ * @author frank
  * @since 1.0.0
  */
 public enum DaysEnum {

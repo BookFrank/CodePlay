@@ -18,8 +18,8 @@ Practice makes perfect.
 | codeplay-container  | 容器相关（集合框架）                |
 | codeplay-design-pattern| 设计模式相关实践        |
 | codeplay-data-structure| 数据结构相关        |
-| codeplay-encode     | 字符编码相关                |
-| codeplay-io         | IO 流相关                |
+| codeplay-encode     | 字符编码 & 加解密相关                |
+| codeplay-io         | IO 流、Socket相关                |
 | codeplay-java8      | Java 1.8 的一些新特性       |
 | codeplay-jvm        | JVM 相关                |
 | codeplay-third      | 第三方类库实践             |

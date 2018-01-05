@@ -1,6 +1,5 @@
-package com.tazine.faio;
+package com.tazine.io.socket.faio;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;

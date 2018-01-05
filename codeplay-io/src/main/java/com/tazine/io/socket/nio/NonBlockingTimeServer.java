@@ -1,4 +1,4 @@
-package com.tazine.nio;
+package com.tazine.io.socket.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

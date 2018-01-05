@@ -19,6 +19,7 @@ public class TimeServer {
             serverSocket = new ServerSocket(port);
             System.out.println(" The time server starts at port: " + port);
             while (true){
+                System.out.println("waiting for u...");
                 Socket socket = serverSocket.accept();
                 new Thread(new TimeServerHandler(socket)).start();
             }

@@ -1,6 +1,4 @@
-package com.tazine.nio;
-
-import java.nio.channels.ServerSocketChannel;
+package com.tazine.io.socket.nio;
 
 /**
  * Created by lina on 2017/11/19.

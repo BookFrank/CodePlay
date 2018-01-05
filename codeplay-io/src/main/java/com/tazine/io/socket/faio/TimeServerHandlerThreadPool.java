@@ -1,4 +1,4 @@
-package com.tazine.faio;
+package com.tazine.io.socket.faio;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;

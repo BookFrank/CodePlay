@@ -15,6 +15,7 @@ Practice makes perfect.
 | ------------------- | --------------------- |
 | codeplay-algorithm  | 主要是一些排序、查找算法          |
 | codeplay-base       | Java中一些常用类（反射、Class等） |
+| codeplay-maven      | maven打包相关插件 |
 | codeplay-container  | 容器相关（集合框架）                |
 | codeplay-design-pattern| 设计模式相关实践        |
 | codeplay-data-structure| 数据结构相关        |

@@ -1,0 +1,32 @@
+package com.tazine.maven.dao;
+
+import java.sql.*;
+
+/**
+ * Created by lina on 2018/1/7.
+ *
+ * @author frank
+ * @since 1.0.0
+ */
+public class BaseDao {
+
+    public static void main(String[] args) throws SQLException {
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo","root","");
+
+        Statement st = conn.createStatement();
+
+        ResultSet rt = st.executeQuery("SELECT * FROM customer");
+
+        while (rt.next()){
+            System.out.println(rt.getString("name"));
+        }
+
+    }
+}

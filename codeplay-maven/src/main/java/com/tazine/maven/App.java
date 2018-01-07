@@ -1,4 +1,4 @@
-package com.tazine.codeplay;
+package com.tazine.maven;
 
 /**
  * Hello world!

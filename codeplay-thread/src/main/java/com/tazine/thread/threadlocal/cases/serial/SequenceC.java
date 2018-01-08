@@ -1,0 +1,25 @@
+package com.tazine.thread.threadlocal.cases.serial;
+
+import com.tazine.thread.threadlocal.MyThreadLocal;
+
+/**
+ * Created by lina on 2018/1/8.
+ *
+ * @author frank
+ * @since 1.0.0
+ */
+public class SequenceC implements SequenceGenerator {
+
+    private static MyThreadLocal<Integer> numContainer = new MyThreadLocal<Integer>(){
+        @Override
+        protected Integer initialValue() {
+            return 0;
+        }
+    };
+
+    @Override
+    public int produce() {
+        numContainer.set(numContainer.get() + 1);
+        return numContainer.get();
+    }
+}

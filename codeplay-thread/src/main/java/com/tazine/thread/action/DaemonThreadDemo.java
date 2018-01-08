@@ -1,4 +1,4 @@
-package com.tazine.thread.daemon;
+package com.tazine.thread.action;
 
 import java.util.Scanner;
 

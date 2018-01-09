@@ -26,25 +26,26 @@ public class TimeClient01 {
         try {
             Socket socket = new Socket(host, port);
 
-
             scanner = new Scanner(System.in);
 
-            while (true) {
-                writer = new PrintWriter(socket.getOutputStream());
-                br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                String input = scanner.nextLine();
+            writer = new PrintWriter(socket.getOutputStream(), true);
+            br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            while (scanner.hasNext()){
+                String input = scanner.next();
                 System.out.println("发送信息：");
                 System.out.println("  " + input);
-                writer.write(input);
-                writer.flush();
+                writer.println(input);
                 System.out.println("收到回应：");
                 String line;
                 while ((line = br.readLine()) != null) {
                     System.out.print("  " + line);
                 }
+//                String line = br.readLine();
+//                if (line != null){
+//                    System.out.print("  " + line);
+//                }
                 System.out.println();
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }

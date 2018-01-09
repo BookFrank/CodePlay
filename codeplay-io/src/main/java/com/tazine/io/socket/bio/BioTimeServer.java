@@ -15,27 +15,15 @@ import java.net.Socket;
  */
 public class BioTimeServer {
 
-    private BufferedReader reader;
-    private PrintWriter writer;
-
     public BioTimeServer(int port) {
         try {
             ServerSocket serverSocket = new ServerSocket(port);
 
             while (true){
                 Socket socket = serverSocket.accept();
-                reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                System.out.println("收到消息：");
-                String line;
-                while ((line = reader.readLine()) != null){
-                    System.out.print("  " + line);
-                }
-                System.out.println();
-                System.out.println("发送消息：");
-                writer = new PrintWriter(socket.getOutputStream());
-                System.out.println("  你说的什么我听不懂啊。。。");
-                writer.println("  你说的什么我听不懂啊。。。");
-                writer.flush();
+                System.out.println("收到一个 socket");
+                SocketHandler handler = new SocketHandler(socket);
+                new Thread(handler).start();
             }
         } catch (IOException e) {
             e.printStackTrace();

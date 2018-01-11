@@ -1,4 +1,4 @@
-package com.tazine.container.queue;
+package com.tazine.container.collection.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

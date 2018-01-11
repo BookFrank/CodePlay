@@ -19,6 +19,7 @@ public class SetPractice {
         set.add(a);
         set.add(b);
 
+        // 包装类型比较应该使用 equals 而不是 ==
         System.out.println(a == b);
         for (Integer i : set){
             System.out.println(i);

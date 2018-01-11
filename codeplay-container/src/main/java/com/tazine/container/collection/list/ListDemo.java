@@ -1,4 +1,4 @@
-package com.tazine.container.list;
+package com.tazine.container.collection.list;
 
 import java.util.ArrayList;
 import java.util.Collections;

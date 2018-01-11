@@ -1,4 +1,4 @@
-package com.tazine.container.queue.block;
+package com.tazine.container.collection.queue.block;
 
 import java.util.Collection;
 import java.util.Iterator;

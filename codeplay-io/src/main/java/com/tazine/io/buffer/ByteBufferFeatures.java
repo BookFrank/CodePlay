@@ -5,12 +5,12 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 /**
- *
+ * ByteBufferFeatures
  *
  * @author frank
  * @since 1.0.0
  */
-public class ByteBufferLive {
+public class ByteBufferFeatures {
 
     public static void main(String[] args) throws IOException {
 
@@ -21,7 +21,7 @@ public class ByteBufferLive {
         ByteBuffer buffer = ByteBuffer.allocate(1024);
 
         int r;
-        while ((r = in.read()) != -1){
+        while ((r = in.read()) != -1) {
             buffer.put((byte) r);
         }
 
@@ -34,8 +34,8 @@ public class ByteBufferLive {
         System.out.println("limit: " + buffer.limit());
 
         byte[] bytes = new byte[6];
-        int i =0;
-        while (buffer.hasRemaining()){
+        int i = 0;
+        while (buffer.hasRemaining()) {
             bytes[i] = buffer.get();
             i++;
         }

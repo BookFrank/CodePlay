@@ -9,7 +9,7 @@ import java.io.RandomAccessFile;
  * @author frank
  * @since 1.0.0
  */
-public class RandAccessFile {
+public class RandAccessFileFeatures {
 
 
     public static void main(String[] args) throws IOException {

@@ -3,7 +3,7 @@ package com.tazine.maven.dao;
 import java.sql.*;
 
 /**
- * Created by lina on 2018/1/7.
+ * BaseDao - Connect db and query one row
  *
  * @author frank
  * @since 1.0.0
@@ -18,13 +18,13 @@ public class BaseDao {
             e.printStackTrace();
         }
 
-        Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo","root","");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "");
 
         Statement st = conn.createStatement();
 
         ResultSet rt = st.executeQuery("SELECT * FROM customer");
 
-        while (rt.next()){
+        while (rt.next()) {
             System.out.println(rt.getString("name"));
         }
 

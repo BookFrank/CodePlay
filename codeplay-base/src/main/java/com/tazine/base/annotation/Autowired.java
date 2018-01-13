@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * 自动注入注解
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 @Target(ElementType.FIELD)

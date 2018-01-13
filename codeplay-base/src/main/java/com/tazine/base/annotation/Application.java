@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 /**
  * 自定义注解测试类
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class Application {
@@ -23,15 +23,15 @@ public class Application {
         System.out.println(env.getProperty("123"));
     }
 
-    public static void parseAnnotations(Application application){
+    public static void parseAnnotations(Application application) {
 
         Class app = application.getClass();
 
-        for (Field field : app.getDeclaredFields()){
+        for (Field field : app.getDeclaredFields()) {
             System.out.print("当前字段名为" + field.getName() + " 类型为：" + field.getType());
             Annotation[] annotations = field.getDeclaredAnnotations();
-            for (Annotation annotation : annotations){
-                if (annotation.annotationType() == Autowired.class){
+            for (Annotation annotation : annotations) {
+                if (annotation.annotationType() == Autowired.class) {
                     try {
                         field.set("env", new Environment());
                     } catch (IllegalAccessException e) {

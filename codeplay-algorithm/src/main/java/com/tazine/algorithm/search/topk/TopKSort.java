@@ -1,14 +1,16 @@
 package com.tazine.algorithm.search.topk;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
 
 /**
  * Top K 算法
+ *
  * @author frank
  * @since 1.0.0
  */
 public class TopKSort {
-
 
     public static void main(String[] args) {
 
@@ -22,11 +24,11 @@ public class TopKSort {
 
         System.out.println(freqTable);
 
-        if (freqTable.contains(3)){
+        if (freqTable.contains(3)) {
             System.out.println(freqTable);
         }
 
-        for (int i=1; i<freqTable.size(); i++){
+        for (int i = 1; i < freqTable.size(); i++) {
 
 
         }
@@ -100,6 +102,4 @@ public class TopKSort {
         queryList.add("www.mi.com");
         return queryList;
     }
-
-
 }

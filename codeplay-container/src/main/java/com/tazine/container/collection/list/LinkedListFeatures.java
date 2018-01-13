@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * LinkedListFeatures
  *
  * @author frank
  * @since 1.0.0

@@ -3,15 +3,15 @@ package com.tazine.container.map;
 import java.util.Hashtable;
 
 /**
- * Created by lina on 2017/12/20.
+ * HashTableFeatures
+ *
+ * @author frank
+ * @since 1.0.0
  */
-public class HashTableDemo {
+public class HashTableFeatures {
 
     public static void main(String[] args) {
 
         Hashtable<String, Integer> table = new Hashtable<>();
-
-
     }
-
 }

@@ -8,4 +8,6 @@ package com.tazine.design.proxy;
  */
 public interface Hello {
     void say(String name);
+
+    void hi();
 }

@@ -20,6 +20,7 @@ public class ProxyTest {
         // 正常业务逻辑
         Hello hello = new HelloImpl();
         hello.say("Frank");
+        hello.hi();
         System.out.println();
 
         // 现在想在say()前后加上一些处理逻辑
@@ -27,12 +28,15 @@ public class ProxyTest {
         // 使用静态代理
         Hello staticProxy = new HelloProxy();
         staticProxy.say("Static Proxy");
+        // 使用静态代理，接口每增加一个方法，相应的代理类也要修改
+        staticProxy.hi();
         System.out.println();
 
         // 使用简单动态代理
         SimpDynamicProxy simpDynamicProxy = new SimpDynamicProxy(hello);
         Hello simpProxy = (Hello) Proxy.newProxyInstance(hello.getClass().getClassLoader(), hello.getClass().getInterfaces(), simpDynamicProxy);
         simpProxy.say("SimpleDynamicProxy");
+        simpProxy.hi();
         System.out.println();
 
         // 使用高级动态代理

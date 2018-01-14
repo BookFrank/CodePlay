@@ -24,6 +24,13 @@ public class HelloProxy implements Hello {
         after();
     }
 
+    @Override
+    public void hi() {
+        before();
+        hello.hi();
+        after();
+    }
+
     private void before(){
         System.out.println("代理模式：say() 方法之前逻辑");
     }

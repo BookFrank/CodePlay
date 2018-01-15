@@ -16,4 +16,13 @@ public class TxBidProcessor extends BidProcessor {
     protected void bidResponse() {
         System.out.println("返回腾讯的 Response");
     }
+
+    /**
+     * 子类通过复写的方式，来决定是否挂钩
+     * @return
+     */
+    @Override
+    protected boolean enableTrace() {
+        return true;
+    }
 }

@@ -3,7 +3,7 @@ package com.tazine.thread.action;
 import java.util.Scanner;
 
 /**
- * 守护线程与用户线程，当用户线程退出后，守护线程也会随着退出.
+ * DaemonThread: 当用户线程退出后，守护线程也会随着退出
  *
  * @author frank
  * @since 1.0.0
@@ -21,7 +21,7 @@ public class DaemonThreadDemo {
         if (scanner.hasNext()) {
             System.out.println(scanner.next());
         }
-        // scanner.hasNext()会使main线程阻塞在等待输入，输入后执行完毕守护线程也会终止。
+        // scanner.hasNext()会使main线程阻塞在等待输入，输入后main线程执行完毕守护线程也会终止。
     }
 }
 

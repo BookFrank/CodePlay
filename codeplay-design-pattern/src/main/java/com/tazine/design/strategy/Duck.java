@@ -8,7 +8,9 @@ package com.tazine.design.strategy;
  */
 public abstract class Duck {
 
-    // 通过飞行策略，代理飞行行为
+    /**
+     * 通过飞行策略，代理飞行行为
+     */
     private FlyingStrategy flyingStrategy;
 
     public void setFlyingStrategy(FlyingStrategy flyingStrategy) {

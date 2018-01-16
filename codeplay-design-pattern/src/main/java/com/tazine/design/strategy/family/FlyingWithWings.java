@@ -3,7 +3,7 @@ package com.tazine.design.strategy.family;
 import com.tazine.design.strategy.FlyingStrategy;
 
 /**
- * Created by lina on 2018/1/15.
+ * FlyingStrategy Impl
  *
  * @author frank
  * @since 1.0.0

@@ -16,6 +16,11 @@ public class DonaldDuck extends Duck {
     }
 
     @Override
+    public void quark() {
+        System.out.println("唐老鸭，呱呱呱。。。");
+    }
+
+    @Override
     protected void display() {
         System.out.println("我是唐老鸭");
     }

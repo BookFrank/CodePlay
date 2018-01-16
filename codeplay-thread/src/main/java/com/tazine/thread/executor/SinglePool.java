@@ -1,4 +1,4 @@
-package com.tazine.thread.pool;
+package com.tazine.thread.executor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,8 +14,7 @@ public class SinglePool {
 
     public static void main(String[] args) {
 
-//        ExecutorService executor = Executors.newSingleThreadExecutor();
-        ExecutorService executor = MyThreadPool.newPool();
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
         for (int i = 0; i < 15; i++) {
             executor.execute(new Counter());

@@ -1,4 +1,4 @@
-package com.tazine.thread.lock;
+package com.tazine.thread.concurrent.lock;
 
 /**
  * ClassLock & ObjectLock

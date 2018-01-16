@@ -1,15 +1,15 @@
-package com.tazine.thread.lock.simple;
+package com.tazine.thread.concurrent.lock.simple;
 
 /**
- * 使用 synchronized 实现的线程安全 counter
+ * LockCounter：使用简单锁实现
  *
  * @author frank
  * @since 1.0.0
  */
-public class SyncCounter {
-    public static void main(String[] args) {
+public class lockCounter {
 
-        SynCounter counter = new SynCounter();
+    public static void main(String[] args) {
+        Counter counter = new Counter();
         for (int i = 0; i < 10; i++) {
             new Thread(counter).start();
         }
@@ -20,9 +20,9 @@ public class SyncCounter {
     }
 }
 
-class SynCounter implements Runnable {
+class Counter implements Runnable {
 
-    private int count;
+    private int count = 0;
 
     public int getCount() {
         return count;
@@ -34,10 +34,9 @@ class SynCounter implements Runnable {
 
     @Override
     public void run() {
-        synchronized (this) {
-            for (int i = 0; i < 10000; i++) {
-                count++;
-            }
+//        Lock lock = new Lock();
+        for (int i = 0; i < 10000; i++) {
+            count++;
         }
     }
 }

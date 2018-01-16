@@ -13,9 +13,10 @@ public class InterruptDemo {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         InterruptThread thread = new InterruptThread();
         thread.start();
+        Thread.sleep(2000);
         thread.interrupt();
     }
 }
@@ -30,7 +31,7 @@ class InterruptThread extends Thread {
         while (isCountinue) {
             System.out.println("InterruptThread is running......");
             try {
-                sleep(1000);
+                sleep(100);
             } catch (InterruptedException e) {
                 //e.printStackTrace();
                 System.out.println("当前线程被强制中断");

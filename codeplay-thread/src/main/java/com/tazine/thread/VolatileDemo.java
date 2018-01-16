@@ -8,7 +8,7 @@ package com.tazine.thread;
  */
 public class VolatileDemo {
 
-    private static int result = 10;
+    private volatile static int result = 10;
 
     public static void main(String[] args) {
 

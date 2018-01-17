@@ -1,4 +1,4 @@
-package com.tazine.thread.threadlocal.cases.connection;
+package com.tazine.thread.concurrent.threadlocal.cases.connection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

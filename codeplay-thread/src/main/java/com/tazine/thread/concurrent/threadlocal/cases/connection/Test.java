@@ -1,4 +1,4 @@
-package com.tazine.thread.threadlocal.cases.connection;
+package com.tazine.thread.concurrent.threadlocal.cases.connection;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

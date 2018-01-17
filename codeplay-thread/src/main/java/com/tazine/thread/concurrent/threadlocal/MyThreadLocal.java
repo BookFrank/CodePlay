@@ -1,4 +1,4 @@
-package com.tazine.thread.threadlocal;
+package com.tazine.thread.concurrent.threadlocal;
 
 import java.util.Collections;
 import java.util.HashMap;

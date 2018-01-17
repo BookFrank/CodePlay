@@ -1,6 +1,6 @@
-package com.tazine.thread.threadlocal.cases.serial;
+package com.tazine.thread.concurrent.threadlocal.cases.serial;
 
-import com.tazine.thread.threadlocal.MyThreadLocal;
+import com.tazine.thread.concurrent.threadlocal.MyThreadLocal;
 
 /**
  * Created by lina on 2018/1/8.

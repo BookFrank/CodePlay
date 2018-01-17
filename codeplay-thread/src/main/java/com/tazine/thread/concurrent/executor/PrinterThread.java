@@ -1,4 +1,4 @@
-package com.tazine.thread.executor;
+package com.tazine.thread.concurrent.executor;
 
 /**
  * Created by lina on 2017/12/18.
@@ -6,7 +6,7 @@ package com.tazine.thread.executor;
 public class PrinterThread extends Thread {
     @Override
     public void run() {
-        for (int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println(currentThread().getName() + "打印中......");
             try {
                 sleep(1000);
@@ -14,6 +14,6 @@ public class PrinterThread extends Thread {
                 e.printStackTrace();
             }
         }
-        System.out.println(" 执行完毕");
+        System.out.println(currentThread().getName() +" 执行完毕");
     }
 }

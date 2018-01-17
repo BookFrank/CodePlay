@@ -1,4 +1,4 @@
-package com.tazine.thread.executor;
+package com.tazine.thread.concurrent.executor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

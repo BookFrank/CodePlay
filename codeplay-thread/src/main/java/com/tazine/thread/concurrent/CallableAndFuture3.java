@@ -37,6 +37,5 @@ public class CallableAndFuture3 {
            提交到CompletionService中的Future是按照完成的顺序排列的，
            List<Future> 是按照添加的顺序排列的
          */
-
     }
 }

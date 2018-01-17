@@ -1,4 +1,4 @@
-package com.tazine.thread.executor;
+package com.tazine.thread.concurrent.executor;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;

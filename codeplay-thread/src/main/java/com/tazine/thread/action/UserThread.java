@@ -1,4 +1,4 @@
-package com.tazine.thread.test;
+package com.tazine.thread.action;
 
 class WindowThread extends Thread {
 

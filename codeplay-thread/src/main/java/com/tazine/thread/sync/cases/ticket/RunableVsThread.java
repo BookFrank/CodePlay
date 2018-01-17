@@ -1,4 +1,4 @@
-package com.tazine.thread.ticket;
+package com.tazine.thread.sync.cases.ticket;
 
 /**
  * Runable 和 Thread 创建线程的区别

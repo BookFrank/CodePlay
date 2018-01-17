@@ -1,4 +1,4 @@
-package com.tazine.thread.unstable;
+package com.tazine.thread.sync.unstable;
 
 /**
  * Created by ly on 2017/8/31.
@@ -6,7 +6,7 @@ package com.tazine.thread.unstable;
 public class VolatileTest {
 
 
-    private static boolean runFlag = true;
+    private static volatile boolean runFlag = true;
 
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.tazine.thread.synchro;
+package com.tazine.thread.sync.n;
 
 /**
  * Created by ly on 2017/9/7.

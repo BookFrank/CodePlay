@@ -1,9 +1,6 @@
 package com.tazine.io.socket.bio;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,7 +16,7 @@ public class BioTimeServer {
         try {
             ServerSocket serverSocket = new ServerSocket(port);
 
-            while (true){
+            while (true) {
                 Socket socket = serverSocket.accept();
                 System.out.println("收到一个 socket");
                 SocketHandler handler = new SocketHandler(socket);

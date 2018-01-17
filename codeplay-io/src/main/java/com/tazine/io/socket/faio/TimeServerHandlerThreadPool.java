@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class TimeServerHandlerThreadPool {
 
-
     private ExecutorService executor;
 
     public TimeServerHandlerThreadPool(int maxPoolSize, int queueSize) {

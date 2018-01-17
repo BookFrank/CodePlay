@@ -22,9 +22,6 @@ public class TimeServer {
             while (true){
                 socket = serverSocket.accept();
             }
-
-
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

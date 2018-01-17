@@ -30,7 +30,7 @@ public class TimeClient01 {
 
             writer = new PrintWriter(socket.getOutputStream(), true);
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            while (scanner.hasNext()){
+            while (scanner.hasNext()) {
                 String input = scanner.next();
                 System.out.println("发送信息：");
                 System.out.println("  " + input);
@@ -55,5 +55,4 @@ public class TimeClient01 {
     public static void main(String[] args) {
         new TimeClient01("127.0.0.1", 8080);
     }
-
 }

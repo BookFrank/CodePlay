@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * Created by lina on 2018/1/4.
+ * TimeClient
  *
  * @author frank
  * @since 1.0.0
@@ -29,7 +29,7 @@ public class TimeClient02 {
 
             writer = new PrintWriter(socket.getOutputStream(), true);
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            while (scanner.hasNext()){
+            while (scanner.hasNext()) {
                 String input = scanner.next();
                 System.out.println("发送信息：");
                 System.out.println("  " + input);

@@ -12,7 +12,7 @@ import java.net.Socket;
  * @author frank
  * @since 1.0.0
  */
-public class SocketHandler implements Runnable{
+public class SocketHandler implements Runnable {
 
     private Socket socket;
     private BufferedReader br;
@@ -28,13 +28,13 @@ public class SocketHandler implements Runnable{
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
 
-            while (true){
+            while (true) {
                 String line = null;
-                while ((line = br.readLine()) != null){
+                while ((line = br.readLine()) != null) {
                     System.out.println("收到消息：");
                     System.out.println("    " + line);
                     System.out.println("发送消息：");
-                    System.out.println("    听不懂你在说什么？" );
+                    System.out.println("    听不懂你在说什么？");
                     writer.println("  听不懂你在说什么？");
                 }
             }

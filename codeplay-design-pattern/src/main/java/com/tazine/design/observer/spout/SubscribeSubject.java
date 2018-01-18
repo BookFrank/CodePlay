@@ -1,6 +1,7 @@
 package com.tazine.design.observer.spout;
 
 import com.tazine.design.observer.Observer;
+import com.tazine.design.observer.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  * @author frank
  * @since 1.0.0
  */
-public class SubscribeSubject {
+public class SubscribeSubject extends Subject{
     protected List<Observer> observers = new ArrayList<>();
 
     public void attach(Observer observer){
@@ -25,7 +26,7 @@ public class SubscribeSubject {
 
     protected void notifyObservers(){
         for (Observer observer : observers){
-            observer.update(this);
+//            observer.update();
         }
     }
 }

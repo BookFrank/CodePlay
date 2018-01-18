@@ -1,7 +1,5 @@
 package com.tazine.design.observer;
 
-import com.tazine.design.observer.spout.SubscribeSubject;
-
 /**
  * 观察者接口：提供一个更新接口给那些有消息来时要通知的对象
  *
@@ -10,5 +8,5 @@ import com.tazine.design.observer.spout.SubscribeSubject;
  */
 public interface Observer {
 
-    void update(SubscribeSubject info);
+    void update(Subject subject);
 }

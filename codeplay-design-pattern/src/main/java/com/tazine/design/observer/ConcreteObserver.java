@@ -1,7 +1,5 @@
 package com.tazine.design.observer;
 
-import com.tazine.design.observer.spout.SubscribeSubject;
-
 /**
  * 具体观察者对象：实现更新的方法，使订阅目标与自身状态保持一致
  *
@@ -9,8 +7,17 @@ import com.tazine.design.observer.spout.SubscribeSubject;
  * @since 1.0.0
  */
 public class ConcreteObserver implements Observer {
-    @Override
-    public void update(SubscribeSubject info) {
 
+    private String monitorState;
+
+    @Override
+    public void update(Subject subject) {
+        ConcreteSubject s = (ConcreteSubject) subject;
+        monitorState = s.getMonitorState();
+        display();
+    }
+
+    private void display() {
+        System.out.println("收到消息：" + monitorState);
     }
 }

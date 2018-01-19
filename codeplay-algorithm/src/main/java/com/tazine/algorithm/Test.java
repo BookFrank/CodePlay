@@ -1,6 +1,5 @@
 package com.tazine.algorithm;
 
-
 import java.util.Arrays;
 
 /**
@@ -26,10 +25,6 @@ public class Test {
             }
 
         }
-
-
         System.out.println(Arrays.toString(a));
-
     }
-
 }

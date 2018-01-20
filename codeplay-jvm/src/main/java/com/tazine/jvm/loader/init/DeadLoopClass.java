@@ -1,7 +1,7 @@
 package com.tazine.jvm.loader.init;
 
 /**
- * Created by lina on 2017/12/28.
+ * DeadLoopClass
  *
  * @author frank
  * @since 1.0.0
@@ -9,9 +9,10 @@ package com.tazine.jvm.loader.init;
 public class DeadLoopClass {
 
     static {
-        if (true){
+        if (true) {
             System.out.println("DeadLoop Init...");
-            while (true){}
+            while (true) {
+            }
         }
     }
 }

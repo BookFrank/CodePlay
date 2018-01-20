@@ -28,7 +28,7 @@ public class CallableAndFuture3 {
          * 可以做一些额外的事情，不着急拿到结果的话
          */
 
-        for (int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             System.out.println(service.take().get());
         }
 

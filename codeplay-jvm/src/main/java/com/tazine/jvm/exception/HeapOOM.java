@@ -7,7 +7,7 @@ import java.util.List;
  * VM Args: -Xms20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError
  * Heap Out of Memory 堆溢出情况
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class HeapOOM {

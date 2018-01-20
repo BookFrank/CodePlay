@@ -2,6 +2,9 @@ package com.tazine.jvm.gc;
 
 /**
  * 引用计数GC算法
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class RefrenceCountingGC {
 

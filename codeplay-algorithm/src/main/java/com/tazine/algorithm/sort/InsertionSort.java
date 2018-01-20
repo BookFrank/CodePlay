@@ -1,5 +1,7 @@
 package com.tazine.algorithm.sort;
 
+import java.util.Arrays;
+
 /**
  * 直接插入排序法
  *
@@ -18,7 +20,21 @@ public class InsertionSort {
 
 
         //insertionSort(arr);
+        insertSort(arr);
         shellSort(arr);
+    }
+
+    private static void insertSort(Integer[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int t = arr[i]; // 需要插入的元素保存到变量t中
+            int j = i-1;
+            while ((j>= 0) && (arr[j] > t)) {
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1]=t;
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 

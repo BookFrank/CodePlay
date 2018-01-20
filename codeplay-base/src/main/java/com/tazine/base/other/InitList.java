@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 /**
  * 初始化顺序

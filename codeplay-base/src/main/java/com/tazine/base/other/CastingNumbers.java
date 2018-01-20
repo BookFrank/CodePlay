@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 /**
  * 强制类型转换之Numbers

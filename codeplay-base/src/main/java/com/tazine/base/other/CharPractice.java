@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 /**
  * Char类型实践

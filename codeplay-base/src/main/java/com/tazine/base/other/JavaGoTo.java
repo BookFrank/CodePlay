@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 /**
  * GOTO是java的保留字，现在没有使用，可以使用一下方式实现GOTO

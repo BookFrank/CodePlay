@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 /**
  * Java 类型转换

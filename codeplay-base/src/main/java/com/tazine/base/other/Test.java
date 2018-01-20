@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 import com.google.common.util.concurrent.RateLimiter;
 

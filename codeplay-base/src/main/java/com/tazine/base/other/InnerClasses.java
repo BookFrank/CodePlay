@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.other;
 
 import java.awt.*;
 import java.awt.event.WindowAdapter;

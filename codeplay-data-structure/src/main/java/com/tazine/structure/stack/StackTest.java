@@ -1,6 +1,4 @@
-package com.tazine.structure;
-
-import com.tazine.structure.stack.MyArrayStack;
+package com.tazine.structure.stack;
 
 /**
  * Stack Test
@@ -31,10 +29,5 @@ public class StackTest {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
-
-
-
     }
-
-
 }

@@ -55,7 +55,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
             return ((Comparable) x).compareTo(element);
         }
     }
-    
+
     private static class BinaryNode<T> {
         T element;
         BinaryNode<T> left;

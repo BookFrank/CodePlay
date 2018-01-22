@@ -1,7 +1,7 @@
 package com.tazine.structure.list;
 
 /**
- * Created by lina on 2017/12/22.
+ * ListTest
  *
  * @author frank
  * @since 1.0.0
@@ -37,16 +37,15 @@ public class ListTest {
 
         System.out.println(list.size());
         list.printList();
-        list.clear();
+        //list.clear();
         //list.remove(b);
         //list.reverse();
-        //list.reversePrint();
+        list.reversePrint();
 
-        //list.reversePrint1(list.head);
+        list.reversePrint1(list.getHead());
 
 //        list.printList();
-        list.debug();
-
+        //list.debug();
 
 
 //        System.out.println(list.head.data);

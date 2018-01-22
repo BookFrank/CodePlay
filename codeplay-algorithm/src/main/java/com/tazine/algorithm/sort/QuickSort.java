@@ -20,32 +20,32 @@ public class QuickSort {
     }
 
     private static void quickSort(int[] arr, int left, int right) {
-        int f = arr[(left+right)/2];//被选中的临界值
+        int f = arr[(left + right) / 2];//被选中的临界值
         int ltemp = left;
         int rtemp = right;
 
-        while (ltemp < rtemp){
-            while (arr[ltemp] < f){
+        while (ltemp < rtemp) {
+            while (arr[ltemp] < f) {
                 ++ltemp;
             }
-            while (arr[rtemp] > f){
+            while (arr[rtemp] > f) {
                 --rtemp;
             }
-            if (ltemp <= rtemp){
+            if (ltemp <= rtemp) {
                 int tmp = arr[ltemp];
                 arr[ltemp] = arr[rtemp];
                 arr[rtemp] = tmp;
                 --rtemp;
                 ++ltemp;
             }
-            if (ltemp == rtemp){
+            if (ltemp == rtemp) {
                 ltemp++;
             }
-            if (left < rtemp){
-                quickSort(arr,left, ltemp-1);
+            if (left < rtemp) {
+                quickSort(arr, left, ltemp - 1);
             }
-            if (ltemp<right){
-                quickSort(arr, rtemp+1,right);
+            if (ltemp < right) {
+                quickSort(arr, rtemp + 1, right);
             }
         }
     }

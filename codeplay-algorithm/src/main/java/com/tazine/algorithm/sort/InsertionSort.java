@@ -24,15 +24,25 @@ public class InsertionSort {
         shellSort(arr);
     }
 
+    /**
+     * 外层循环中的 i 表示本次计算中需要完成插入任务的数组元素，
+     * 首先将需要插入的元素保存在 tmp 中，变量 j 表示需要插入的位置
+     * 内层 while 循环就是为了寻找 j 的位置，通过 arr[j] 和 tmp 变量的比较
+     * 当arr[j] > tmp 时，就把 j 当前的元素向后移动，直到找到比tmp变量小的元素时停止。
+     * 此时 j + 1，这个位置就是本次数组元素应该插入的位置，同时别的元素也都完成了移动。
+     *
+     * @param arr
+     */
     private static void insertSort(Integer[] arr) {
+        int tmp, j;
         for (int i = 1; i < arr.length; i++) {
-            int t = arr[i]; // 需要插入的元素保存到变量t中
-            int j = i-1;
-            while ((j>= 0) && (arr[j] > t)) {
-                arr[j+1] = arr[j];
+            tmp = arr[i]; // 需要插入的元素保存到变量t中
+            j = i - 1;
+            while ((j >= 0) && (arr[j] > tmp)) {
+                arr[j + 1] = arr[j];
                 j--;
             }
-            arr[j+1]=t;
+            arr[j + 1] = tmp;
         }
         System.out.println(Arrays.toString(arr));
     }

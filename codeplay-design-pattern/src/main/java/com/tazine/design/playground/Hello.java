@@ -1,7 +1,7 @@
 package com.tazine.design.playground;
 
 /**
- * Created by lina on 2018/1/8.
+ * 抽象角色
  *
  * @author frank
  * @since 1.0.0
@@ -9,5 +9,4 @@ package com.tazine.design.playground;
 public interface Hello {
 
     void sayHello();
-
 }

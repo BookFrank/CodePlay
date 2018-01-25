@@ -1,4 +1,4 @@
-package com.tazine.algorithm.sort;
+package com.tazine.algorithm.sort.inner;
 
 import java.util.ArrayList;
 import java.util.Iterator;

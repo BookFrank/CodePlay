@@ -1,6 +1,6 @@
 package com.tazine.algorithm.search;
 
-import com.tazine.algorithm.sort.BubbleSort;
+import com.tazine.algorithm.sort.inner.BubbleSort;
 
 import java.util.Scanner;
 

@@ -10,7 +10,6 @@ import java.util.Arrays;
  */
 public class ShellSort {
 
-
     public static void main(String[] args) {
         int[] arr = {127, 118, 105, 101, 112, 107, 112, 120};
         System.out.println(Arrays.toString(arr));

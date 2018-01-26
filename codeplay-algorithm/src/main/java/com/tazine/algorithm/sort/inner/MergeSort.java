@@ -16,7 +16,14 @@ public class MergeSort {
 
     }
 
-    public static void mergeSort(int[] arr){
+    private static void mergeSort(int[] arr, int n){
+        int h, count, len, f;
+
+        count = 0; // 排序步骤
+        len = 1;
+    }
+
+    private static void mergeOne(int[] a, int[] b, int n, int len){
 
     }
 

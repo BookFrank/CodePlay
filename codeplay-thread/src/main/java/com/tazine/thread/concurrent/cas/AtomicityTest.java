@@ -1,4 +1,4 @@
-package com.tazine.thread.concurrent.atomic;
+package com.tazine.thread.concurrent.cas;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

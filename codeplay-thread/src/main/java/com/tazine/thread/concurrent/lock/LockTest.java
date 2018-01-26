@@ -37,8 +37,8 @@ class Outputer {
 
     private Lock lock = new ReentrantLock();
 
-    public void print(String words) {
-        lock.lock();
+    public synchronized void print(String words) {
+        //lock.lock();
         try {
             for (int i = 0; i < words.length(); i++) {
                 System.out.print(words.charAt(i));
@@ -53,7 +53,7 @@ class Outputer {
             /**
              * 为了保证锁最终被释放(即使发生异常情况)，要把互斥区放在try内，释放锁放在finally内
              */
-            lock.unlock();
+            //lock.unlock();
         }
     }
 }

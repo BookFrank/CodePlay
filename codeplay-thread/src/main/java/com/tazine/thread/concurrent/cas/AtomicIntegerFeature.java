@@ -1,4 +1,4 @@
-package com.tazine.thread.concurrent.atomic;
+package com.tazine.thread.concurrent.cas;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -10,6 +10,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class AtomicIntegerFeature implements Runnable{
 
+    /**
+     * 使用 CAS 可以避免加锁
+     */
     private AtomicInteger i = new AtomicInteger(0);
 
     private AtomicInteger getVal(){

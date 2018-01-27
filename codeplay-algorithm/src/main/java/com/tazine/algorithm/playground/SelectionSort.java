@@ -13,20 +13,24 @@ public class SelectionSort {
     public static void main(String[] args) {
 
         int[] scores = {2, 1, 4, 3, 5, 6, 8, 7};
+        selectSort(scores);
+        System.out.println(Arrays.toString(scores));
+    }
 
-        for (int i = 0; i < scores.length - 1; i++) {
-            int min = i;
-            for (int j = i + 1; j < scores.length; j++) {
-                if (scores[j] < scores[min]) {
-                    min = j;
+    public static void selectSort(int[] arr) {
+        int minIndex, tmp;
+        for (int i = 0; i < arr.length - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
                 }
             }
-            if (min != i){
-                int tmp = scores[min];
-                scores[min] = scores[i];
-                scores[i] = tmp;
+            if (minIndex != i) {
+                tmp = arr[minIndex];
+                arr[minIndex] = arr[i];
+                arr[i] = tmp;
             }
         }
-        System.out.println(Arrays.toString(scores));
     }
 }

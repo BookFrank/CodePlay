@@ -1,6 +1,5 @@
 package com.tazine.structure.tree.heap;
 
-import java.nio.channels.AsynchronousServerSocketChannel;
 import java.util.Arrays;
 
 /**
@@ -12,7 +11,6 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) {
-        AsynchronousServerSocketChannel
         int[] arr = {8, 1, 3, 2, 4, 6, 7, 5};
         System.out.println(Arrays.toString(arr));
         heapSort(arr, arr.length);

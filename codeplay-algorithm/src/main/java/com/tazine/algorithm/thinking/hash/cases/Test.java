@@ -19,8 +19,10 @@ public class Test {
 
     static {
         for (int i = 0; i<servers.length; i++){
-            String virtualName = servers[i] + "-" + i + "号机房";
-            virtualNodes.put(getHash(virtualName),virtualName);
+            for (int j=0; j< VIRTUAL_NODE_NUMS; j++){
+                String virtualName = servers[i] + "-" + j + "号机房";
+                virtualNodes.put(getHash(virtualName),virtualName);
+            }
         }
     }
 
@@ -38,7 +40,7 @@ public class Test {
             Integer i = subMap.firstKey();
             ret = virtualNodes.get(i);
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
             ret = virtualNodes.get(virtualNodes.firstKey());
         }
         return ret;

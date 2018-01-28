@@ -1,0 +1,37 @@
+package com.tazine.thread.sync.cases.producer.block;
+
+import java.util.Random;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+/**
+ * Created by lina on 2018/1/28.
+ *
+ * @author frank
+ * @since 1.0.0
+ */
+public class ProduceThread extends Thread {
+
+    private BlockingQueue<Integer> queue;
+
+    public ProduceThread(BlockingQueue<Integer> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true){
+            int i = new Random().nextInt();
+            if (queue.offer(i)){
+                System.out.println("生产者生产 -- " + i);
+            }else {
+                System.out.println("加入队列失败");
+            }
+            try {
+                sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

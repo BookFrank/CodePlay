@@ -3,7 +3,10 @@ package com.tazine.algorithm;
 import java.util.Arrays;
 
 /**
+ * SortTest
  *
+ * @author frank
+ * @since 1.0.0
  */
 public class Test {
 
@@ -13,9 +16,7 @@ public class Test {
 
         System.out.println(Arrays.toString(a));
 
-
         for (int i = 1; i < a.length; i++) {
-
             for (int j = 0; j < a.length - i; j++) {
                 if (a[j] > a[j + 1]) {
                     int tmp = a[j];
@@ -23,7 +24,6 @@ public class Test {
                     a[j + 1] = tmp;
                 }
             }
-
         }
         System.out.println(Arrays.toString(a));
     }

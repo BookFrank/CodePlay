@@ -1,6 +1,8 @@
 package com.tazine.container.collection.list;
 
+import java.lang.ref.PhantomReference;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -9,97 +11,70 @@ import java.util.Iterator;
  * @author frank
  * @since 1.0.0
  */
-public class MyArrayList<T> implements Iterable<T> {
+public class MyArrayList<E> implements Iterable<E> {
 
-    private static int INIT_SIZE = 16;
+    private static final int INIT_CAPACITY = 10;
 
-    private static Object[] arr;
+    private static Object[] list;
 
-    /**
-     * 数组当前下标
-     */
-    private int index;
-
-    /**
-     * 数组当前长度
-     */
-    private int size;
-
-    public int size() {
-        return index;
-    }
-
-    public MyArrayList(int size) {
-        this.size = size;
-        arr = new Object[size];
-    }
+    private static int size;
 
     public MyArrayList() {
-        this(INIT_SIZE);
+        this(INIT_CAPACITY);
     }
 
-    public int add(T obj) {
-        expand(index);
-        arr[index++] = obj;
-        return index;
+    public MyArrayList(int initCapacity) {
+        list = new Object[initCapacity];
     }
 
-    public T get(int i) {
-        if (i <= index) {
-            return (T) arr[i];
-        } else {
-            return null;
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
+    public void add(E element){
+        ensureCapacity(size + 1);
+        list[size++] = element;
+    }
+
+    private void ensureCapacity(int minCapacity) {
+        int oldCapacity = list.length;
+        if (oldCapacity < minCapacity){
+            int newCapacity = oldCapacity + (oldCapacity >> 1);
+            System.out.println("扩容至 " + newCapacity);
+            list = Arrays.copyOf(list, newCapacity);
         }
     }
 
-    public void remove(int i) {
-        if (i < index) {
-            for (int j = i; j < index; j++) {
-                arr[j] = arr[j + 1];
-            }
-            index--;
-        } else if (i == index) {
-            arr[index--] = null;
+    public E get(int i){
+        rangeCheck(i);
+        return (E) list[i];
+    }
+
+    private void rangeCheck(int i) {
+        if (i >= size){
+            throw new IndexOutOfBoundsException("out of bounds");
         }
     }
 
-    private synchronized void expand(int index) {
-        // 可以在这里调整
-        if (index == size) {
-            Object[] newArr = new Object[size * 2];
-            for (int i = 0; i < index; i++) {
-                newArr[i] = arr[i];
-            }
-            System.out.println("完成扩容");
-            arr = newArr;
-            size = size * 2;
-        }
+    public boolean contains(E element){
+        int i = indexOf(element);
+        return true;
     }
 
-    public class ListIterator<T> implements java.util.Iterator<T> {
-
-        int start = 0;
-
-        @Override
-        public boolean hasNext() {
-            if (start < index) {
-                return true;
-            }
-            return false;
+    private int indexOf(E element) {
+        if (element == null){
         }
-
-        @Override
-        public T next() {
-            if (hasNext()) {
-                return (T) arr[start++];
-            }
-            return null;
-        }
+        return -1;
     }
 
-    @Override
-    public Iterator<T> iterator() {
-        return new ListIterator<>();
+    public E remove(int i){
+        rangeCheck(i);
+        E data = (E) list[i];
+        int numsMoved = size - 1 -i;
+        if (numsMoved > 0){
+            System.arraycopy(list,i+1,list,i,numsMoved);
+        }
+        return data;
     }
 
     public static void main(String[] args) {
@@ -112,13 +87,15 @@ public class MyArrayList<T> implements Iterable<T> {
 
         System.out.println(list.get(0));
         System.out.println(list.get(1));
-        System.out.println(list.size());
 
         list.remove(0);
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
 
-        Iterator<String> it = list.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return null;
     }
 }

@@ -6,7 +6,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
- * Created by lina on 2018/1/28.
+ * 简单一致性哈希
  *
  * @author frank
  * @since 1.0.0
@@ -99,6 +99,4 @@ public class ConsistentHashWithNode {
         }
 
     }
-
-
 }

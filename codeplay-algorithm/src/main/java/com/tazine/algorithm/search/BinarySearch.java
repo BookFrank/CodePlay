@@ -15,7 +15,7 @@ import java.util.Scanner;
  * 若中间点位置值小于待查值，则新的查找区间是中间点位置的右边区域。
  * 下一次查找是针对新的查找区间进行的。
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class BinarySearch {

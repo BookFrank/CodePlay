@@ -11,9 +11,9 @@ import java.util.Queue;
  */
 public class QueueDemo {
 
-    /*
-        LinkedList 提供了方法以支持队列的行为，并且它实现了Queue接口，因此LinkedList可以用作Queue的一种实现。
-        通过将 LinkedList 向上转型为Queue
+    /**
+     * LinkedList 提供了方法以支持队列的行为，并且它实现了Queue接口，因此LinkedList可以用作Queue的一种实现。
+     * 通过将 LinkedList 向上转型为Queue
      */
 
     public static void main(String[] args) {

@@ -1,10 +1,9 @@
 package com.tazine.container.collection.queue;
 
-import java.util.HashMap;
 import java.util.Stack;
 
 /**
- * Created by lina on 2018/1/28.
+ * 使用两个 Stack 实现队列功能
  *
  * @author frank
  * @since 1.0.0
@@ -18,13 +17,13 @@ public class MyQueue<E> {
     public MyQueue() {
     }
 
-    public synchronized E push(E data){
+    public synchronized E push(E data) {
         return inStack.push(data);
     }
 
-    public synchronized E pop(){
+    public synchronized E pop() {
         if (popStack.isEmpty()) {
-            while (!inStack.isEmpty()){
+            while (!inStack.isEmpty()) {
                 popStack.push(inStack.pop());
             }
         }

@@ -5,13 +5,12 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by lina on 2018/1/11.
+ * TreeSetFeatures
  *
  * @author frank
  * @since 1.0.0
  */
 public class TreeSetFeatures {
-
 
     public static void main(String[] args) {
 
@@ -27,5 +26,4 @@ public class TreeSetFeatures {
         System.out.println(set);
 
     }
-
 }

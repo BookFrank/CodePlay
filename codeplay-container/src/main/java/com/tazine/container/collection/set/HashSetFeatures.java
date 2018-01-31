@@ -1,11 +1,11 @@
 package com.tazine.container.collection.set;
 
+import java.util.Collections;
 import java.util.HashSet;
-import java.util.Random;
 import java.util.Set;
 
 /**
- * Created by lina on 2018/1/11.
+ * HashSetFeatures
  *
  * @author frank
  * @since 1.0.0
@@ -23,13 +23,16 @@ public class HashSetFeatures {
         /**
          * 下面这个Set集合能存放的元素个数最大为 16*2 = 32 个
          */
-        Set<String> cSet = new HashSet<>(16,2);
+        Set<String> cSet = new HashSet<>(16, 2);
 
-        for (int i = 0 ; i < 20; i++){
+        for (int i = 0; i < 20; i++) {
             strSet.add(String.valueOf(i));
         }
 
 
+        Set<String> set = new HashSet<>();
+
+        Collections.addAll(set, "A B C D E".split(" "));
 
 //
 //        Random rand = new Random(47);

@@ -5,6 +5,9 @@ import java.util.Set;
 
 /**
  * HashSet 去重原理：根据对象的 equals() 和 hashcode()
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class SetPractice {
 
@@ -21,7 +24,7 @@ public class SetPractice {
 
         // 包装类型比较应该使用 equals 而不是 ==
         System.out.println(a == b);
-        for (Integer i : set){
+        for (Integer i : set) {
             System.out.println(i);
         }
         System.out.println(set.size());
@@ -36,17 +39,16 @@ public class SetPractice {
 
 
         System.out.println(p1.equals(p2));
-        for (Player p : playerSet){
+        for (Player p : playerSet) {
             System.out.println(p.getName());
         }
-
 
 
     }
 
 }
 
-class Player{
+class Player {
 
     private String name;
 
@@ -64,6 +66,7 @@ class Player{
 
     /**
      * 重写Object类的equals方法，直接返回 true
+     *
      * @param obj
      * @return
      */

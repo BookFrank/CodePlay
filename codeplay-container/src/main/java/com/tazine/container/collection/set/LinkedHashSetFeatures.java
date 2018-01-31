@@ -1,24 +1,19 @@
 package com.tazine.container.collection.set;
 
-import javax.swing.text.html.HTMLDocument;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * Created by lina on 2018/1/13.
+ * LinkedHashSetFeatures
  *
  * @author frank
  * @since 1.0.0
  */
 public class LinkedHashSetFeatures {
 
-
     public static void main(String[] args) {
-
-
-
         Set<Integer> set1 = new LinkedHashSet<>();
         Set<Integer> set2 = new HashSet<>();
 
@@ -33,18 +28,14 @@ public class LinkedHashSetFeatures {
         set2.add(1);
 
         Iterator<Integer> it = set1.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
         System.out.println();
 
         Iterator<Integer> it1 = set2.iterator();
-        while (it1.hasNext()){
+        while (it1.hasNext()) {
             System.out.print(it1.next() + " ");
         }
-
     }
-
-
-
 }

@@ -2,9 +2,11 @@ package com.tazine.io.file;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 
 /**
  * 使用 NIO 读写文件
@@ -54,8 +56,41 @@ public class NioFileReadWrite {
         }
     }
 
+    static void writeNIO(){
+        String filePath = "/Users/lina/Desktop/out.txt";
+        FileOutputStream fos = null;
+
+        try {
+            fos = new FileOutputStream(filePath);
+            FileChannel channel = fos.getChannel();
+
+            ByteBuffer bf = Charset.forName("utf-8").encode("永远不要停下脚步");
+            System.out.println("限制是：" + bf.limit() + " 容量是：" + bf.capacity() + " 位置是：" + bf.position());
+
+            int length = 0;
+            while ((length = channel.write(bf)) != 0){
+                System.out.println("写入长度" + length);
+                System.out.println("限制是：" + bf.limit() + " 容量是：" + bf.capacity() + " 位置是：" + bf.position());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         readNIO();
+        System.out.println();
+        writeNIO();
     }
 
 }

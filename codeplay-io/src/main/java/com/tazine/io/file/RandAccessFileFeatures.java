@@ -11,7 +11,6 @@ import java.io.RandomAccessFile;
  */
 public class RandAccessFileFeatures {
 
-
     public static void main(String[] args) throws IOException {
 
         String path = "/Users/lina/rand.txt";
@@ -40,9 +39,5 @@ public class RandAccessFileFeatures {
         System.out.println(new String(bytes));
 //        System.out.println(new String(bs));
         file.close();
-
-
     }
-
-
 }

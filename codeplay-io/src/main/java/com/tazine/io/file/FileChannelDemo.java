@@ -1,7 +1,5 @@
 package com.tazine.io.file;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
@@ -15,7 +13,6 @@ import java.nio.channels.FileChannel;
  */
 public class FileChannelDemo {
 
-
     public static void main(String[] args) throws IOException {
 
         String path = "/Users/lina/rand.txt";
@@ -28,7 +25,7 @@ public class FileChannelDemo {
 
         System.out.println("size : " + channel.size());
         System.out.println("position: " + channel.position());
-        System.out.println("channel.read() : " +  channel.read(buffer));
+        System.out.println("channel.read() : " + channel.read(buffer));
 
         System.out.println("size : " + channel.size());
         System.out.println("position: " + channel.position());
@@ -47,13 +44,13 @@ public class FileChannelDemo {
 //        System.out.println("position: " + channel.position());
 
         byte[] bs = new byte[6];
-        int i=0;
-        while (buffer.hasRemaining()){
+        int i = 0;
+        while (buffer.hasRemaining()) {
             bs[i] = buffer.get();
             System.out.println("position: " + channel.position());
         }
 
-        for (byte b : bs){
+        for (byte b : bs) {
             System.out.print(b + " ");
         }
         System.out.println(new String(bs));

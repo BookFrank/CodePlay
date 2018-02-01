@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
 /**
  * 流：字节流 & 字符流
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class ByteCharStream {
@@ -49,7 +49,10 @@ public class ByteCharStream {
 
             byte[] b = new byte[2];
             while (inputStream.available() > 0) {
-                System.out.println(inputStream.read(b)); // 返回的 int 值为读取到的字节总数
+                /**
+                 * 返回的 int 值为读取到的字节总数
+                 */
+                System.out.println(inputStream.read(b));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -109,14 +112,20 @@ public class ByteCharStream {
             FileOutputStream outputStream = new FileOutputStream(file);
 
             String a = "中";
-            outputStream.write(a.getBytes()); // 字节流只能写入字节
+            /**
+             * 字节流只能写入字节
+             */
+            outputStream.write(a.getBytes());
             // outputStream.flush(); FileOutputStream继承了flush()方法，但是OutputStream的flush方法什么也没做
             outputStream.close();
 
 
             FileInputStream inputStream = new FileInputStream(file);
             System.out.println("从文件中读取到的字节数组转为int[]为：");
-            while (inputStream.available() > 0) { // avaiable 表示还有多少字节可以读
+            /**
+             * avaiable 表示还有多少字节可以读
+             */
+            while (inputStream.available() > 0) {
                 System.out.print("  " + inputStream.read());
             }
             inputStream.close();

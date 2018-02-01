@@ -12,9 +12,7 @@ import java.nio.charset.Charset;
  */
 public class BufferStream {
 
-
     public static void main(String[] args) {
-
         System.out.println(Charset.defaultCharset());
         System.out.println((int)'l');
         System.out.println((int)'y');
@@ -30,8 +28,5 @@ public class BufferStream {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-
 }

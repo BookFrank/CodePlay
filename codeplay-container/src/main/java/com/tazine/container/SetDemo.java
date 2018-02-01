@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 集合框架之Set
  *
- * @author Frank
+ * @author frank
  * @since 1.0.0
  */
 public class SetDemo {

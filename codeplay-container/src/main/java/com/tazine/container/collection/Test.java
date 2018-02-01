@@ -1,6 +1,8 @@
 package com.tazine.container.collection;
 
 
+import java.util.HashMap;
+
 /**
  * Collection Test
  *
@@ -16,5 +18,7 @@ public class Test {
         int f = (h = o.hashCode()) ^ (h >>> 16);
         System.out.println(Integer.toBinaryString(f));
         System.out.println(Integer.toBinaryString(-1));
+
+        HashMap
     }
 }

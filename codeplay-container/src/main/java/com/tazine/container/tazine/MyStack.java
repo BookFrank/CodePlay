@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * MyStack
+ *
  * @author frank
  * @since 1.0.0
  */
@@ -26,28 +27,28 @@ public class MyStack<E> {
         stack = new Object[len];
     }
 
-    public boolean offer(E element){
+    public boolean offer(E element) {
         ensureCapacity(size + 1);
         stack[size++] = element;
         return true;
     }
 
-    public E peek(){
-        if (size > 0){
-            System.out.println(stack[size-1]);
-            return (E) stack[size-1];
+    public E peek() {
+        if (size > 0) {
+            System.out.println(stack[size - 1]);
+            return (E) stack[size - 1];
         }
         return null;
     }
 
-    public E pop(){
+    public E pop() {
         E e = peek();
         stack[--size] = null;
         return e;
     }
 
     private void ensureCapacity(int minCapacity) {
-        if (minCapacity >= stack.length){
+        if (minCapacity >= stack.length) {
             grow();
         }
     }
@@ -58,7 +59,7 @@ public class MyStack<E> {
         stack = Arrays.copyOf(stack, newCapacity);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
 

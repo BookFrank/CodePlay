@@ -3,13 +3,12 @@ package com.tazine.container.utils;
 import java.util.*;
 
 /**
- * Created by lina on 2018/1/11.
+ * IteratorLive
  *
  * @author frank
  * @since 1.0.0
  */
 public class IteratorLive {
-
 
     private static void display(Iterator it){
         while (it.hasNext()){
@@ -30,8 +29,4 @@ public class IteratorLive {
         display(list2.iterator());
         display(list3.iterator());
     }
-
-
-
-
 }

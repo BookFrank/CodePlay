@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * Created by lina on 2017/12/29.
+ * SingleThreadPool
  *
  * @author frank
  * @since 1.0.0

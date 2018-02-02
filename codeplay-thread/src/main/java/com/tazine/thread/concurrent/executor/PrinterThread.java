@@ -1,7 +1,10 @@
 package com.tazine.thread.concurrent.executor;
 
 /**
- * Created by lina on 2017/12/18.
+ * PrinterThread
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class PrinterThread extends Thread {
     @Override
@@ -14,6 +17,6 @@ public class PrinterThread extends Thread {
                 e.printStackTrace();
             }
         }
-        System.out.println(currentThread().getName() +" 执行完毕");
+        System.out.println(currentThread().getName() + " 执行完毕");
     }
 }

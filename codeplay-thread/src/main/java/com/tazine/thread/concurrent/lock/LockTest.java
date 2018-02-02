@@ -29,7 +29,6 @@ public class LockTest {
                 outputer.print(b);
             }
         }.start();
-
     }
 }
 

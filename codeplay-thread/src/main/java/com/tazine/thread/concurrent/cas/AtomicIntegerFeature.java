@@ -8,24 +8,24 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author frank
  * @since 1.0.0
  */
-public class AtomicIntegerFeature implements Runnable{
+public class AtomicIntegerFeature implements Runnable {
 
     /**
      * 使用 CAS 可以避免加锁
      */
     private AtomicInteger i = new AtomicInteger(0);
 
-    private AtomicInteger getVal(){
+    private AtomicInteger getVal() {
         return i;
     }
 
-    private void increment(){
+    private void increment() {
         i.addAndGet(2);
     }
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             increment();
         }
     }
@@ -36,9 +36,9 @@ public class AtomicIntegerFeature implements Runnable{
 
         new Thread(runnable).start();
 
-        while (true){
+        while (true) {
             int val = runnable.i.get();
-            if (val % 2 != 0){
+            if (val % 2 != 0) {
                 System.out.println(val + " is not enen");
                 System.exit(0);
             }

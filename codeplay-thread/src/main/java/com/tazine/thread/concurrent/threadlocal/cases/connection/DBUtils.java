@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 /**
- * Created by lina on 2018/1/8.
+ * DBUtils
  *
  * @author frank
  * @since 1.0.0
@@ -16,13 +16,13 @@ public class DBUtils {
     static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root","");
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static Connection getConnection(){
+    public static Connection getConnection() {
         return conn;
     }
 }

@@ -1,7 +1,7 @@
 package com.tazine.thread.concurrent.threadlocal.cases.connection;
 
 /**
- * Created by lina on 2018/1/8.
+ * ClientThread
  *
  * @author frank
  * @since 1.0.0

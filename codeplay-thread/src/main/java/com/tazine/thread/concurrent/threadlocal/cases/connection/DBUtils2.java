@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Created by lina on 2018/1/8.
+ * DBUtils2
  *
  * @author frank
  * @since 1.0.0
@@ -24,8 +24,8 @@ public class DBUtils2 {
 
     public static Connection getConnection() throws SQLException {
         Connection conn = connContainer.get();
-        if (conn == null){
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo","root","");
+        if (conn == null) {
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "");
             connContainer.set(conn);
         }
         return conn;

@@ -13,13 +13,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * Created by lina on 2018/1/11.
+ * Multiplexer
  *
  * @author frank
  * @since 1.0.0
  */
-public class MultiplexerTimeServer implements Runnable{
-
+public class MultiplexerTimeServer implements Runnable {
 
     private Selector selector;
 
@@ -51,13 +50,13 @@ public class MultiplexerTimeServer implements Runnable{
 
     @Override
     public void run() {
-        while (!stop){
+        while (!stop) {
             try {
                 selector.select(1000);
                 Set<SelectionKey> selectionKeys = selector.selectedKeys();
                 Iterator<SelectionKey> it = selectionKeys.iterator();
                 SelectionKey key = null;
-                while (it.hasNext()){
+                while (it.hasNext()) {
                     key = it.next();
                     it.remove();
                     handleInputKey(key);
@@ -70,23 +69,27 @@ public class MultiplexerTimeServer implements Runnable{
 
     private void handleInputKey(SelectionKey key) throws IOException {
 
-        if (key.isValid()){
-            // 处理新接入的请求
+        if (key.isValid()) {
+            /**
+             * 处理新接入的请求
+             */
 
-            if (key.isAcceptable()){
-                // 处理新连接
+            if (key.isAcceptable()) {
+                /**
+                 * 处理新连接
+                 */
                 ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
                 SocketChannel sc = ssc.accept();
                 sc.configureBlocking(false);
                 sc.register(selector, SelectionKey.OP_READ);
             }
 
-            if (key.isReadable()){
+            if (key.isReadable()) {
                 // 读取数据
                 SocketChannel sc = (SocketChannel) key.channel();
                 ByteBuffer readBuffer = ByteBuffer.allocate(1024);
                 int readBytes = sc.read(readBuffer);
-                if (readBytes > 0){
+                if (readBytes > 0) {
 
                     readBuffer.flip();
                     byte[] bytes = new byte[readBuffer.remaining()];
@@ -94,11 +97,11 @@ public class MultiplexerTimeServer implements Runnable{
                     String body = new String(bytes, "UTF-8");
                     System.out.println("Receive the message : " + body);
                     doWrite(sc, new Date().toString());
-                }else if (readBytes < 0){
+                } else if (readBytes < 0) {
                     // 对端链路关闭
                     key.cancel();
                     sc.close();
-                }else {
+                } else {
                     // 读到 0 字节，忽略
                 }
             }
@@ -106,7 +109,7 @@ public class MultiplexerTimeServer implements Runnable{
     }
 
     private void doWrite(SocketChannel channel, String response) throws IOException {
-        if (response != null && response.trim().length() > 0){
+        if (response != null && response.trim().length() > 0) {
             byte[] bytes = response.getBytes();
             ByteBuffer writeBuffer = ByteBuffer.allocate(bytes.length);
             writeBuffer.put(bytes);

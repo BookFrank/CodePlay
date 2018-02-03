@@ -8,7 +8,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 /**
- * Created by lina on 2018/1/10.
+ * TimeClient
  *
  * @author frank
  * @since 1.0.0

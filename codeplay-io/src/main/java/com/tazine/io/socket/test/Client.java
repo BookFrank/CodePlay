@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by lina on 2018/1/28.
+ * Client
  *
  * @author frank
  * @since 1.0.0

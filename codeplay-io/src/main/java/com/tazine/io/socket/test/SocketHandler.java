@@ -1,10 +1,13 @@
 package com.tazine.io.socket.test;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by lina on 2018/1/28.
+ * SocketHandler
  *
  * @author frank
  * @since 1.0.0
@@ -30,17 +33,17 @@ public class SocketHandler extends Thread {
             writer.write("hello world");
             writer.flush();
             writer.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if (buffer != null){
+        } finally {
+            if (buffer != null) {
                 try {
                     buffer.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if (writer != null){
+            if (writer != null) {
                 writer.close();
             }
         }

@@ -1,15 +1,14 @@
 package com.tazine.io.socket.nio;
 
 /**
- * Created by lina on 2017/11/19.
+ * TimeClient
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class TimeClient {
 
-
     public static void main(String[] args) {
 
-
-
     }
-
 }

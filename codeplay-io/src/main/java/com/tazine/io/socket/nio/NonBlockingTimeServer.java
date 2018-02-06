@@ -12,9 +12,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * Created by lina on 2017/11/19.
+ * NonBlockingTimeServer
+ *
+ * @author frank
+ * @since 1.0.0
  */
-public class NonBlockingTimeServer implements Runnable{
+public class NonBlockingTimeServer implements Runnable {
 
     private Selector selector;
 
@@ -24,6 +27,7 @@ public class NonBlockingTimeServer implements Runnable{
 
     /**
      * 初始化多路复用器，绑定监听端口
+     *
      * @param port
      */
     public NonBlockingTimeServer(int port) {
@@ -40,19 +44,19 @@ public class NonBlockingTimeServer implements Runnable{
         }
     }
 
-    public void stop(){
+    public void stop() {
         this.stop = true;
     }
 
     @Override
     public void run() {
-        while (!stop){
+        while (!stop) {
             try {
                 selector.select(1000);
                 Set<SelectionKey> selectionKeys = selector.selectedKeys();
                 Iterator<SelectionKey> it = selectionKeys.iterator();
                 SelectionKey key = null;
-                while (it.hasNext()){
+                while (it.hasNext()) {
                     key = it.next();
                     it.remove();
 
@@ -63,19 +67,19 @@ public class NonBlockingTimeServer implements Runnable{
         }
     }
 
-    private void handleInput(SelectionKey key) throws IOException{
-        if (key.isValid()){
-            if (key.isAcceptable()){
+    private void handleInput(SelectionKey key) throws IOException {
+        if (key.isValid()) {
+            if (key.isAcceptable()) {
                 ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
                 SocketChannel socketChannel = ssc.accept();
                 socketChannel.configureBlocking(false);
                 socketChannel.register(selector, SelectionKey.OP_READ);
             }
-            if (key.isReadable()){
+            if (key.isReadable()) {
                 SocketChannel socketChannel = (SocketChannel) key.channel();
                 ByteBuffer readBuffer = ByteBuffer.allocate(1024);
                 int readBytes = socketChannel.read(readBuffer);
-                if (readBytes > 0){
+                if (readBytes > 0) {
                     readBuffer.flip();
                     byte[] bytes = new byte[readBuffer.remaining()];
                     readBuffer.get(bytes);
@@ -83,7 +87,7 @@ public class NonBlockingTimeServer implements Runnable{
                     System.out.println("The time server receive order:" + body);
                     String currentTime = new Date(System.currentTimeMillis()).toString();
                     doWrite(socketChannel, currentTime);
-                }else {
+                } else {
                     key.cancel();
                     socketChannel.close();
                 }
@@ -92,7 +96,7 @@ public class NonBlockingTimeServer implements Runnable{
     }
 
     private void doWrite(SocketChannel socketChannel, String response) throws IOException {
-        if (null != response && response.trim().length() > 0){
+        if (null != response && response.trim().length() > 0) {
             byte[] bytes = response.getBytes();
             ByteBuffer writeBuffer = ByteBuffer.allocate(bytes.length);
             writeBuffer.put(bytes);

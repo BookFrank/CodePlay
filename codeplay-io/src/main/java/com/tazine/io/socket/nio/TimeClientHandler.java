@@ -1,7 +1,10 @@
 package com.tazine.io.socket.nio;
 
 /**
- * Created on 2017/11/19.
+ * TimeClientHandler
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class TimeClientHandler {
 }

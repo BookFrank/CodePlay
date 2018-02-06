@@ -1,15 +1,15 @@
 package com.tazine.io.socket.nio;
 
 /**
- * Created by lina on 2017/11/19.
+ * TimeServer
+ *
+ * @author frank
+ * @since 1.0.0
  */
 public class TimeServer {
-
 
     public static void main(String[] args) {
 
 
     }
-
-
 }

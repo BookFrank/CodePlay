@@ -19,6 +19,5 @@ public class Test {
         System.out.println(Integer.toBinaryString(f));
         System.out.println(Integer.toBinaryString(-1));
 
-        HashMap
     }
 }

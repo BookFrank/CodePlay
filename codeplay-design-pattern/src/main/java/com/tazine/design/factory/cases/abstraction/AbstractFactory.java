@@ -1,6 +1,5 @@
 package com.tazine.design.factory.cases.abstraction;
 
-import com.sun.tools.javap.TypeAnnotationWriter;
 import com.tazine.design.factory.cases.product.NoteBook;
 import com.tazine.design.factory.cases.product.Phone;
 

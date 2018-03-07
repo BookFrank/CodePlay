@@ -1,0 +1,33 @@
+syntax = "proto3";
+option java_package = "com.tazine.third.protobuf.compare"; //包的名称
+option java_outer_classname = "AmapEntity"; //生成的数据访问类的类名
+
+
+message Traffic {
+    int32 ent = 1; // 同上
+    int32 dip = 2; // 同上
+    string diu = 3; //
+    string session = 4; //
+    string sign = 5; //
+    int32 aetraffic = 6; //
+    string appstartid = 7; //
+    string adiu = 8; //
+    string cifa = 9; //
+    string diu2 = 10; //
+    string div = 11; //
+    string output = 12; //
+    string siv = 13; //
+    string dic = 14; //
+    string BID_F = 15; //
+    int32 stepid = 16; //
+    string diu3 = 17; //
+    string spm = 18; //
+    string tid = 19; //
+    int32 uid = 20; //
+    int32 dibv = 21; //
+    string channel = 22; //
+    int32 client_network_class = 23; //
+    string csid = 24; //
+    int32 accs = 25; //
+    string gsid = 26; //
+}

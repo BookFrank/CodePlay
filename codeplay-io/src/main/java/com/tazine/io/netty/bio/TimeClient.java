@@ -22,6 +22,7 @@ public class TimeClient {
         Socket socket = null;
         try {
             socket = new Socket(host, port);
+            System.out.println(socket.toString());
             writer = new PrintWriter(socket.getOutputStream(), true);
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
@@ -29,7 +30,8 @@ public class TimeClient {
             while (sc.hasNext()) {
                 writer.println(sc.next());
                 String line = br.readLine();
-                if (line.equalsIgnoreCase("bye")) {
+                System.out.println(line);
+                if (null != line && line.equalsIgnoreCase("bye")) {
                     break;
                 } else {
                     System.out.println("  " + line);
@@ -49,6 +51,7 @@ public class TimeClient {
     }
 
     public static void main(String[] args) throws IOException {
-        new TimeClient("127.0.0.1", 8080);
+        //new TimeClient("127.0.0.1", 8080);
+        new TimeClient("218.107.195.122", 18081);
     }
 }

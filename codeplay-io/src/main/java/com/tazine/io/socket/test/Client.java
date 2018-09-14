@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Client
+ * TimeClient
  *
  * @author frank
  * @since 1.0.0

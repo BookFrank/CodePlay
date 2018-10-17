@@ -4,7 +4,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Socket Server
+ * Socket TimeServer
  *
  * @author frank
  * @since 1.0.0

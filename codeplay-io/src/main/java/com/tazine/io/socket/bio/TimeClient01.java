@@ -53,6 +53,8 @@ public class TimeClient01 {
     }
 
     public static void main(String[] args) {
-        new TimeClient01("127.0.0.1", 8080);
+        //new TimeClient01("127.0.0.1", 8080);
+        new TimeClient01("218.107.195.122", 18081);
+
     }
 }

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * InetAddress 用来标示网络上的硬件资源，表示互联网协议地址（IP）
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/10/31
  */
 public class InetAddressFeature {
 

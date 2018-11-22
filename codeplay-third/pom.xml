@@ -11,6 +11,7 @@
     <packaging>jar</packaging>
 
     <name>codeplay-third</name>
+    <description>三方库相关</description>
     <url>http://maven.apache.org</url>
 
     <properties>

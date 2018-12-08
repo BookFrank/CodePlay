@@ -1,4 +1,4 @@
-package com.tazine.java8.lambda;
+package com.tazine.codeplay.version.java8.lambda;
 
 /**
  * Player

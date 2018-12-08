@@ -1,4 +1,4 @@
-package com.tazine.java8;
+package com.tazine.codeplay.version.java8;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.Base64;
 
 /**
- * Created by lina on 2017/12/14.
+ *
  */
 public class App {
 

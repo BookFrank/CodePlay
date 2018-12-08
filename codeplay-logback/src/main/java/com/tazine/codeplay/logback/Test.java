@@ -15,6 +15,8 @@ public class Test {
 
     private static final Logger logger = LoggerFactory.getLogger(Test.class);
 
+    Logger rootLogger = LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+
     public static void main(String[] args) {
         logger.info("日志测试  - {}", "Hello World");
 

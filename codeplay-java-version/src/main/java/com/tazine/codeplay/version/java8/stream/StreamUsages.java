@@ -1,4 +1,4 @@
-package com.tazine.java8.stream;
+package com.tazine.codeplay.version.java8.stream;
 
 import java.util.List;
 import java.util.stream.Collectors;

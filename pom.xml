@@ -18,6 +18,7 @@
         <module>codeplay-design-pattern</module>
         <module>codeplay-data-structure</module>
         <module>codeplay-maven</module>
+        <module>codeplay-java-version</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -13,6 +13,11 @@ import io.protostuff.runtime.RuntimeSchema;
  */
 public class ProtostuffUtil {
 
+    /**
+     * 避免每次序列化都重新申请Buffer空间
+     */
+    private static LinkedBuffer buffer = LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE);
+
     public static <T> byte[] serliazer(T obj) {
         Schema schema = RuntimeSchema.getSchema(obj.getClass());
         return ProtobufIOUtil.toByteArray(obj, schema, LinkedBuffer.allocate(1024));

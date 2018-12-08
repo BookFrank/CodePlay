@@ -42,19 +42,18 @@
             <version>2.9.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-core -->
+        <!-- ProtoStuff Start -->
         <dependency>
             <groupId>io.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
             <version>1.6.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.protostuff/protostuff-core -->
         <dependency>
             <groupId>io.protostuff</groupId>
             <artifactId>protostuff-runtime</artifactId>
             <version>1.6.0</version>
         </dependency>
+        <!-- ProtoStuff End -->
 
         <dependency>
             <groupId>junit</groupId>
@@ -90,9 +89,5 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.7</version>
         </dependency>
-
     </dependencies>
-
-
-
 </project>

@@ -1,7 +1,11 @@
 <configuration>
 
+    <property file="src/main/java/chapters/configuration/variables1.properties" />
+
+    <!--<property name="LOG_HOME" value="/Users/lina/logs" />-->
+
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>myApp.log</file>
+        <file>${LOG_HOME}/myApp.log</file>
         <!-- encoders are assigned by default the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
         <encoder>
             <pattern>

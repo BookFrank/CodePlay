@@ -1,0 +1,14 @@
+<configuration>
+
+    <appender name="SOCKET" class="ch.qos.logback.classic.net.SocketAppender">
+        <RemoteHost>${host}</RemoteHost>
+        <Port>${port}</Port>
+        <ReconnectionDelay>10000</ReconnectionDelay>
+        <IncludeCallerData>${includeCallerData}</IncludeCallerData>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="SOCKET"/>
+    </root>
+
+</configuration>

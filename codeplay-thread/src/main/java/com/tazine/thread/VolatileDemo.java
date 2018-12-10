@@ -4,7 +4,7 @@ package com.tazine.thread;
  * Volatile关键词：能够实现可见性，但是无法实现原子性
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/26
  */
 public class VolatileDemo {
 

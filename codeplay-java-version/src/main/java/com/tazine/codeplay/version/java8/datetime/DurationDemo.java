@@ -8,7 +8,7 @@ import java.time.Month;
  * Java8 - Duration类
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2018/12/09
  */
 public class DurationDemo {
 

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Java8 - Duration类
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/09/14
  */
 public class Test {
 

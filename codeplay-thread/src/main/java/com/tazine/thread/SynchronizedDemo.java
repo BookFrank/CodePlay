@@ -4,7 +4,7 @@ package com.tazine.thread;
  * synchronized 可以实现原子性与可见性
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/26
  */
 public class SynchronizedDemo {
 

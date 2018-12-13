@@ -16,9 +16,9 @@ public class Test {
 
         JSONArray array = JSONArray.parseArray(s);
 
-        array.forEach(json -> {
-            System.out.println(json.toString());
-        });
+        //array.forEach(json -> {
+        //    System.out.println(json.toString());
+        //});
 
     }
 

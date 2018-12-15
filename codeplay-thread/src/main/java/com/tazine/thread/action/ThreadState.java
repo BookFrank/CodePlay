@@ -4,7 +4,7 @@ package com.tazine.thread.action;
  * 线程状态
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/07/26
  */
 public class ThreadState extends Thread {
 

@@ -4,7 +4,7 @@ package com.tazine.thread.action;
  * Thread.yield()：可以将CPU从当前线程转移给另一个线程
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/07/26
  */
 public class YieldDemo {
 

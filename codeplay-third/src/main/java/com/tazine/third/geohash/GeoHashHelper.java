@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * GeoHashHelper
+ *
  * @author frank
  * @date 2018/07/26
  */

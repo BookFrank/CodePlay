@@ -1,7 +1,10 @@
 package com.tazine.thread;
 
 /**
+ * Thread2
  *
+ * @author frank
+ * @date 2018/07/26
  */
 public class Thread2 extends Thread {
 

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * DaemonThread: 当用户线程退出后，守护线程也会随着退出
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/07/26
  */
 public class DaemonThreadDemo {
 

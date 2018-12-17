@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Guava-限流
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/08/09
  */
 public class RateLimiterDemo {
 

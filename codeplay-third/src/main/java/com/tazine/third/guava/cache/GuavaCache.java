@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * Guava Cache
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/08/09
  */
 public class GuavaCache {
 

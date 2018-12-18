@@ -3,10 +3,10 @@ package com.tazine.io.stream;
 import java.io.*;
 
 /**
- * Created by lina on 2017/12/28.
+ * MIS
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/09
  */
 public class MyInputStream extends FileInputStream {
 

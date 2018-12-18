@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
  * 带缓存的 I/O 流
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/09
  */
 public class BufferStream {
 

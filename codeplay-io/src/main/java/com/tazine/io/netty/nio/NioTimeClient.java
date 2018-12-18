@@ -4,7 +4,7 @@ package com.tazine.io.netty.nio;
  * NioTimeClient
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017-12-11
  */
 public class NioTimeClient {
 

@@ -7,7 +7,7 @@ import java.nio.charset.Charset;
  * 流：字节流 & 字符流
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/09
  */
 public class ByteCharStream {
 

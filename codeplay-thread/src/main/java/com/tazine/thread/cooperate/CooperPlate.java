@@ -10,7 +10,7 @@ import java.util.List;
  * wait() 和 notify() 必须工作于 synchronized 内部，且这两个方法只能由锁对象调用
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/18
  */
 public class CooperPlate {
 

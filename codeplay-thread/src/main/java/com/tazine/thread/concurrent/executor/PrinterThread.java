@@ -4,7 +4,7 @@ package com.tazine.thread.concurrent.executor;
  * PrinterThread
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/26
  */
 public class PrinterThread extends Thread {
     @Override

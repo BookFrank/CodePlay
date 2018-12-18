@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
  * 单线程中介：按顺序执行加进来的任务，每次只有一个线程工作
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/26
  */
 public class SingleThreadExecutor {
 

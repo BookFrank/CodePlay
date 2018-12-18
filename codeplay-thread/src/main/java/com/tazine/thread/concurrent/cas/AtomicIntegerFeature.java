@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * AtomicInteger
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/07/26
  */
 public class AtomicIntegerFeature implements Runnable {
 

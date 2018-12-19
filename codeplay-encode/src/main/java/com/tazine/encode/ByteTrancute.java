@@ -6,7 +6,7 @@ import java.io.UnsupportedEncodingException;
  * byte 类型转换
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2018/05/21
  */
 public class ByteTrancute {
 

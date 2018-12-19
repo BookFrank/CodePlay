@@ -7,7 +7,7 @@ import java.nio.charset.Charset;
  * 探究 JAVA 编码
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2018/05/21
  */
 public class JavaEncode {
 

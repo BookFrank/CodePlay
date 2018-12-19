@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 基于数组实现 ArrayList
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class MyArrayList<E> {
 

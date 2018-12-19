@@ -6,7 +6,7 @@ import java.util.Iterator;
  * 实现单链表
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class MyLinkedList<E> implements Iterable<E> {
 
@@ -32,7 +32,7 @@ public class MyLinkedList<E> implements Iterable<E> {
 
     public E get(int i) {
         if (i < size) {
-            if (i == 0){
+            if (i == 0) {
                 return head.data;
             }
             Node<E> node = head;
@@ -44,8 +44,8 @@ public class MyLinkedList<E> implements Iterable<E> {
         return null;
     }
 
-    public boolean remove(int index){
-        if (index < 0 || index > size){
+    public boolean remove(int index) {
+        if (index < 0 || index > size) {
             return false;
         }
         return true;
@@ -64,13 +64,13 @@ public class MyLinkedList<E> implements Iterable<E> {
      * 为了避免链表断开，需要在调整 x 节点的 next 之前，把 next 指向的节点保存下来。
      * 接着试着找到反转后链表的头结点
      */
-    private void flip(){
+    private void flip() {
         Node<E> reverseHead = head;
         Node<E> currentNode = head;
         Node<E> prevNode = null;
-        while (currentNode != null){
+        while (currentNode != null) {
             Node<E> next = currentNode.next;
-            if (next == null){
+            if (next == null) {
                 reverseHead = currentNode;
             }
             currentNode.next = prevNode;
@@ -80,8 +80,8 @@ public class MyLinkedList<E> implements Iterable<E> {
         this.head = reverseHead;
     }
 
-    private void reversePrint(Node<E> node){
-        if (node != null){
+    private void reversePrint(Node<E> node) {
+        if (node != null) {
             reversePrint(node.next);
             System.out.print(node.data + " ");
         }

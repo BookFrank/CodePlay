@@ -6,7 +6,7 @@ import java.util.Stack;
  * 利用stack来反转字符串
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class StringReverse {
 

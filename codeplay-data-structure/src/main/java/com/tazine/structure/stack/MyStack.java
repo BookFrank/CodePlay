@@ -6,7 +6,7 @@ import com.tazine.structure.list.MyLinkedList;
  * MyStack
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public class MyStack<T> {
 

@@ -7,7 +7,7 @@ import java.util.List;
  * Arrays API
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class ArraysMethods {
 

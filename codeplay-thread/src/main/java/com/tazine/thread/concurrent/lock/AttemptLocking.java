@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * to give up on trying to acquire a lock.
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/26
  */
 public class AttemptLocking {
 

@@ -4,7 +4,7 @@ package com.tazine.thread.sync;
  * 展示 CPU 执行的乱序性
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/20
  */
 public class ThreadDisorder {
 

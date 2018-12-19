@@ -9,7 +9,7 @@ import java.util.concurrent.CountDownLatch;
  * 例如，应用程序的主线程希望在负责启动框架服务的线程已经启动所有的框架服务之后再执行
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/20
  */
 public class CountDownLatchFeatures {
 

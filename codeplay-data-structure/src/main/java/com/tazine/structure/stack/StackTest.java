@@ -8,10 +8,7 @@ package com.tazine.structure.stack;
  */
 public class StackTest {
 
-
     public static void main(String[] args) {
-
-
         //MyStack<Integer> stack = new MyStack<>();
 
         MyArrayStack<Integer> stack = new MyArrayStack<>();

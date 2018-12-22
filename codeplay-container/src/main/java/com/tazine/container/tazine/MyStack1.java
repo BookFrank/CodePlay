@@ -4,7 +4,7 @@ package com.tazine.container.tazine;
  * 如何用 O(1) 的时间复杂度求栈中最小元素 ？
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class MyStack1 {
 
@@ -18,29 +18,29 @@ public class MyStack1 {
      */
     private MyStack<Integer> stack2 = new MyStack<>();
 
-    public boolean push(Integer i){
-        if (stack1.isEmpty()){
+    public boolean push(Integer i) {
+        if (stack1.isEmpty()) {
             stack1.offer(i);
             stack2.offer(i);
-        }else {
-            if (i <= stack2.peek()){
+        } else {
+            if (i <= stack2.peek()) {
                 stack2.offer(i);
             }
         }
         return true;
     }
 
-    public Integer pop(){
+    public Integer pop() {
         int e = stack1.pop();
         System.out.println(e + "---" + stack2.peek());
-        if (e == stack2.peek()){
+        if (e == stack2.peek()) {
             stack2.pop();
         }
 
         return e;
     }
 
-    public Integer min(){
+    public Integer min() {
         return stack2.peek();
     }
 

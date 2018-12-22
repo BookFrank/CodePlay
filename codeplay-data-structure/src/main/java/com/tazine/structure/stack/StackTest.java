@@ -4,14 +4,11 @@ package com.tazine.structure.stack;
  * Stack Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public class StackTest {
 
-
     public static void main(String[] args) {
-
-
         //MyStack<Integer> stack = new MyStack<>();
 
         MyArrayStack<Integer> stack = new MyArrayStack<>();

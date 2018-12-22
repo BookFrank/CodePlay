@@ -1,7 +1,7 @@
 package com.tazine.base.other;
 
 /**
- *
+ * @date 2017/12/03
  */
 public class CoolString {
 

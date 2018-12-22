@@ -2,6 +2,7 @@ package com.tazine.base.other;
 
 /**
  * @author Frank
+ * @date 2017/12/03
  */
 public class ArrayMemory {
 
@@ -26,6 +27,5 @@ public class ArrayMemory {
         long memory2 = Runtime.getRuntime().totalMemory() / 1024 / 1024;
         System.out.println("二维数组存储占用内存总量为：" + memory2);
     }
-
 
 }

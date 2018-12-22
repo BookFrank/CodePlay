@@ -2,7 +2,7 @@ package com.tazine.base.classes;
 
 /**
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/15
  */
 public class CatClass extends Animal {
 

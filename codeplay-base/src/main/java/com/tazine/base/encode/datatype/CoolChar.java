@@ -1,4 +1,4 @@
-package com.tazine.encode.datatype;
+package com.tazine.base.encode.datatype;
 
 import java.io.UnsupportedEncodingException;
 

@@ -1,4 +1,4 @@
-package com.tazine.encode;
+package com.tazine.base.encode;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

@@ -4,7 +4,7 @@ package com.tazine.design.template;
  * 抽象基类：定义算法骨架
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/10/9
  */
 public abstract class BidProcessor {
 

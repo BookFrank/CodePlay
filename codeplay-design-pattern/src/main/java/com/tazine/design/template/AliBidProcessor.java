@@ -4,7 +4,7 @@ package com.tazine.design.template;
  * 子类实现延迟步骤
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/10/9
  */
 public class AliBidProcessor extends BidProcessor {
     @Override

@@ -8,7 +8,6 @@ import java.util.Date;
  */
 public class LoginLog implements Serializable {
 
-
     private int LoginLogId;
     private int userId;
     private String ip;

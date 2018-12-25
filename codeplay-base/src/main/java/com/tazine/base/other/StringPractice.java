@@ -7,7 +7,7 @@ import java.util.Arrays;
  * String相关实践
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/21
  */
 public class StringPractice {
 

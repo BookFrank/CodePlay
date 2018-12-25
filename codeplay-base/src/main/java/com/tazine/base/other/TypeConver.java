@@ -4,6 +4,7 @@ package com.tazine.base.other;
  * Java 类型转换
  *
  * @author Frank
+ * @date 2017/12/21
  */
 public class TypeConver {
 

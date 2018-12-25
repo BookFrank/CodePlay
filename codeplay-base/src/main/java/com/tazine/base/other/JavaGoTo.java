@@ -4,7 +4,7 @@ package com.tazine.base.other;
  * GOTO是java的保留字，现在没有使用，可以使用一下方式实现GOTO
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/03
  */
 public class JavaGoTo {
 

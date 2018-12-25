@@ -1,4 +1,4 @@
-package com.tazine.encode.encrypt;
+package com.tazine.base.encode.encrypt;
 
 /**
  * 实现 Base64 加解密算法

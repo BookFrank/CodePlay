@@ -1,4 +1,4 @@
-package com.tazine.encode.convert;
+package com.tazine.base.encode.convert;
 
 /**
  * Byte 转换

@@ -6,7 +6,7 @@ package com.tazine.base.generic;
  * 如果不声明泛型，如：class FruitGenerator implements Generator<T>，编译器会报错："Unknown class"
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/27
  */
 public class AppleGenerator<T> implements Generator<T> {
     @Override

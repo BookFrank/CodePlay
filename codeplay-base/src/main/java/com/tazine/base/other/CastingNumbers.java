@@ -4,7 +4,7 @@ package com.tazine.base.other;
  * 强制类型转换之Numbers
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/03
  */
 public class CastingNumbers {
 

@@ -1,7 +1,6 @@
 package com.tazine.third.fastjson;
 
-import com.google.common.collect.Maps;
-
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,8 +9,9 @@ import java.util.Map;
  */
 public class ThirdDiamondManager {
 
-    public static Player player = new Player("kobe", 24);
+    //public static Player player = new Player("kobe", 24);
 
-    public static Map<String,Integer> map = Maps.newHashMap();
+    //public static Map<String, Integer> map;
+    public static List<Player> map;
 
 }

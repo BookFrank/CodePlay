@@ -8,36 +8,37 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 /**
+ * getFieldGeneric
+ *
  * @author frank
  * @date 2018/12/24
  */
 public class DiamondUtil {
 
     public static Type getFieldGeneric(Field field) {
-        try {
-            Object value = field.get(null);
-            Class<?> type = field.getType();
-            // 如果不是基本数据类型
-            if (!type.isPrimitive()) {
-                Class<?> clz = value.getClass();
-                //handle AnonynousClass
-                for (; clz.isAnonymousClass(); ) {
-                    clz = clz.getSuperclass();
-                }
-                Type rawType = (Type)clz;
-                Type genericType = field.getGenericType();
-                try {
-                    ParameterizedType parameterizedType = (ParameterizedType)genericType;
-                    return new TypeReference(rawType, parameterizedType.getActualTypeArguments());
-                } catch (ClassCastException e) {
-                    return genericType;
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            //log.info("getFieldGeneric Error, {}", JSON.toJSONString(field), e);
+        if (field.getType().isPrimitive()) {
+            return null;
         }
-        return null;
+        Object value = null;
+        try {
+            value = field.get(null);
+        } catch (Exception e) {
+        }
+        Type genericType = field.getGenericType();
+        if (null == value) {
+            return genericType;
+        }
+        Class<?> clz = value.getClass();
+        for (; clz.isAnonymousClass(); ) {
+            clz = clz.getSuperclass();
+        }
+        Type rawType = (java.lang.reflect.Type)clz;
+        try {
+            ParameterizedType parameterizedType = (ParameterizedType)genericType;
+            return new TypeReference(rawType, parameterizedType.getActualTypeArguments());
+        } catch (ClassCastException e) {
+            return genericType;
+        }
     }
 
     public static void main(String[] args) {
@@ -46,19 +47,18 @@ public class DiamondUtil {
             //Field field = ThirdDiamondManager.class.getDeclaredField("player");
             Field field = ThirdDiamondManager.class.getDeclaredField("map");
 
-            System.out.println(field.getGenericType());
-            System.out.println(field.getType());
+            System.out.println("GenericType: " + field.getGenericType());
+            System.out.println("Type: " + field.getType());
 
             // 获得 Field 的值
-            System.out.println(field.get(null));
+            System.out.println("Field Get: " + field.get(null));
 
             Type type = getFieldGeneric(field);
-            System.out.println(type.getTypeName());
+            System.out.println("TypeName: " + type.getTypeName());
 
-            String s = "{\"num\":24}";
-            Map<String,Integer> map = JSON.parseObject(s, type);
-            System.out.println(map);
-
+            //String s = "{\"num\":24}";
+            //Map<String, Integer> map = JSON.parseObject(s, type);
+            //System.out.println(map);
 
         } catch (Exception e) {
             e.printStackTrace();

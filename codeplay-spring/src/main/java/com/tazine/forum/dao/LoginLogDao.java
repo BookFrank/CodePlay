@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 /**
  * Created by lina on 2017/10/9.
+ *
+ * @author frank
+ * @date 2017/10/09
  */
 @Repository
 public class LoginLogDao {

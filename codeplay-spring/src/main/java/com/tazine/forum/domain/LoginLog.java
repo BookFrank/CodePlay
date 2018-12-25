@@ -5,6 +5,9 @@ import java.util.Date;
 
 /**
  * Created by lina on 2017/10/9.
+ *
+ * @author frank
+ * @date 2017/10/09
  */
 public class LoginLog implements Serializable {
 

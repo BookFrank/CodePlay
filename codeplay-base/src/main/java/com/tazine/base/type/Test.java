@@ -2,6 +2,9 @@ package com.tazine.base.type;
 
 /**
  * Created by lina on 2017/12/20.
+ *
+ * @author frank
+ * @date 2017/12/20
  */
 public class Test {
 
@@ -15,5 +18,4 @@ public class Test {
         System.out.println(k);
 
     }
-
 }

@@ -7,8 +7,8 @@ import java.lang.reflect.Type;
 /**
  * 反射
  *
- * @author Frank
- * @since 1.0.0
+ * @author frank
+ * @date 2017/12/5
  */
 public class Kobe extends NbaPlayer implements BrandInterface {
 

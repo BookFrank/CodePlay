@@ -1,7 +1,10 @@
 package com.tazine.base.reflect;
 
 /**
+ * NbaPlayer
  *
+ * @author frank
+ * @date 2017/12/5
  */
 public class NbaPlayer implements BrandInterface{
 

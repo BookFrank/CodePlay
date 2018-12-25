@@ -7,9 +7,11 @@ import java.lang.reflect.Method;
 
 /**
  * Created on 2017/12/5.
+ *
+ * @author frank
+ * @date 2017/12/5
  */
 public class Reflect {
-
 
     public static void main(String[] args) {
 
@@ -17,11 +19,11 @@ public class Reflect {
 
         Class ref = bitOperator.getClass();
 
-        for (Method method : ref.getDeclaredMethods()){
+        for (Method method : ref.getDeclaredMethods()) {
             System.out.println(method.getName());
         }
 
-        for (Field field : ref.getDeclaredFields()){
+        for (Field field : ref.getDeclaredFields()) {
             System.out.println(field.getName());
         }
 

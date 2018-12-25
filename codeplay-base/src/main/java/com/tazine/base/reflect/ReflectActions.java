@@ -3,13 +3,12 @@ package com.tazine.base.reflect;
 import java.lang.reflect.Method;
 
 /**
- * Reflect Actions
+ * ReflectActions
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/5
  */
 public class ReflectActions {
-
 
     public static void main(String[] args) {
 
@@ -27,6 +26,4 @@ public class ReflectActions {
         }
 
     }
-
-
 }

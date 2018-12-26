@@ -4,7 +4,7 @@ package com.tazine.jvm.loader.init;
  * DeadLoopClass
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/12
  */
 public class DeadLoopClass {
 

@@ -5,7 +5,7 @@ package com.tazine.jvm.exception;
  * 栈容量只由 -Xss 参数设定
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/18
  */
 public class JavaVMStackSOF {
 

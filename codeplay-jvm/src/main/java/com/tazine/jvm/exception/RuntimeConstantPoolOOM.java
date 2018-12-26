@@ -1,6 +1,5 @@
 package com.tazine.jvm.exception;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +7,7 @@ import java.util.List;
  * 运行时常量池内存溢出
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/18
  */
 public class RuntimeConstantPoolOOM {
 

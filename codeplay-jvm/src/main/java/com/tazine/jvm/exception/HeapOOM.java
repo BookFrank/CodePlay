@@ -1,6 +1,5 @@
 package com.tazine.jvm.exception;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +7,7 @@ import java.util.List;
  * Heap Out of Memory 堆溢出情况
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/18
  */
 public class HeapOOM {
 

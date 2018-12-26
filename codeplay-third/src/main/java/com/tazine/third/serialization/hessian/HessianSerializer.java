@@ -9,7 +9,7 @@ import com.tazine.third.serialization.ISerializer;
  * @date 2018/12/26
  */
 public class HessianSerializer implements ISerializer {
-    
+
     public <T> byte[] serialize(T obj) {
         return new byte[0];
     }

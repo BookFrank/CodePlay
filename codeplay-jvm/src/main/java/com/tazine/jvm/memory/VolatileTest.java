@@ -4,7 +4,7 @@ package com.tazine.jvm.memory;
  * Volatile 能保证同步，不能保证原子
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/12
  */
 public class VolatileTest {
 

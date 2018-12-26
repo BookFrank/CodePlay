@@ -4,7 +4,7 @@ package com.tazine.jvm.memory;
  * Volatile 使用场景
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/12
  */
 public class VolatileScene {
 

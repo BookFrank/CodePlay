@@ -6,7 +6,7 @@ package com.tazine.jvm.gc;
  * 2. 这种自救的机会只有一次，因为finalize方法最多只会被系统调用一次
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/12
  */
 public class FinalizeEscapeGC {
 

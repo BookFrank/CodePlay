@@ -9,7 +9,7 @@ import java.util.Iterator;
  * MyArrayList
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/11
  */
 public class MyArrayList<E> implements Iterable<E> {
 

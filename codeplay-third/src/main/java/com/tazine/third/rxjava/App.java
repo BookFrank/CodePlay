@@ -12,7 +12,7 @@ import org.reactivestreams.Subscription;
  * RxJava Demo
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/26
  */
 public class App {
 

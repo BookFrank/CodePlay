@@ -3,7 +3,7 @@ package com.tazine.third.serialization.hessian;
 import com.tazine.third.serialization.ISerializer;
 
 /**
- * Created by lina on 2018/12/26.
+ * HessianSerializer
  *
  * @author frank
  * @date 2018/12/26

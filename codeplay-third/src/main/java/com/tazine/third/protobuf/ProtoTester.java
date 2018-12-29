@@ -3,6 +3,8 @@ package com.tazine.third.protobuf;
 import com.googlecode.protobuf.format.JsonFormat;
 
 /**
+ * ProtoTester
+ *
  * @author jiaer.ly
  * @date 2018/02/26
  */

@@ -3,7 +3,7 @@ package com.tazine.third.serialization.thrift;
 import com.tazine.third.serialization.ISerializer;
 
 /**
- * Created by lina on 2018/12/26.
+ * ThriftSerializer
  *
  * @author frank
  * @date 2018/12/26

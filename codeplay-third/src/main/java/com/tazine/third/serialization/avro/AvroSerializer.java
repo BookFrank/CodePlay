@@ -3,7 +3,7 @@ package com.tazine.third.serialization.avro;
 import com.tazine.third.serialization.ISerializer;
 
 /**
- * Created by lina on 2018/12/26.
+ * AvroSerializer
  *
  * @author frank
  * @date 2018/12/26

@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class GuavaCache {
 
-    static Cache<String,Integer> cache = CacheBuilder.newBuilder()
+    private static Cache<String,Integer> cache = CacheBuilder.newBuilder()
             // 设置 cache 的初始大小为 10
             .initialCapacity(10)
             // 设置并发数为5，即同一时间最多只能有5个线程往cache执行写入操作
@@ -28,7 +28,6 @@ public class GuavaCache {
     public static void main(String[] args) {
 
         cache.put("kobe", 24);
-
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()){
             sc.next();

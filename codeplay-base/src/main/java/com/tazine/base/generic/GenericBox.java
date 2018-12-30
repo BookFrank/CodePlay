@@ -4,7 +4,7 @@ package com.tazine.base.generic;
  * 泛型盒子
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/27
  */
 public class GenericBox<T> {
 

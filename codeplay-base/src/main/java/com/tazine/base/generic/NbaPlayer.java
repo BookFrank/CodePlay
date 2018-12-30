@@ -1,7 +1,8 @@
 package com.tazine.base.generic;
 
 /**
- *
+ * @author frank
+ * @date 2017/12/27
  */
 public class NbaPlayer {
 

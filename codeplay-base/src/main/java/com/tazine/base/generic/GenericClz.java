@@ -10,10 +10,9 @@ import java.util.Map;
  * 泛型Class<T>
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/27
  */
 public class GenericClz {
-
 
     public static void main(String[] args) {
 

@@ -7,7 +7,7 @@ import java.util.List;
  * 为什么需要泛型 & 泛型的特性
  *
  * @author Frank
- * @since 1.0.0
+ * @date 2017/12/27
  */
 public class GenericDemo {
 

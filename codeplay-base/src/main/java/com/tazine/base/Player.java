@@ -13,8 +13,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Player {
+public class Player implements Cloneable{
 
     private String name;
     private int num;
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return new Player(name, num);
+    }
 }

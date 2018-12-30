@@ -4,7 +4,7 @@ package com.tazine.base.object;
  * ObjectFeatures
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/27
  */
 public class ObjectFeatures {
 

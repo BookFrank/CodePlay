@@ -1,5 +1,6 @@
 package com.tazine.base.object;
 
+import com.alibaba.fastjson.JSON;
 import com.tazine.base.Player;
 
 import java.io.FileInputStream;
@@ -42,7 +43,9 @@ public class ObjectCreator {
         // 为了反序列化一个对象，我们需要让我们的类实现Serializable接口
         ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
         Player player4 = (Player)in.readObject();
+        String json = JSON.toJSONString(player);
+        Player player5 = JSON.parseObject(json, Player.class);
+        System.out.println("json: " + player5 + " - " + (player == player5));
 
     }
-
 }

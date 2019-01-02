@@ -8,7 +8,7 @@ import java.util.concurrent.*;
  * 而Callable被线程执行后，可以有返回值，这个返回值可以被Future拿到，Future可以拿到异步执行任务的返回值。
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/8
  */
 public class CallableAndFuture {
 

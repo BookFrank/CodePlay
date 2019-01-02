@@ -6,7 +6,7 @@ import java.util.concurrent.*;
  * Callable and Future Demo 3
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/8
  */
 public class CallableAndFuture3 {
 

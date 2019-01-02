@@ -3,10 +3,10 @@ package com.tazine.thread.concurrent.lock.dead;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by lina on 2018/1/28.
+ * DeadLockDemo
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class DeadLockDemo {
 

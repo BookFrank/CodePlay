@@ -5,14 +5,30 @@
 
     <body>
         <div id="app">
+            <h4>1.模板引擎</h4>
             <h1>{{ message }}</h1>
-            <br>
+            <hr>
+
+            <h4>2.数据绑定</h4>
             <h2>跟随用户输入：{{ slogon }}</h2>
             <input type="text" v-model="slogon">
+            <hr>
+
+            <h4>3.组件化</h4>
+            <comp name="tazine"></comp>
+
         </div>
     </body>
 
     <script>
+        // 3. 组件化
+        var company = Vue.extend({
+            props: ['name'],
+            template: '<p>powered by {{name}}</p>'
+        });
+        Vue.component('comp', company);
+
+
         var app = new Vue({
             el: '#app',
             data: {
@@ -32,7 +48,8 @@
     通过 v-model 将 html 中的 {{slogon}} 与创建的 vue 实例 app 中的 slogon 成员绑定在一起，可以通过在 console 环境修改 app.slogon 观察
     数据绑定，无需手动更改html中的内容。也可以绑定用户输入的数据，视图html中的内容会随着用户的输入而变化。
 
-    
+    3. 第二个特性：组件化
+    就是说我们可以自定义HTML标签，同时这个标签还可以添加参数以及方法，使之能更更好的复用，并在模板中使用它。
     
  -->
 </html>

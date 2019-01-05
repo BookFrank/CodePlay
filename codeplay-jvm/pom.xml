@@ -11,6 +11,7 @@
     <packaging>jar</packaging>
 
     <name>codeplay-jvm</name>
+    <description>CodePlay-各个Java版本特性实践</description>
     <url>http://maven.apache.org</url>
 
     <properties>

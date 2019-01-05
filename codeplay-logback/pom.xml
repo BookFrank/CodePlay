@@ -12,6 +12,7 @@
     <artifactId>codeplay-logback</artifactId>
 
     <name>codeplay-logback</name>
+    <description>CodePlay-增加LogBack学习实践</description>
     <url>http://www.example.com</url>
 
     <properties>

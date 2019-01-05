@@ -25,10 +25,14 @@
 
 
 <!-- 
-    1.
+    1. 模板引擎
     上面<h1>这种方式，类似于前端模板引擎（PHP中的smarty，java中thymleaf等），我们把 js 中的 message 值替换了 HTML 模板中 {{message}}这部分。
 
-    2.
+    2. 第一个特性：数据绑定
+    通过 v-model 将 html 中的 {{slogon}} 与创建的 vue 实例 app 中的 slogon 成员绑定在一起，可以通过在 console 环境修改 app.slogon 观察
+    数据绑定，无需手动更改html中的内容。也可以绑定用户输入的数据，视图html中的内容会随着用户的输入而变化。
+
+    
     
  -->
 </html>

@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>codeplay-thread</name>
-    <description>Thread 相关</description>
+    <description>CodePlay-Thread 相关</description>
     <url>http://maven.apache.org</url>
 
     <properties>

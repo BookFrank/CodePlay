@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <button v-on:click="getWeather">点击获取天气</button>
+            <hr>
+            <div>
+                {{ weather }}
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                weather: ""
+            },
+            methods: {
+                getWeather: function(){
+                    this.$http.get('http://t.weather.sojson.com/api/weather/city/101030100').then(function(res){
+                        console.log(res.body);
+                        this.weather = res.body;
+                    },function(){
+                        console.log('请求失败处理');
+                    });
+                }
+            },
+        });
+    </script>
+</html>

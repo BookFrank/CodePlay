@@ -1,0 +1,15 @@
+{
+  "name": "npm-vue",
+  "version": "1.0.0",
+  "description": "使用npm开发的vue应用",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "frank",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "vue": "^2.5.21"
+  }
+}

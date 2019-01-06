@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/vue.router/0.7.10/vue-router.min.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <nav>
+                <!-- 使用 v-link 指令，path 值对应的跳转路径，即 #!/home -->
+                <a v-link="{path:'home'}">Home</a>
+                <br>
+                <a v-link="{path:'about'}">About Us</a>
+            </nav>
+
+            <div id="container">
+                <!-- 路由切换组件 template 插入位置 -->
+                <router-view></router-view>
+            </div>
+        </div>
+    </body>
+
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                slogon: "powered by tazine"
+            }
+        });
+    </script>
+</html>

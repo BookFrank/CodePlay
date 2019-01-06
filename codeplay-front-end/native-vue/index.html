@@ -12,13 +12,30 @@
             <h4>2.数据绑定</h4>
             <h2>跟随用户输入：{{ slogon }}</h2>
             <input type="text" v-model="slogon">
+            <p></p>
             <hr>
 
             <h4>3.组件化</h4>
             <comp name="tazine"></comp>
 
+            <hr>
+            <h4>4.方法</h4>
+            <button v-on:click="alert">这是一个button</button>
+        </div>
+
+        <hr>
+
+        <div id="main">
+            <p>123</p>
         </div>
     </body>
+
+
+    <script id="tpl" type="x-template">
+        <div class="tpl">
+            <p>从 script 脚本加载的内容</p>
+        </div>
+    </script>
 
     <script>
         // 3. 组件化
@@ -34,9 +51,25 @@
             data: {
                 message: 'Hello Vue',
                 slogon: 'Learn Vue'
+            },
+            // 4. 方法
+            methods: {
+                alert: function(){
+                    alert("Hello World" + this.slogon);
+                }
             }
         });
+
+
+
+        // 模板绑定
+        var main = new Vue({
+            el: '#main',
+            template: '#tpl'
+        });
     </script>
+
+
 
 
 

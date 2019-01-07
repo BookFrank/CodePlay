@@ -1,0 +1,1 @@
+document.write("It works from dev.js");

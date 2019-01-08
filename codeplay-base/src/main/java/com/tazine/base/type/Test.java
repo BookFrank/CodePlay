@@ -17,5 +17,16 @@ public class Test {
         System.out.println(i);
         System.out.println(k);
 
+        String msg = "hello";
+        Object o = msg;
+        if (o instanceof String){
+            System.out.println("o instanceof String： true" );
+        }
+
+        if (o.getClass() == String.class){
+            System.out.println(o.getClass() == String.class);
+        }
+
+
     }
 }

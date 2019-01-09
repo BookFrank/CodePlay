@@ -4,7 +4,7 @@ package com.tazine.maven;
  * Hello world!
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/12/11
  */
 public class App {
     public static void main(String[] args) {

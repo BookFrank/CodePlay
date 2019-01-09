@@ -1,7 +1,7 @@
 package com.tazine.third.geohash;
 
 /**
- * @author jiaer.ly
+ * @author frank
  * @date 2018/07/26
  */
 public class DistanceHelper {

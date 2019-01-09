@@ -5,7 +5,7 @@ import com.googlecode.protobuf.format.JsonFormat;
 /**
  * ProtoTester
  *
- * @author jiaer.ly
+ * @author frank
  * @date 2018/02/26
  */
 public class ProtoTester {

@@ -9,7 +9,7 @@ import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 
 /**
- * @author jiaer.ly
+ * @author frank
  * @date 2018/02/27
  */
 public class ProtoWriteTest {

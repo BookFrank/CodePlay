@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.StringTokenizer;
 
 /**
- * @author jiaer.ly
+ * @author frank
  * @date 2018/07/25
  */
 public class RegexTokenizer{

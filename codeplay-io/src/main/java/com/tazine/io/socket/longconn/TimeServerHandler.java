@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerAdapter;
 /**
  * TimeServerHandler
  *
- * @author jiaer.ly
+ * @author frank
  * @date 2018/05/17
  */
 public class TimeServerHandler extends ChannelHandlerAdapter{

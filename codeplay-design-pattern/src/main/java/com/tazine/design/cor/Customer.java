@@ -8,8 +8,8 @@ import java.util.Random;
 /**
  * 客户折扣请求
  *
- * @author Frank
- * @since 1.0.0
+ * @author frank
+ * @date 2017/12/27
  */
 public class Customer {
 

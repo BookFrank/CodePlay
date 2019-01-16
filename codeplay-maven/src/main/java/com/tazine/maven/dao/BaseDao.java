@@ -6,7 +6,7 @@ import java.sql.*;
  * BaseDao - Connect db and query one row
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/12/11
  */
 public class BaseDao {
 

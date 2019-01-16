@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author jiaer.ly
+ * @author frank
  * @date 2018/05/16
  */
 public class LongServer {

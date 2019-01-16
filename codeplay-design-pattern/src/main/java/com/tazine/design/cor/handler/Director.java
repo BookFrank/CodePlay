@@ -3,8 +3,8 @@ package com.tazine.design.cor.handler;
 /**
  * Director handler
  *
- * @author Frank
- * @since 1.0.0
+ * @author frank
+ * @date 2017/12/27
  */
 public class Director extends PriceHandler {
     @Override

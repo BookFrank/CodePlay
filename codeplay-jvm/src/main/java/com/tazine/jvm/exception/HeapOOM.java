@@ -1,5 +1,6 @@
 package com.tazine.jvm.exception;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,5 +21,6 @@ public class HeapOOM {
         }
     }
     // java -Xms20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError com.tazine.jvm.exception.HeapOOM
+    // java -cp codeplay-jvm-1.0.0.jar -Xms20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError com.tazine.jvm.exception.HeapOOM
     // 出现错误：java.lang.OutOfMemoryErroe: Java heap space，因为所有Java对象的实例和数组都是在堆上分配内存的
 }

@@ -28,7 +28,7 @@ public class JavaVMStackSOF {
     }
 
     // java -Xss168k com.tazine.jvm.exception.JavaVMStackSOF
-
+    // java -Xss168k -cp codeplay-jvm-1.0.0.jar com.tazine.jvm.exception.JavaVMStackSOF
     // 如果线程请求的栈深度大于虚拟机所允许的最大深度，将抛出 StackOverflowError 异常
     // 如果虚拟机在扩展栈时无法申请到足够的内存空间，则抛出 OutOfMemoryError 异常
 }

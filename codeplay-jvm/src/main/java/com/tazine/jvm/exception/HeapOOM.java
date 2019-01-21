@@ -18,11 +18,12 @@ public class HeapOOM {
     public static void main(String[] args) {
         List<HeapOOM> list = new ArrayList<>();
         while (true) {
-            //try {
-            //    TimeUnit.MILLISECONDS.sleep(100);
-            //} catch (InterruptedException e) {
-            //    e.printStackTrace();
-            //}
+            try {
+                //TimeUnit.MILLISECONDS.sleep(100);
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             list.add(new HeapOOM());
         }
     }

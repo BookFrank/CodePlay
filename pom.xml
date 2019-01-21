@@ -18,6 +18,7 @@
         <module>codeplay-maven</module>
         <module>codeplay-logback</module>
         <module>codeplay-java-version</module>
+        <module>codeplay-database</module>
     </modules>
 
     <packaging>pom</packaging>

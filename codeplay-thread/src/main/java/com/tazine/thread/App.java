@@ -2,6 +2,9 @@ package com.tazine.thread;
 
 /**
  * Hello world!
+ *
+ * @author frank
+ * @date 2018/02/26
  */
 public class App {
 
@@ -10,21 +13,21 @@ public class App {
     private int i = 0;
 
     public synchronized void minus() throws InterruptedException {
-        if (flag){
+        if (flag) {
             i--;
             flag = true;
             notify();
-        }else {
+        } else {
             wait();
         }
     }
 
     public synchronized void add() throws InterruptedException {
-        if (flag){
+        if (flag) {
             i++;
             flag = true;
             notify();
-        }else {
+        } else {
             wait();
         }
     }
@@ -37,7 +40,7 @@ public class App {
         Thread2 thread2 = new Thread2(app);
 
         thread.start();
-        synchronized (app){
+        synchronized (app) {
             thread.wait();
         }
 //        app.wait();

@@ -15,5 +15,9 @@ public class Demo {
         s+=1;
         System.out.println(s);
 
+
+        boolean flag = true;
+        String str = String.valueOf(flag);
+        System.out.println(str);
     }
 }

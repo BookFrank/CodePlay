@@ -23,5 +23,4 @@ public class DirectMemoryOOM {
             unsafe.allocateMemory(_1MB);
         }
     }
-
 }

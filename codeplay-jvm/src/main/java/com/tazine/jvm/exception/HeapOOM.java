@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * VM Args: -Xms20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError
+ * VM Args: -Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError
  * Heap Out of Memory 堆溢出情况
  *
  * @author frank

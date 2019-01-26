@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
  * @author frank
  * @date 2019/01/26
  */
-public class CpuOveruse {
+public class CpuExhaustion {
 
     private static Executor executor = Executors.newFixedThreadPool(4);
 

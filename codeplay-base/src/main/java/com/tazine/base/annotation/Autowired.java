@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * 自动注入注解
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/15
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

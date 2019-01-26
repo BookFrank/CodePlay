@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * POJO Player
  *
- * @author jiaer.ly
+ * @author frank
  * @date 2018/12/30
  */
 @Data

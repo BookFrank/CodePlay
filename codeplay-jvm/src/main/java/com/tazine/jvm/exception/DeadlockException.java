@@ -49,5 +49,4 @@ class A {
 
 class B {
     static Integer B = new Integer(1);
-
 }

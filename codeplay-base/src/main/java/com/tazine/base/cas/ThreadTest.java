@@ -7,7 +7,7 @@ package com.tazine.base.cas;
  * @date 2019/01/28
  */
 public class ThreadTest {
-    
+
     public static void main(String[] args) {
         // 在main线程中创建线程，即便 main 线程最后退出，创建的线程依然会执行
         new Thread(new Runnable() {

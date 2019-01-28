@@ -17,6 +17,7 @@ public class DeadlockException {
 }
 
 class ThreadRunA extends Thread {
+    @Override
     public void run() {
         System.out.println("================A===================");
         synchronized (A.A) {
@@ -30,6 +31,7 @@ class ThreadRunA extends Thread {
 }
 
 class ThreadRunB extends Thread {
+    @Override
     public void run() {
         System.out.println("================B===================");
         synchronized (B.B) {

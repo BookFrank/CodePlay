@@ -33,6 +33,8 @@ public class Test {
 
         // List 转 Map
         Map<String, Integer> map = list.stream().collect(Collectors.toMap(Player::getName, Player::getNum));
+        Map<String, Player> pmap = list.stream().collect(Collectors.toMap(Player::getName, p -> p,(p1,p2)->p1));
         System.out.println(map);
+        System.out.println(pmap);
     }
 }

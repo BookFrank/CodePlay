@@ -9,7 +9,7 @@ import java.nio.channels.FileChannel;
  * FileChannel Practice
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/11/19
  */
 public class FileChannelDemo {
 

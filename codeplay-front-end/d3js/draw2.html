@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <script type="text/javascript" src="static/v3/d3.min.js" ></script>
+    <title>比例尺的使用</title>
+</head>
+<body>
+    <script>
+        // 1. 线性比例尺
+        var dataset = [1.2, 2.3, 0.9, 1.5, 3.3];
+        var min = d3.min(dataset);
+        var max = d3.max(dataset);
+        // 将 dataset 中最小的值映射成0；将最大的值，映射成300，linear 可以当做函数用
+        var linear = d3.scale.linear().domain([min, max]).range([0, 300]);
+        linear(0.9);
+        linear(1.5);
+        linear(3.3);
+
+        // 2. 序数比例尺
+        var index = [0,1,2,3,4];
+        var color = ["red", "blue", "green", "yellow", "black"];
+        var ordinal = d3.scale.ordinal().domain(index).range(color);
+
+        ordinal(0); //返回 red
+        ordinal(2); //返回 green
+        ordinal(4); //返回 black
+
+        // 3.
+        var linear1 = d3.scale.linear().domain([0, d3.max(dataset)]).range([0, 250]);
+        var rectHeight = 25;   //每个矩形所占的像素高度(包括空白)
+
+        svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("x",20)
+            .attr("y",function(d,i){
+                return i * rectHeight;
+            })
+            .attr("width",function(d){
+                return linear(d);   //在这里用比例尺
+            })
+            .attr("height",rectHeight-2)
+            .attr("fill","steelblue");
+    </script>
+</body>
+</html>

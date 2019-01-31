@@ -80,8 +80,5 @@ public class Jdk8NioFileIO {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
 }

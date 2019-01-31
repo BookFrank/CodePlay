@@ -3,8 +3,53 @@
 <head>
     <meta charset="utf-8" >
     <script type="text/javascript" src="static/v3/d3.min.js" ></script>
+    <title>中国地图</title>
 </head>
 <body>
-    
+    <!-- D3 修改 Dom 内容 -->
+    <script>
+        var width  = 1000;
+        var height = 1000;
+        
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(0,0)");
+
+        // GeoJSON 数据格式中，地图数据都是三维的，在网页上显示是二维的，设立一个投影函数来转换经纬度
+        var projection = d3.geo.mercator()
+            .center([107, 31]) // 设定地图中心位置，107经度
+            .scale(850) // 设定放大的比例
+            .translate([width/2, height/2]); // 设定平移
+
+        // 根据地理数据生成 SVG 中 path 元素的路净值
+        var path = d3.geo.path().projection(projection);
+
+        var color = d3.scale.category20();
+        
+        d3.json("/static/assets/china.geojson", function(error, root) {
+            if (error) 
+                return console.error(error);
+            console.log(root.features);
+                
+            svg.selectAll("path")
+                .data( root.features )
+                .enter()
+                .append("path")
+                .attr("stroke","#000")
+                .attr("stroke-width",1)
+                .attr("fill", function(d,i){
+                    return color(i);
+                })
+                .attr("d", path )   //使用地理路径生成器
+                .on("mouseover",function(d,i){
+                    d3.select(this).attr("fill","yellow");
+                })
+                .on("mouseout",function(d,i){
+                    d3.select(this).attr("fill",color(i));
+                })
+        });    
+    </script>
 </body>
 </html>

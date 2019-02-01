@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <script type="text/javascript" src="../../static/v5/d3.min.js" ></script>
+    <script type="text/javascript" src="./static/topology.js" ></script>
+    <title>网关拓扑图</title>
+    <style>
+            body{
+                overflow: hidden;
+            }
+            #gatewayTop{
+                width: 800px;
+                height:500px;
+                border:1px solid #ccc;
+                user-select: none;
+            }
+            #gatewayTop text{
+                font-size:10px;/*和js里保持一致*/
+                fill:#1A2C3F;
+                text-anchor: middle;
+            }
+            #gatewayTop .node-other{
+    
+                text-anchor: start;
+            }
+            #gatewayTop .health1{
+                stroke:#92E1A2;
+            }
+            #gatewayTop .health2{
+                stroke:orange;
+            }
+            #gatewayTop .health3{
+                stroke:red;
+            }
+            #gatewayTop #cloud,#togo #database{
+                fill:#ccc;
+            }
+            #gatewayTop .link{
+                stroke:#E4E8ED;
+            }
+            #gatewayTop .node-title{
+                font-size: 14px;
+            }
+            #gatewayTop .node-code circle{
+               fill:#3F86F5;
+            }
+            #gatewayTop .node-code text{
+                fill:#fff;
+            }
+            #gatewayTop .node-bg{
+                fill:#fff;
+            }
+            #gatewayTop .arrow{
+                fill:#E4E8ED;
+            }
+        </style>
+</head>
+<body>
+    <svg id="gatewayTop" width="800" height="800"></svg>
+    <script src="static/topology.js"></script>
+    <script>
+        let __options={
+            data:[{
+                type:'app',
+                name: 'monitor-web-server',
+                time: 30,
+                rpm: 40,
+                epm: 50,
+                active: 3,
+                total: 5,
+                code: 'java',
+                health: 1,
+                lineProtocol: 'http',
+                lineTime: 12,
+                lineRpm: 34,
+            }, {
+                type:'database',
+                name: 'Mysql',
+                time: 30,
+                rpm: 40,
+                epm: 50,
+                active: 3,
+                total: 5,
+                code: 'java',
+                health: 2,
+                lineProtocol: 'http',
+                lineTime: 12,
+                lineRpm: 34,
+
+            },
+                {
+                type:'app',
+                name: 'Redis',
+                time: 30,
+                rpm: 40,
+                epm: 50,
+                active: 3,
+                total: 5,
+                code: 'java',
+                health: 3,
+                lineProtocol: 'http',
+                lineTime: 12,
+                lineRpm: 34,
+
+                }, {
+                type:'cloud',
+                name: 'ES',
+                time: 30,
+                rpm: 40,
+                epm: 50,
+                active: 3,
+                total: 5,
+                code: 'java',
+                health: 1,
+                lineProtocol: 'http',
+                lineTime: 12,
+                lineRpm: 34,
+                value: 100
+                }
+            ],
+            edges: [
+                {
+                source: 0,
+                target: 3,
+                }, {
+                source: 1,
+                target: 2,
+                }
+                , {
+                source: 1,
+                target: 3,
+                },
+                {
+                source: 0,
+                target: 1,
+                },
+                {
+                source: 0,
+                target: 2,
+                }
+                // {
+                //   source: 3,
+                //   target: 2,
+                // },
+            ]
+        }
+        console.log(__options);
+        console.log(JSON.stringify(__options));
+        var t = new GatewayTopology("#gatewayTop", __options);
+        t.render();
+        // new Topology('svg', __options).render();
+    </script>
+</body>
+</html>

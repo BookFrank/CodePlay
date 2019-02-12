@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" >
-    <script type="text/javascript" src="../../static/v5/d3.min.js" ></script>
-    <script type="text/javascript" src="./static/topology.js" ></script>
+    <script type="text/javascript" src="../static/v5/d3.min.js" ></script>
+    <!-- <script type="text/javascript" src="./static/topology.js" ></script> -->
     <title>网关拓扑图</title>
     <style>
         body{
@@ -21,7 +21,6 @@
                 text-anchor: middle;
             }
             #gatewayTop .node-other{
-    
                 text-anchor: start;
             }
             #gatewayTop .health1{
@@ -58,7 +57,7 @@
 </head>
 <body>
     <svg id="gatewayTop" width="800" height="800"></svg>
-    <script src="static/topology.js"></script>
+    <script src="./static/topology.js"></script>
     <script>
         let __options={
             data:[{
@@ -145,11 +144,10 @@
                 // },
             ]
         }
-        console.log(__options);
         console.log(JSON.stringify(__options));
         var t = new GatewayTopology("#gatewayTop", __options);
         t.render();
-        // new Topology('svg', __options).render();
+        // new GatewayTopology('svg', __options).render();
     </script>
 </body>
 </html>

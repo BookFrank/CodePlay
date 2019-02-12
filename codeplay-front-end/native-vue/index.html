@@ -21,6 +21,10 @@
             <hr>
             <h4>4.方法</h4>
             <button v-on:click="alert">这是一个button</button>
+
+            <hr>
+            <h4>5.mounted</h4>
+            <h1>{{ mountMessage }}</h1>
         </div>
 
         <hr>
@@ -50,13 +54,22 @@
             el: '#app',
             data: {
                 message: 'Hello Vue',
-                slogon: 'Learn Vue'
+                slogon: 'Learn Vue',
+                mountMessage: ''
             },
             // 4. 方法
             methods: {
                 alert: function(){
                     alert("Hello World" + this.slogon);
+                },
+                welcome: function(){
+                    alert('The wandering earth');
+                    this.mountMessage = 'Brave World'
                 }
+            },
+            // 5. mounted
+            mounted: function(){
+                this.welcome();   
             }
         });
 

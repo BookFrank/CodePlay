@@ -6,7 +6,9 @@
     <title>拓扑图</title>
 </head>
 <body>
-    <svg width="800" height="800"></svg>
+	<div id="app">
+		<svg width="800" height="800"></svg>
+	</div>
     <script>
         var marge = {top:60,bottom:60,left:60,right:60}
     	var svg = d3.select("svg")
@@ -45,9 +47,10 @@
     		.force("link",d3.forceLink())
     		.force("charge",d3.forceManyBody())
     		.force("center",d3.forceCenter());
-        //生成节点数据
+		//生成节点数据
+		// tick 这个函数很重要，后面给出具体实现和说明
     	forceSimulation.nodes(nodes)
-    		.on("tick",ticked);//这个函数很重要，后面给出具体实现和说明
+    		.on("tick",ticked);
         //生成边数据
     	forceSimulation.force("link")
     		.links(edges)

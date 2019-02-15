@@ -1,0 +1,24 @@
+{
+    "name":"d3-project-template",
+    "version":"0.0.1",
+    "description":"D3 NPM 项目开发",
+    "keywords":[
+        "data visualization",
+        "d3"
+    ],
+    "homepage":"http://www.tazine.com",
+    "author":{
+        "name":"frank",
+        "url":"http://xxx"
+    },
+    "repository":{
+        "type":"git",
+        "url":"url"
+    },
+    "dependencies":{
+        "d3":"3.x"
+    },
+    "devDependencies":{
+        "uglify-js":"2.x"
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <script type="text/javascript" src="../../../static/v3/d3.min.js" ></script>
+</head>
+<body>
+
+    <!-- JavaScript 中的函数是对象，跟其他对象一样。函数只是键值对的一个集合，函数对象与普通对象的区别就是，函数可以执行，还带有两个隐藏的属性，即函数上下文和函数代码。
+        函数本身也是对象，它可以存储在对象/函数、其他变量、数组里，也可以作为函数参数。
+        跟流行的原型编程中的伪类模式相比，这样的模式通常被称作函数模式。
+        函数模式的优点是提供了更好的信息隐藏和封装，因为只能通过静态作用域规则里限定的那些嵌套定义的函数来访问私有变量，所以返回的对象就更加灵活，也更加健壮，
+        如果我们用函数式风格创建对象，并且该对象所有的方法都没有用this，那么这个对象就是持久的，
+        持久对象就是许多功能行为的集合。持久对象：（如果一个对象不包含外部可见的成员数据，并且其方法不会使用this，那么这个对象就是持久的） -->
+    <script>
+        function SimpleWidget(spec) {
+            var instance = {}; // <-- A
+            var headline, description; // <-- B
+
+            // render函数式instance对象的一个方法，并且被定义为对象字面量。
+            // 函数本身也是对象，它可以存储在对象/函数、其他变量、数组里，也可以作为函数参数
+            instance.render = function () {
+                var div = d3.select('body').append("div");
+                div.append("h3").text(headline); // <-- C
+                div.attr("class", "box")
+                .attr("style", "color:" + spec.color) // <-- D
+                .append("p")
+                    .text(description); // <-- E
+                return instance; // <-- F
+            };
+            instance.headline = function (h) {
+                if (!arguments.length) return headline; // <-- G
+                headline = h;
+                return instance; // <-- H
+            };
+            instance.description = function (d) {
+                if (!arguments.length) return description;
+                description = d;
+                return instance;
+            };
+            return instance; // <-- I
+        }
+        var widget = SimpleWidget({color: "#6495ed"})
+                .headline("Simple Widget")
+                .description("This is a simple widget demonstrating functional javascript.");
+        widget.render();
+    </script>
+</body>
+</html>

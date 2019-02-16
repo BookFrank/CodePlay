@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <button v-on:click="show = !show">Click</button>
+            <transition name="fade">
+                <p v-if="show">hello vue</p>
+            </transition>
+        </div>
+    </body>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                show: true
+            }
+        });
+    </script>
+</html>

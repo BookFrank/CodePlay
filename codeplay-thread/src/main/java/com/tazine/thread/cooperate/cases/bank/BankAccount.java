@@ -1,10 +1,10 @@
 package com.tazine.thread.cooperate.cases.bank;
 
 /**
- *
+ * BankAccount
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/18
  */
 public class BankAccount {
 
@@ -16,14 +16,14 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public void deposit(double money){
-        balance+=money;
+    public void deposit(double money) {
+        balance += money;
     }
 
-    public void fetch(double money){
-        if (balance >= money){
-            balance-=money;
-        }else {
+    public void fetch(double money) {
+        if (balance >= money) {
+            balance -= money;
+        } else {
             System.out.println(" 您的余额不足 ");
         }
     }

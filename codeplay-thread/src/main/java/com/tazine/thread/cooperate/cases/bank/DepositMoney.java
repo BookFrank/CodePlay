@@ -1,9 +1,12 @@
 package com.tazine.thread.cooperate.cases.bank;
 
 /**
- * Created by lina on 2017/12/18.
+ * DepositMoney
+ *
+ * @author frank
+ * @date 2017/12/18
  */
-public class DepositMoney extends Thread{
+public class DepositMoney extends Thread {
 
     private BankAccount bankAccount;
     private double money;
@@ -23,6 +26,5 @@ public class DepositMoney extends Thread{
             e.printStackTrace();
         }
         System.out.println("当前余额为 " + balance + "，存入 " + money + "，结余：" + bankAccount.getBalance());
-
     }
 }

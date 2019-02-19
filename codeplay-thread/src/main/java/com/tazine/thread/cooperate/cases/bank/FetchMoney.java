@@ -1,8 +1,12 @@
 package com.tazine.thread.cooperate.cases.bank;
 
 /**
+ * FetchMoney
+ *
+ * @author frank
+ * @date 2017/12/18
  */
-public class FetchMoney extends Thread{
+public class FetchMoney extends Thread {
 
     private BankAccount bankAccount;
     private double money;

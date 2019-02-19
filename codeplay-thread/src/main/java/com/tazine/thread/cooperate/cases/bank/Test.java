@@ -1,7 +1,10 @@
 package com.tazine.thread.cooperate.cases.bank;
 
 /**
+ * Test
  *
+ * @author frank
+ * @date 2017/12/18
  */
 public class Test {
 

@@ -4,7 +4,7 @@ package com.tazine.thread.sync.cases.even;
  * IntGenerator
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/17
  */
 public abstract class IntGenerator {
     private volatile boolean canceled = false;

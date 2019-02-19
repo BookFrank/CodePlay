@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * MutexGenerator 互斥生成器
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/17
  */
 public class MutexGenerator extends IntGenerator {
 

@@ -1,10 +1,10 @@
 package com.tazine.thread.sync.cases;
 
 /**
- * Created by lina on 2018/1/17.
+ * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/17
  */
 public class Test {
 }

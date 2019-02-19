@@ -6,13 +6,13 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class ThreadState extends Thread {
+public class StateThread extends Thread {
 
-    public synchronized void waitForASecond() throws InterruptedException {
+    private synchronized void waitForASecond() throws InterruptedException {
         wait(500);
     }
 
-    public synchronized void waitForever() throws InterruptedException {
+    private synchronized void waitForever() throws InterruptedException {
         wait();
     }
 

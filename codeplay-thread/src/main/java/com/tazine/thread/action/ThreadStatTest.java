@@ -6,21 +6,23 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class ThreadApp {
+public class ThreadStatTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        ThreadState thread = new ThreadState();
+        StateThread thread = new StateThread();
 
         System.out.println("当前线程状态为：" + thread.getState());
 
         thread.start();
+        System.out.println("start(),线程状态为：" + thread.getState());
+
+        // main线程休息，让state线程执行 sleep(500)
+        Thread.sleep(100);
         System.out.println("当前线程状态为：" + thread.getState());
 
-        Thread.sleep(100);  // main线程休息，让state线程执行 sleep(500)
-        System.out.println("当前线程状态为：" + thread.getState());
-
-        Thread.sleep(500); // main线程继续休息，让state线程sleep(500)执行完，进入wait()无止境等待
+        // main线程继续休息，让state线程sleep(500)执行完，进入wait()无止境等待
+        Thread.sleep(500);
         System.out.println("当前线程状态为：" + thread.getState());
 
         thread.notifyIt(); // 唤醒线程

@@ -12,7 +12,7 @@ public class ThreadStatTest {
 
         StateThread thread = new StateThread();
 
-        System.out.println("当前线程状态为：" + thread.getState());
+        System.out.println("创建线程完后，线程状态为：" + thread.getState());
 
         thread.start();
         System.out.println("start(),线程状态为：" + thread.getState());

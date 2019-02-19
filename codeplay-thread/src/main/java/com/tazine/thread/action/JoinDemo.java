@@ -9,9 +9,9 @@ package com.tazine.thread.action;
 public class JoinDemo {
 
     /**
-     * 当某个线程使用 join() 方法加入到另一个线程时，另一个线程会等待该线程执行完毕再继续执行
+     * 当对某个线程使用 join() 方法时，另一个线程会等待该线程执行完毕再继续执行
      *
-     * @param args
+     * @param args args
      */
     public static void main(String[] args) {
 
@@ -37,6 +37,6 @@ class JoinThread extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("JoinThread 线程执行完毕");
+        System.out.println("JoinThread 工作完毕");
     }
 }

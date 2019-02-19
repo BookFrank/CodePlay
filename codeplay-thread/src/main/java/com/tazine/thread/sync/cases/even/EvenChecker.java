@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
  * EvenChecker
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/17
  */
 public class EvenChecker implements Runnable {
 

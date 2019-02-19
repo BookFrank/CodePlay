@@ -1,7 +1,10 @@
 package com.tazine.thread.sync.unstable;
 
 /**
- * Created by ly on 2017/8/31.
+ * VolatileTest
+ *
+ * @author frank
+ * @date 2017/8/31
  */
 public class VolatileTest {
 
@@ -11,11 +14,11 @@ public class VolatileTest {
 
     public static void main(String[] args) {
 
-        new Thread(){
+        new Thread() {
             @Override
-            public void run(){
-                for (;;){
-                    if (runFlag == !runFlag){
+            public void run() {
+                for (; ; ) {
+                    if (runFlag == !runFlag) {
                         System.out.println("标志的状态改变了");
                         System.exit(0);
                     }
@@ -29,20 +32,13 @@ public class VolatileTest {
             e.printStackTrace();
         }
 
-        new Thread(){
+        new Thread() {
             @Override
-            public void run(){
-                for (;;){
+            public void run() {
+                for (; ; ) {
                     runFlag = !runFlag;
                 }
             }
         }.start();
-
-
     }
-
-
-
-
-
 }

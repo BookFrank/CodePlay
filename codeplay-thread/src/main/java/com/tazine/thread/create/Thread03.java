@@ -11,7 +11,7 @@ public class Thread03 implements Callable<String> {
 
     @Override
     public String call() throws Exception {
-        System.err.println("Thread03 开始工作");
+        System.err.println("通过实现Callable接口创建的线程正在执行");
         Thread.sleep(3000);
         return "Hello Thread03";
     }

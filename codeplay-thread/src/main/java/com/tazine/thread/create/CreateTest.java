@@ -13,6 +13,12 @@ public class CreateTest {
 
     public static void main(String[] args) throws Exception {
 
+        // 1. 方式一
+        Thread thread01 = new Thread01();
+        thread01.start();
+
+        
+
         Callable<String> callable = new Thread03();
         // Callable + FutureTask
         FutureTask<String> futureTask = new FutureTask<>(callable);

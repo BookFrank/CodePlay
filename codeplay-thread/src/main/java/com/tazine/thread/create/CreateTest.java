@@ -18,8 +18,10 @@ public class CreateTest {
         FutureTask<String> futureTask = new FutureTask<>(callable);
 
         new Thread(futureTask).start();
+        System.err.println("开始执行 main 线程");
 
-        //System.err.println(futureTask.get());
+        // get() 是阻塞的，直到有结果才返回
+        System.err.println(futureTask.get());
 
     }
 

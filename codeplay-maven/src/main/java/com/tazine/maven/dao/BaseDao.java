@@ -27,6 +27,5 @@ public class BaseDao {
         while (rt.next()) {
             System.out.println(rt.getString("name"));
         }
-
     }
 }

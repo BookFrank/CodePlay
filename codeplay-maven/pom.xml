@@ -10,6 +10,7 @@
     <artifactId>codeplay-maven</artifactId>
     <packaging>jar</packaging>
     <name>codeplay-maven</name>
+    <description>CodePlay-Maven实践</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

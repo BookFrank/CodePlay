@@ -58,6 +58,18 @@ public class CreateTest {
         // 关闭线程池
         executor.shutdown();
 
-        // 2. 
+        // 2. 不提倡手动创建线程池，推荐 Executors类中的几个静态方法来创建线程
+        // 从它们的具体实现来看，它们实际上也是调用了ThreadPoolExecutor，只不过参数都已配置好了
+        // 创建一个缓冲池，缓冲池容量大小为Integer.MAX_VALUE
+        ExecutorService executors1 = Executors.newCachedThreadPool();
+        // 创建容量为1的缓冲池
+        // Executor executors2 = Executors.newSingleThreadExecutor();
+        // 创建固定容量大小的缓冲池
+        // Executor executors3 = Executors.newFixedThreadPool(2);
+        for (int i=0; i<10; i++){
+            Thread02 runnable = new Thread02();
+            executors1.submit(runnable);
+        }
+        executor.shutdown();
     }
 }

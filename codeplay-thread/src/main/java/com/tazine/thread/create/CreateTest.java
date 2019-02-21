@@ -1,8 +1,6 @@
 package com.tazine.thread.create;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 /**
  * CreateTest
@@ -13,7 +11,7 @@ import java.util.concurrent.FutureTask;
 public class CreateTest {
 
     public static void main(String[] args) throws Exception {
-        manuallyUsingThread();
+        //manuallyUsingThread();
 
         poolingUsingThread();
     }
@@ -48,6 +46,18 @@ public class CreateTest {
      * 线程池方式使用线程
      */
     private static void poolingUsingThread() {
+        // 1. 手动创建线程池
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
+                new ArrayBlockingQueue<Runnable>(5));
+        for (int i = 0; i < 15; i++) {
+            Thread02 runnable = new Thread02();
+            executor.execute(runnable);
+            System.out.println("线程池中线程数目：" + executor.getPoolSize() + "，队列中等待执行的任务数目：" +
+                    executor.getQueue().size() + "，已执行完成的任务数目：" + executor.getCompletedTaskCount());
+        }
+        // 关闭线程池
+        executor.shutdown();
 
+        // 2. 
     }
 }

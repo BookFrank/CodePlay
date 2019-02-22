@@ -17,7 +17,5 @@ public class ObjectFeatures {
         // 比较的是真实对象的 地址值，而不是两个引用相等不相等
         System.out.println(obj1.equals(obj2));
         System.out.println(obj1 == obj2);
-
-    }
-
+            }
 }

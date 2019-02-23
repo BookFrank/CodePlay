@@ -28,17 +28,17 @@ public class CreateTest {
 
         // main线程休息，让state线程执行 sleep(500)
         Thread.sleep(100);
-        System.out.println("当前线程状态为：" + thread.getState());
+        System.out.println("wait(500)，线程状态为：" + thread.getState());
 
         // main线程继续休息，让state线程sleep(500)执行完，进入wait()无止境等待
         Thread.sleep(500);
-        System.out.println("当前线程状态为：" + thread.getState());
+        System.out.println("wait()无止境等待，线程状态为：" + thread.getState());
 
         thread.notifyIt(); // 唤醒线程
-        System.out.println("当前线程状态为：" + thread.getState());
+        System.out.println("thread.notifyIt()，线程状态为：" + thread.getState());
 
         Thread.sleep(1000);
-        System.out.println("当前线程状态为：" + thread.getState());
+        System.out.println("执行完毕后，线程状态为：" + thread.getState());
     }
 
     /**

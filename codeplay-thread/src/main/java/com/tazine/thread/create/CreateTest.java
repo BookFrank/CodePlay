@@ -3,7 +3,7 @@ package com.tazine.thread.create;
 import java.util.concurrent.*;
 
 /**
- * CreateTest
+ * 线程创建测试
  *
  * @author frank
  * @date 2017/02/20
@@ -11,13 +11,13 @@ import java.util.concurrent.*;
 public class CreateTest {
 
     public static void main(String[] args) throws Exception {
-        //manuallyUsingThread();
+//        manuallyUsingThread();
 
         poolingUsingThread();
     }
 
     /**
-     * 三种方式手动创建线程使用
+     * 手动创建使用线程：三种方式
      */
     private static void manuallyUsingThread() throws ExecutionException, InterruptedException {
         // 1. 方式一
@@ -45,7 +45,7 @@ public class CreateTest {
     /**
      * 线程池方式使用线程
      */
-    private static void poolingUsingThread() {
+    private static void poolingUsingThread() throws Exception {
         // 1. 手动创建线程池
         ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
                 new ArrayBlockingQueue<Runnable>(5));
@@ -66,9 +66,13 @@ public class CreateTest {
         // Executor executors2 = Executors.newSingleThreadExecutor();
         // 创建固定容量大小的缓冲池
         // Executor executors3 = Executors.newFixedThreadPool(2);
-        for (int i=0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             Thread02 runnable = new Thread02();
             executors1.submit(runnable);
+
+            Thread03 callable = new Thread03();
+            Future<String> future = executors1.submit(callable);
+            System.out.println("Future: " + future.get());
         }
         executor.shutdown();
     }

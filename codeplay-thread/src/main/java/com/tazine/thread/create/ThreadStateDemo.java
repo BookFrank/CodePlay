@@ -1,4 +1,4 @@
-package com.tazine.thread.action;
+package com.tazine.thread.create;
 
 /**
  * 线程状态
@@ -6,7 +6,7 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class StateThread extends Thread {
+public class ThreadStateDemo extends Thread {
 
     private synchronized void waitForASecond() throws InterruptedException {
         wait(500);

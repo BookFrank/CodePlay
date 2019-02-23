@@ -1,11 +1,8 @@
 package com.tazine.third.fastjson;
 
-import com.alibaba.fastjson.JSON;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.util.Map;
 
 /**
  * getFieldGeneric
@@ -13,7 +10,7 @@ import java.util.Map;
  * @author frank
  * @date 2018/12/24
  */
-public class DiamondUtil {
+public class TypeUtil {
 
     public static Type getFieldGeneric(Field field) {
         if (field.getType().isPrimitive()) {
@@ -32,9 +29,9 @@ public class DiamondUtil {
         for (; clz.isAnonymousClass(); ) {
             clz = clz.getSuperclass();
         }
-        Type rawType = (java.lang.reflect.Type)clz;
+        Type rawType = (java.lang.reflect.Type) clz;
         try {
-            ParameterizedType parameterizedType = (ParameterizedType)genericType;
+            ParameterizedType parameterizedType = (ParameterizedType) genericType;
             return new TypeReference(rawType, parameterizedType.getActualTypeArguments());
         } catch (ClassCastException e) {
             return genericType;

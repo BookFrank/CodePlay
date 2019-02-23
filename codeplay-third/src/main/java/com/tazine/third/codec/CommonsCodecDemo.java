@@ -1,7 +1,7 @@
 package com.tazine.third.codec;
 
 /**
- * Created by lina on 2019/1/22.
+ * CommonsCodecDemo
  *
  * @author frank
  * @date 2019/1/22

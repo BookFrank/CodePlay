@@ -1,4 +1,4 @@
-package com.tazine.codeplay.db;
+package com.tazine.base;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

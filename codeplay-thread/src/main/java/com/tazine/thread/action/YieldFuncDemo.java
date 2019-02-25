@@ -7,7 +7,7 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class YieldDemo {
+public class YieldFuncDemo {
 
     public static void main(String[] args) throws InterruptedException {
         YieldThread yt1 = new YieldThread("hello");

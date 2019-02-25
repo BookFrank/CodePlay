@@ -6,7 +6,7 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class JoinDemo {
+public class JoinFuncDemo {
 
     /**
      * 当对某个线程使用 join() 方法时，另一个线程会等待该线程执行完毕再继续执行

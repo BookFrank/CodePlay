@@ -1,4 +1,4 @@
-package com.tazine.thread.concurrent.executor;
+package com.tazine.thread.pool;
 
 import com.tazine.thread.pool.PrinterThread;
 

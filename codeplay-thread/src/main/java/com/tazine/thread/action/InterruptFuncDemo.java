@@ -6,7 +6,7 @@ package com.tazine.thread.action;
  * @author frank
  * @date 2018/07/26
  */
-public class InterruptDemo {
+public class InterruptFuncDemo {
 
     /**
      * 线程Run设置while循环，通过中断标志中断循环来终止线程。

@@ -1,4 +1,4 @@
-package com.tazine.jvm.gc;
+package com.tazine.jvm.exception;
 
 /**
  * 引用计数GC算法

@@ -6,7 +6,7 @@ package com.tazine.thread.create;
  * @author frank
  * @date 2017/2/20
  */
-public class Thread01 extends Thread {
+public class ThreadDemo extends Thread {
 
     @Override
     public void run() {

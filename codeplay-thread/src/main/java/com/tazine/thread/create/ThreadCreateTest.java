@@ -8,7 +8,7 @@ import java.util.concurrent.*;
  * @author frank
  * @date 2017/02/20
  */
-public class CreateTest {
+public class ThreadCreateTest {
 
     public static void main(String[] args) throws Exception {
         threadState();
@@ -46,16 +46,16 @@ public class CreateTest {
      */
     private static void manuallyUsingThread() throws ExecutionException, InterruptedException {
         // 1. 方式一
-        Thread thread01 = new Thread01();
+        Thread thread01 = new ThreadDemo();
         thread01.start();
 
         // 2. 方式二
-        Thread02 runnable = new Thread02();
+        RunnableDemo runnable = new RunnableDemo();
         Thread thread02 = new Thread(runnable);
         thread02.start();
 
         // 3. 方式三 Callable + FutureTask
-        Callable<String> callable = new Thread03();
+        Callable<String> callable = new CallableDemo();
         FutureTask<String> futureTask = new FutureTask<>(callable);
         // Future<String> future = new FutureTask<>(callable);
         // System.out.println(future.get());
@@ -75,7 +75,7 @@ public class CreateTest {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
                 new ArrayBlockingQueue<Runnable>(5));
         for (int i = 0; i < 15; i++) {
-            Thread02 runnable = new Thread02();
+            RunnableDemo runnable = new RunnableDemo();
             executor.execute(runnable);
             System.out.println("线程池中线程数目：" + executor.getPoolSize() + "，队列中等待执行的任务数目：" +
                     executor.getQueue().size() + "，已执行完成的任务数目：" + executor.getCompletedTaskCount());
@@ -92,10 +92,10 @@ public class CreateTest {
         // 创建固定容量大小的缓冲池
         // Executor executors3 = Executors.newFixedThreadPool(2);
         for (int i = 0; i < 10; i++) {
-            Thread02 runnable = new Thread02();
+            RunnableDemo runnable = new RunnableDemo();
             executors1.submit(runnable);
 
-            Thread03 callable = new Thread03();
+            CallableDemo callable = new CallableDemo();
             Future<String> future = executors1.submit(callable);
             System.out.println("Future: " + future.get());
         }

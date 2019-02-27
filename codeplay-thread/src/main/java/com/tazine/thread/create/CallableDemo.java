@@ -8,7 +8,7 @@ import java.util.concurrent.Callable;
  * @author frank
  * @date 2017/02/20
  */
-public class Thread03 implements Callable<String> {
+public class CallableDemo implements Callable<String> {
 
     @Override
     public String call() throws Exception {

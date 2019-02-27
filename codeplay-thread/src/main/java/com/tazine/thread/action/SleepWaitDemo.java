@@ -1,7 +1,7 @@
 package com.tazine.thread.action;
 
 /**
- * SleepWaitDemo
+ * sleep() 与 wait() 方法的区别
  *
  * @author frank
  * @date 2018/02/27
@@ -9,16 +9,16 @@ package com.tazine.thread.action;
 public class SleepWaitDemo {
 
     public static void main(String[] args) {
-        new Thread(new Thread1()).start();
+        new Thread(new WaitThread()).start();
         try {
             Thread.sleep(5000);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        new Thread(new Thread2()).start();
+        new Thread(new SleepThread()).start();
     }
 
-    private static class Thread1 implements Runnable{
+    private static class WaitThread implements Runnable{
         @Override
         public void run(){
             synchronized (SleepWaitDemo.class) {
@@ -36,7 +36,7 @@ public class SleepWaitDemo {
         }
     }
 
-    private static class Thread2 implements Runnable{
+    private static class SleepThread implements Runnable{
         @Override
         public void run(){
             synchronized (SleepWaitDemo.class) {

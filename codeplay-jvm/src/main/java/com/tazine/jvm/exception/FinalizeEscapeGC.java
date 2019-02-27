@@ -1,4 +1,4 @@
-package com.tazine.jvm.gc;
+package com.tazine.jvm.exception;
 
 /**
  * 因为在GC时会执行对象的finalize方法，可以用来自救

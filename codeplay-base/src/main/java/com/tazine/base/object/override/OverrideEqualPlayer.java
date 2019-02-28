@@ -1,4 +1,4 @@
-package com.tazine.base.object;
+package com.tazine.base.object.override;
 
 import lombok.Data;
 
@@ -9,11 +9,11 @@ import lombok.Data;
  * @date 2019/02/22
  */
 @Data
-public class OverrideNbaPlayer {
+public class OverrideEqualPlayer {
 
     private String name;
 
-    public OverrideNbaPlayer(String name) {
+    public OverrideEqualPlayer(String name) {
         this.name = name;
     }
 
@@ -21,10 +21,10 @@ public class OverrideNbaPlayer {
     public boolean equals(Object o) {
         if (o == this) {
             return true;
-        } else if (!(o instanceof OverrideNbaPlayer)) {
+        } else if (!(o instanceof OverrideEqualPlayer)) {
             return false;
         } else {
-            OverrideNbaPlayer player = (OverrideNbaPlayer)o;
+            OverrideEqualPlayer player = (OverrideEqualPlayer)o;
             String this$name = this.getName();
             String that$name = player.getName();
 

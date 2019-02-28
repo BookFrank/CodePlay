@@ -1,4 +1,4 @@
-package com.tazine.base.object;
+package com.tazine.base.object.creat;
 
 import com.alibaba.fastjson.JSON;
 import com.tazine.base.Player;
@@ -46,6 +46,5 @@ public class ObjectCreator {
         String json = JSON.toJSONString(player);
         Player player5 = JSON.parseObject(json, Player.class);
         System.out.println("json: " + player5 + " - " + (player == player5));
-
     }
 }

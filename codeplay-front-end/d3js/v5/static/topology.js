@@ -16,8 +16,6 @@ this.data = option.data;
 this.edges = option.edges; 
 
 this.svg = d3.select(svg); 
-
-
 }
 
 

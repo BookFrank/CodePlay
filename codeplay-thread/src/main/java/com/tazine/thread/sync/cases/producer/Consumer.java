@@ -3,10 +3,10 @@ package com.tazine.thread.sync.cases.producer;
 import java.util.List;
 
 /**
- * Created by lina on 2018/1/28.
+ * Consumer
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class Consumer {
 

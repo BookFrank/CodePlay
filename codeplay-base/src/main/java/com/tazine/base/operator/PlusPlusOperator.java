@@ -1,10 +1,10 @@
 package com.tazine.base.operator;
 
 /**
- * Created by lina on 2017/12/28.
+ * PlusPlusOperator
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/2
  */
 public class PlusPlusOperator {
 

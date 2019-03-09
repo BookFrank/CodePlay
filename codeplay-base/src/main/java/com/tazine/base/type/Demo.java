@@ -1,7 +1,7 @@
 package com.tazine.base.type;
 
 /**
- * Created by lina on 2017/12/20.
+ * Demo
  *
  * @author frank
  * @date 2017/12/20

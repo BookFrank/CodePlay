@@ -23,7 +23,7 @@ public class App {
             Statement st = connection.createStatement();
 
             ResultSet rt = st.executeQuery("SELECT * FROM player");
-            
+
             while (rt.next()) {
                 System.out.println(rt.getString("name"));
             }

@@ -1,10 +1,10 @@
 package com.tazine.structure.tree.binary;
 
 /**
- * Created by lina on 2018/1/21.
+ * Client
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/21
  */
 public class Client {
 }

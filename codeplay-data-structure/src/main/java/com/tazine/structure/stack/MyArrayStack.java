@@ -1,7 +1,7 @@
 package com.tazine.structure.stack;
 
 /**
- * Created by lina on 2017/12/22.
+ * 使用数组实现Stack结构
  *
  * @author frank
  * @date 2017/12/22
@@ -21,17 +21,17 @@ public class MyArrayStack<T> {
         if (stack.length == 0) {
             stack[0] = a;
             size = 1;
-        }else if (size < stack.length){
+        } else if (size < stack.length) {
             stack[size + 1] = a;
             size++;
         }
     }
 
-    public T pop(){
+    public T pop() {
         T a = stack[0];
-        for (int i=0;i<stack.length - 1;i++){
-            stack[i] = stack[i+1];
-            stack[i+1] = null;
+        for (int i = 0; i < stack.length - 1; i++) {
+            stack[i] = stack[i + 1];
+            stack[i + 1] = null;
         }
         size--;
         return a;

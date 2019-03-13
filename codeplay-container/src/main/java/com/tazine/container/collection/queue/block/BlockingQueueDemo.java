@@ -6,10 +6,10 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by lina on 2017/12/29.
+ * BlockingQueueDemo
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/29
  */
 public class BlockingQueueDemo implements BlockingQueue {
     @Override

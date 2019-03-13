@@ -1,12 +1,10 @@
 package com.tazine.algorithm.search.bitmap;
 
-import java.math.BigInteger;
-
 /**
- * Created by lina on 2018/1/5.
+ * BitMapDemo
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/5
  */
 public class BitMapDemo {
 
@@ -17,11 +15,9 @@ public class BitMapDemo {
 
         int[] bitmap = new int[99999999];
 
-        for (int i=0;i<bitmap.length;i++){
+        for (int i = 0; i < bitmap.length; i++) {
             System.out.println(bitmap[i]);
         }
 
     }
-
-
 }

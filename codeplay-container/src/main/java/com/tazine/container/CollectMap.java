@@ -3,7 +3,7 @@ package com.tazine.container;
 import java.util.*;
 
 /**
- * Created by lina on 2018/1/11.
+ * CollectMap
  *
  * @author frank
  * @date 2018/1/11

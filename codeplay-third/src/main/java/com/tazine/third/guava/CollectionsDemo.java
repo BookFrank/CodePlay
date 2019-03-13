@@ -30,7 +30,7 @@ public class CollectionsDemo {
                 return nbaPlayer.getNum() > 20;
             }
         });
-        
+
         List<NbaPlayer> ret = Lists.newArrayList(c);
         ret.forEach(v -> {
             System.out.println(v.getName() + " - " + v.getNum());

@@ -27,6 +27,9 @@ public class App {
             while (rt.next()) {
                 System.out.println(rt.getString("name"));
             }
+
+            st.close();
+            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

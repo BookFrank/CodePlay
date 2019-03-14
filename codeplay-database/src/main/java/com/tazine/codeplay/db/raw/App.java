@@ -18,7 +18,7 @@ public class App {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "jiaer.ly");
 
             Statement st = connection.createStatement();
 

@@ -47,14 +47,11 @@ public class SpringJdbcDemo {
             System.out.println(s + " - " + ctx.getBean(s).getClass());
         }
 
+        // 1. Spring 使用 dataSource 查询
         DataSource dataSource = (DataSource)ctx.getBean("dataSource");
-
         Connection con = dataSource.getConnection();
-
         Statement st = con.createStatement();
-
         ResultSet rt = st.executeQuery("SELECT * FROM player");
-
         while (rt.next()) {
             System.out.println(rt.getString("name"));
         }
@@ -62,6 +59,7 @@ public class SpringJdbcDemo {
         con.close();
         System.out.println("====================");
 
+        // 2. Spring-Jdbc 使用 JDBCTemplate 进行查询
         JdbcTemplate jdbcTemplate = (JdbcTemplate)ctx.getBean("jdbcTemplate");
         List<NbaPlayer> players = jdbcTemplate.query("SELECT * FROM player", new PlayerRowMapper());
         players.forEach(p -> {

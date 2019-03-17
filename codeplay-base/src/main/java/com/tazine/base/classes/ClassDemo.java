@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by lina on 2017/12/15.
+ * ClassDemo
+ *
+ * @author frank
+ * @date 2017/12/15
  */
 public class ClassDemo {
 

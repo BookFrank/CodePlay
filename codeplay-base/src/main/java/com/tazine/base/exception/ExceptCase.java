@@ -1,7 +1,7 @@
 package com.tazine.base.exception;
 
 /**
- * Created by lina on 2017/12/27.
+ * ExceptCase
  *
  * @author frank
  * @date 2017/12/27

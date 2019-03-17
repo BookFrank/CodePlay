@@ -18,7 +18,7 @@ public class App {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "jiaer.ly");
 
             Statement st = connection.createStatement();
 
@@ -27,6 +27,9 @@ public class App {
             while (rt.next()) {
                 System.out.println(rt.getString("name"));
             }
+
+            st.close();
+            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

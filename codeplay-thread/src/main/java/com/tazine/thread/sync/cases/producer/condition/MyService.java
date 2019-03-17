@@ -7,10 +7,10 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by lina on 2018/1/28.
+ * MyService
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class MyService {
 

@@ -1,7 +1,7 @@
 package com.tazine.design.adapter;
 
 /**
- * Created by lina on 2017/12/27.
+ * Hkbu
  *
  * @author frank
  * @date 2017/12/27
@@ -9,7 +9,6 @@ package com.tazine.design.adapter;
 public class Hkbu {
 
     private HkSocketInterface hkSocket;
-
 
     public Hkbu(HkSocketInterface hkSocket) {
         this.hkSocket = hkSocket;

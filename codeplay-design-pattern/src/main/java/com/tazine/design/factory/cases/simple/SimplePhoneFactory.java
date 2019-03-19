@@ -5,7 +5,7 @@ import com.tazine.design.factory.cases.product.NoteEight;
 import com.tazine.design.factory.cases.product.Phone;
 
 /**
- * Created by lina on 2018/1/28.
+ * SimplePhoneFactory
  *
  * @author frank
  * @date 2018/1/28

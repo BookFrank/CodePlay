@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by lina on 2017/10/9.
+ * UserDao
  *
  * @author frank
  * @date 2017/10/09

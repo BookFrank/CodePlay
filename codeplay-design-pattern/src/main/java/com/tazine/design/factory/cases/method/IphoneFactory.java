@@ -4,7 +4,7 @@ import com.tazine.design.factory.cases.product.IphoneX;
 import com.tazine.design.factory.cases.product.Phone;
 
 /**
- * Created by lina on 2018/1/28.
+ * IphoneFactory
  *
  * @author frank
  * @date 2018/1/28

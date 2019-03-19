@@ -1,5 +1,7 @@
 package com.tazine.codeplay.version.java8.stream;
 
+import com.tazine.codeplay.version.NbaPlayer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,10 +17,27 @@ import java.util.stream.Stream;
 public class StreamUsages {
 
     public static void main(String[] args) {
+        //flatMap();
 
+        listFilter();
+    }
+
+    /**
+     * List 根据条件过滤
+     */
+    private static void listFilter() {
+        NbaPlayer p1 = new NbaPlayer("kobe", 24);
+        NbaPlayer p2 = new NbaPlayer("james", 23);
+        NbaPlayer p3 = new NbaPlayer("harden", 1);
+        List<NbaPlayer> list = Stream.of(p1, p2, p3).collect(Collectors.toList());
+
+        List<NbaPlayer> ret = list.stream().filter(nbaPlayer -> nbaPlayer.getNum() > 23).collect(Collectors.toList());
+        ret.forEach(v -> System.out.println(v.getName()));
+    }
+
+    private static void flatMap() {
         List<String> list = Stream.of("A", "B", "C").collect(Collectors.toList());
         System.out.println(list);
-
 
         List<String> teamIndia = Arrays.asList("Virat", "Dhoni", "Jadeja");
         List<String> teamAustralia = Arrays.asList("Warner", "Watson", "Smith");
@@ -42,8 +61,8 @@ public class StreamUsages {
         // Let's print all players before Java 8
         List<String> listOfAllPlayers = new ArrayList<>();
 
-        for(List<String> team : playersInWorldCup2016){
-            for(String name : team){
+        for (List<String> team : playersInWorldCup2016) {
+            for (String name : team) {
                 listOfAllPlayers.add(name);
             }
         }
@@ -51,11 +70,10 @@ public class StreamUsages {
         System.out.println("Players playing in world cup 2016");
         System.out.println(listOfAllPlayers);
 
-
         // Now let's do this in Java 8 using FlatMap
         List<String> flatMapList = playersInWorldCup2016.stream()
-                .flatMap(pList -> pList.stream())
-                .collect(Collectors.toList());
+            .flatMap(pList -> pList.stream())
+            .collect(Collectors.toList());
 
         System.out.println("List of all Players using Java 8");
         System.out.println(flatMapList);

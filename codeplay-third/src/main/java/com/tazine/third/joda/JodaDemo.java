@@ -35,6 +35,7 @@ public class JodaDemo {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println(sdf.format(calendar.getTime()));
 
+        // 3. 场景：距离任意时刻 45 天之后的某天在下一个月的当前周的最后一天的日期
     }
 
 
@@ -45,5 +46,15 @@ public class JodaDemo {
 
         // 2. 以 Joda 的方式向某一个瞬间加上 90 天并输出结果
         System.out.println(dateTime.plusDays(90).toString("yyyy-MM-dd HH:mm:ss.SSS"));
+
+        // 3. 场景：距离任意时刻 45 天之后的某天在下一个月的当前周的最后一天的日期
+        System.out.println(dateTime.plusDays(45).plusMonths(1).dayOfWeek()
+                .withMaximumValue().toString("yyyy-MM-dd HH:mm:ss.SSS"));
+
+        // 4. JDK 与 Joda 的互操作性
+        Calendar calendar = Calendar.getInstance();
+        System.out.println(dateTime.plusDays(45).plusMonths(1).dayOfWeek()
+                .withMaximumValue().toString("E MM/dd/yyyy HH:mm:ss.SSS"));
+        calendar.setTime(dateTime.toDate());
     }
 }

@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by lina on 2018/1/8.
+ * Test
  *
  * @author frank
  * @date 2018/1/8
@@ -26,9 +26,5 @@ public class Test {
         }
 
         executor.shutdown();
-
-
     }
-
-
 }

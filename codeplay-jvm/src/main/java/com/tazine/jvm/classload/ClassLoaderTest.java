@@ -1,4 +1,4 @@
-package com.tazine.jvm.loader;
+package com.tazine.jvm.classload;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,7 +29,7 @@ public class ClassLoaderTest {
             }
         };
 
-        Object obj = loader.loadClass("com.tazine.jvm.loader.ClassLoaderTest").newInstance();
+        Object obj = loader.loadClass("com.tazine.jvm.classload.ClassLoaderTest").newInstance();
 //        Object obj1 = new ClassLoaderTest();
 
         System.out.println("obj " + obj.getClass());

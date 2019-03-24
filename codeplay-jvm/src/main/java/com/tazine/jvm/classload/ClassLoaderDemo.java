@@ -8,6 +8,11 @@ package com.tazine.jvm.classload;
  */
 public class ClassLoaderDemo {
 
+    static {
+        System.out.println("执行 ClassLoaderDemo 静态代码块");
+        ClassLoaderDemo demo = new ClassLoaderDemo();
+    }
+
     public static void main(String[] args) {
 
         // 默认编写的程序都是通过 sun.misc.Launcher.AppClassLoader 来加载的

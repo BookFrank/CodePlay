@@ -1,4 +1,4 @@
-package com.tazine.codeplay;
+package com.tazine.codeplay.logback;
 
 import static org.junit.Assert.assertTrue;
 

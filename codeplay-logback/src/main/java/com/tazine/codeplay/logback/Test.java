@@ -18,10 +18,10 @@ public class Test {
     Logger rootLogger = LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
 
     public static void main(String[] args) {
-        logger.info("日志测试  - {}", "Hello World");
-
         // 打印 Logger 状态 print internal state
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
         StatusPrinter.print(loggerContext);
+
+        logger.info("日志测试  - {}", "Hello World");
     }
 }

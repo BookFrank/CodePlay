@@ -48,6 +48,4 @@ public class SynchronizedDemo {
         s.new ReadWriteThread().start();
         s.new ReadWriteThread().start();
     }
-
-
 }

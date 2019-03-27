@@ -21,10 +21,11 @@ public class ThreadList {
     /**
      * 获得根线程组
      *
-     * @return
+     * @return ThreadGroup
      */
     public static ThreadGroup getRootThreadGroups() {
-        ThreadGroup rootThreadGroup = Thread.currentThread().getThreadGroup(); // 获得当前线程组
+        // 获得当前线程组
+        ThreadGroup rootThreadGroup = Thread.currentThread().getThreadGroup();
         while (true) {
             if (null != rootThreadGroup.getParent()) {
                 rootThreadGroup = rootThreadGroup.getParent();
@@ -38,8 +39,8 @@ public class ThreadList {
     /**
      * 获得给定线程组中所有线程名
      *
-     * @param group
-     * @return
+     * @param group ThreadGroup
+     * @return List<String>
      */
     public static List<String> getThreads(ThreadGroup group) {
         List<String> threadList = new ArrayList<String>();
@@ -54,8 +55,8 @@ public class ThreadList {
     /**
      * 获得线程组中子线程组
      *
-     * @param group
-     * @return
+     * @param group ThreadGroup
+     * @return List<String>
      */
     public static List<String> getThreadGroups(ThreadGroup group) {
         List<String> threadList = getThreads(group);

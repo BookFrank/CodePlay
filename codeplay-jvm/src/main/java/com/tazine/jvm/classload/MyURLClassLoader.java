@@ -1,4 +1,4 @@
-package com.tazine.jvm.loader;
+package com.tazine.jvm.classload;
 
 /**
  * MyUrlClassLoader

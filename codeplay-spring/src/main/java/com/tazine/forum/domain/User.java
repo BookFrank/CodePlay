@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by lina on 2017/10/9.
+ * User
  *
  * @author frank
  * @date 2017/10/09

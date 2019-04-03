@@ -3,7 +3,7 @@ package com.tazine.thread.concurrent.threadlocal.cases.serial;
 import com.tazine.thread.concurrent.threadlocal.MyThreadLocal;
 
 /**
- * Created by lina on 2018/1/8.
+ * SequenceC
  *
  * @author frank
  * @date 2018/1/8

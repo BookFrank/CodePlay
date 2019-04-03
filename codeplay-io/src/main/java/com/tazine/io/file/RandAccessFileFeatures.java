@@ -18,7 +18,7 @@ public class RandAccessFileFeatures {
 
         String str = "中国";
         for (byte b : str.getBytes()) {
-            System.out.print(b + " ");
+            System.out.print(b + " " + getBit(b) + "         ");
         }
         System.out.println();
         raf.write(str.getBytes());
@@ -39,5 +39,18 @@ public class RandAccessFileFeatures {
         System.out.println(new String(bytes));
 //        System.out.println(new String(bs));
         file.close();
+    }
+
+    public static String getBit(byte by) {
+        StringBuffer sb = new StringBuffer();
+        sb.append((by >> 7) & 0x1)
+                .append((by >> 6) & 0x1)
+                .append((by >> 5) & 0x1)
+                .append((by >> 4) & 0x1)
+                .append((by >> 3) & 0x1)
+                .append((by >> 2) & 0x1)
+                .append((by >> 1) & 0x1)
+                .append((by >> 0) & 0x1);
+        return sb.toString();
     }
 }

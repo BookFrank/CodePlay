@@ -5,7 +5,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Created by lina on 2017/11/18.
+ * TimeServer
+ *
+ * @author frank
+ * @date 2017/11/18
  */
 public class TimeServer {
 
@@ -19,14 +22,13 @@ public class TimeServer {
         try {
             serverSocket = new ServerSocket(port);
 
-            while (true){
+            while (true) {
                 socket = serverSocket.accept();
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+
         }
-
-
     }
 }

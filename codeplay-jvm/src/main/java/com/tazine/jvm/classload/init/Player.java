@@ -1,4 +1,4 @@
-package com.tazine.jvm.loader.init;
+package com.tazine.jvm.classload.init;
 
 /**
  * Father

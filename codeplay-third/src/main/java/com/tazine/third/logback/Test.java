@@ -1,4 +1,4 @@
-package com.tazine.codeplay.logback;
+package com.tazine.third.logback;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.core.util.StatusPrinter;
@@ -15,13 +15,13 @@ public class Test {
 
     private static final Logger logger = LoggerFactory.getLogger(Test.class);
 
-    Logger rootLogger = LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+    Logger rootLogger = LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 
     public static void main(String[] args) {
-        logger.info("日志测试  - {}", "Hello World");
-
         // 打印 Logger 状态 print internal state
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
         StatusPrinter.print(loggerContext);
+
+        logger.info("日志测试  - {}", "Hello World");
     }
 }

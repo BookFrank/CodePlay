@@ -1,4 +1,4 @@
-package com.tazine.base;
+package com.tazine.base.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

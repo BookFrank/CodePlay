@@ -7,7 +7,7 @@ import java.util.Observer;
  * 基于JDK实现的观察者
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
 public class ConcreteObserver implements Observer {
 
@@ -27,7 +27,6 @@ public class ConcreteObserver implements Observer {
         // 推
         System.out.println(observerName + " 收到了消息 " + arg);
         // 拉
-        System.out.println(observerName + " 收到了消息，主动拉消息 "
-                + ((WeatherSubject) o).getWeather());
+        System.out.println(observerName + " 收到了消息，主动拉消息 " + ((WeatherSubject)o).getWeather());
     }
 }

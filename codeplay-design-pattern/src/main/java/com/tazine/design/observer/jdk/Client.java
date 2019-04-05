@@ -1,16 +1,13 @@
 package com.tazine.design.observer.jdk;
 
-import com.tazine.design.observer.ConcreteSubject;
-
-import java.util.Observer;
-
 /**
  * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
 public class Client {
+    
     public static void main(String[] args) {
 
         WeatherSubject subject = new WeatherSubject();

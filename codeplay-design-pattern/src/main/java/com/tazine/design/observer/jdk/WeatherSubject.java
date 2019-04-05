@@ -6,7 +6,7 @@ import java.util.Observable;
  * 基于JDK实现的被观察者
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
 public class WeatherSubject extends Observable {
 

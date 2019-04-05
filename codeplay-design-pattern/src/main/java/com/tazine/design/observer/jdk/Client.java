@@ -25,5 +25,17 @@ public class Client {
         subject.setWeather("rainy");
         System.out.println();
         subject.setWeather("cloudy");
+        System.out.println();
+
+        WechatObservable wechat = new WechatObservable();
+        WeiboObservable weibo = new WeiboObservable();
+        FrankObserver frank = new FrankObserver();
+        frank.setName("frank");
+
+        wechat.addObserver(frank);
+        weibo.addObserver(frank);
+
+        wechat.recv("Elon: Hello");
+        weibo.newWeibo("Jackson: Made it");
     }
 }

@@ -8,7 +8,7 @@ import java.util.Observable;
  * @author frank
  * @date 2017/9/9
  */
-public class WeatherSubject extends Observable {
+public class WeatherObservable extends Observable {
 
     private String weather;
 
@@ -18,14 +18,15 @@ public class WeatherSubject extends Observable {
 
     public void setWeather(String weather) {
         this.weather = weather;
+
         // 当天气改变时，通知所有的观察者
         // 在通知之前，必须调用 setChanged()
         this.setChanged();
-        // 然后主动通知，拉模式
-        //this.notifyObservers();
+
+        // 然后主动通知，拉模式，当使用拉模式时，观察者也需要采用拉模式获取数据
+        this.notifyObservers();
+
         // 推模式
-        this.notifyObservers(weather);
+        //this.notifyObservers(weather);
     }
-
-
 }

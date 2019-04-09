@@ -18,7 +18,8 @@ public class ProtoTester {
         builder.setEmail("frank@github.com");
 
         byte[] bs = builder.build().toByteString().toByteArray();
-        PersonEntity.Person p2 = PersonEntity.Person.parseFrom(bs);
+//        PersonEntity.Person p2 = PersonEntity.Person.parseFrom(bs);
+        PersonDTO.Person p2 = PersonDTO.Person.parseFrom(bs);
         System.out.println(p2.getEmail());
 
         JsonFormat format = new JsonFormat();

@@ -4,13 +4,13 @@ package com.tazine.design.observer.watch;
  * 被观察者接口
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
-public interface Subject {
+public interface MyObservable {
 
-    void registerObserver(Observer observer);
+    void registerObserver(MyObserver myObserver);
 
-    void removeObserver(Observer observer);
+    void removeObserver(MyObserver myObserver);
 
     void inform(String msg);
 }

@@ -7,25 +7,25 @@ import java.util.List;
  * 被观察者-Rolex
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
-public class RolexWatch implements Subject {
+public class RolexWatch implements MyObservable {
 
-    private List<Observer> observers = new ArrayList<>();
+    private List<MyObserver> myObservers = new ArrayList<>();
 
     @Override
-    public void registerObserver(Observer observer) {
-        observers.add(observer);
+    public void registerObserver(MyObserver myObserver) {
+        myObservers.add(myObserver);
     }
 
     @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
+    public void removeObserver(MyObserver myObserver) {
+        myObservers.remove(myObserver);
     }
 
     @Override
     public void inform(String msg) {
-        for (Observer ob : observers){
+        for (MyObserver ob : myObservers){
             ob.update(msg);
         }
     }

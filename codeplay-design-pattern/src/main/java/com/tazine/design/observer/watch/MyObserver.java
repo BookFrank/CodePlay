@@ -4,8 +4,8 @@ package com.tazine.design.observer.watch;
  * Observer
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
-public interface Observer {
+public interface MyObserver {
     void update(String timestamp);
 }

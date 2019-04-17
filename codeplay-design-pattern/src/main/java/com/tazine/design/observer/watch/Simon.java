@@ -4,9 +4,9 @@ package com.tazine.design.observer.watch;
  * 观察者-Simon
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
-public class Simon implements Observer ,Display{
+public class Simon implements MyObserver,Display{
 
     private String time;
 

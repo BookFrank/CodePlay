@@ -4,13 +4,14 @@ package com.tazine.design.observer.watch;
  * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/9
  */
 public class Test {
+
     public static void main(String[] args) {
-        Subject rolex = new RolexWatch();
-        Observer frank = new Frank();
-        Observer simon = new Simon();
+        MyObservable rolex = new RolexWatch();
+        MyObserver frank = new Frank();
+        MyObserver simon = new Simon();
         rolex.registerObserver(frank);
         rolex.registerObserver(simon);
 

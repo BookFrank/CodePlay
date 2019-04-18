@@ -15,6 +15,10 @@ public class JodaDateTimeDemo {
         String s = new DateTime().toString("yyyyMMddhhmmss");
         System.out.println(s);
 
+        String ymd = new DateTime().toString("yyyyMMdd");
+        System.out.println(ymd);
+
+
 
     }
 

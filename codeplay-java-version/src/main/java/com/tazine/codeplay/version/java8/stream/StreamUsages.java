@@ -5,8 +5,7 @@ import com.tazine.codeplay.version.NbaPlayer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.*;
 
 /**
  * Common Stream Usages
@@ -17,9 +16,31 @@ import java.util.stream.Stream;
 public class StreamUsages {
 
     public static void main(String[] args) {
+        constructStream();
+
+
         //flatMap();
 
         listFilter();
+    }
+
+    private static void constructStream() {
+        // 1. Individual values
+        Stream stream = Stream.of("a", "b", "c");
+        // 2. Arrays
+        String [] strArray = new String[] {"a", "b", "c"};
+        stream = Stream.of(strArray);
+        stream = Arrays.stream(strArray);
+        // 3. Collections
+        List<String> list = Arrays.asList(strArray);
+        stream = list.stream();
+
+        // 数值流的构造
+        IntStream.of(new int[]{1, 2, 3}).forEach(System.out::println);
+        IntStream.range(1, 3).forEach(System.out::println);
+        IntStream.rangeClosed(1, 3).forEach(System.out::println);
+        //LongStream.of(1L, 2L);
+        //DoubleStream
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.tazine.codeplay.version.java8.stream;
 
+import com.google.common.collect.Lists;
 import com.tazine.codeplay.version.NbaPlayer;
+import com.tazine.codeplay.version.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -16,12 +18,27 @@ import java.util.stream.*;
 public class StreamUsages {
 
     public static void main(String[] args) {
-        constructStream();
+        //constructStream();
 
+        peekDemo();
 
         //flatMap();
 
-        listFilter();
+        //listFilter();
+    }
+
+    private static void peekDemo() {
+        Student zhangsan = new Student("zhangsan", 92);
+        Student lisi = new Student("lisi", 89);
+        Student wangwu = new Student("wangwu", 98);
+
+        List<Student> students = Lists.newArrayList(zhangsan, lisi, wangwu);
+        List<Integer> scores = students.stream().peek(e -> {
+            if (e.getScore() < 90){
+                e.setScore(90);
+            }
+        }).map(Student::getScore).collect(Collectors.toList());
+        System.out.println(scores);
     }
 
     private static void constructStream() {

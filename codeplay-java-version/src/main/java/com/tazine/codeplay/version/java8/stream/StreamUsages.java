@@ -20,11 +20,17 @@ public class StreamUsages {
     public static void main(String[] args) {
         //constructStream();
 
-        peekDemo();
+        //peekDemo();
 
         //flatMap();
 
         //listFilter();
+
+        Student zhangsan = new Student("zhangsan", 92);
+        Student lisi = new Student("lisi", 89);
+        Student wangwu = new Student("wangwu", 98);
+        List<Student> students = Lists.newArrayList(zhangsan, lisi, wangwu);
+        students.stream().filter(v -> v.getScore() >= 60).mapToInt(Student::getScore).sum();
     }
 
     private static void peekDemo() {

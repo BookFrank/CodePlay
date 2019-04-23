@@ -15,5 +15,5 @@ public class Student {
 
     private String name;
 
-    private Integer score;
+    private int score;
 }

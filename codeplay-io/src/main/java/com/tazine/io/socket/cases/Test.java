@@ -1,10 +1,10 @@
 package com.tazine.io.socket.cases;
 
 /**
- * Created by lina on 2018/1/9.
+ * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/9
  */
 public class Test {
 }

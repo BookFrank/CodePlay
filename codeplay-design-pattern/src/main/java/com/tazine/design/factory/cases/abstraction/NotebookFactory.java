@@ -6,7 +6,7 @@ import com.tazine.design.factory.cases.product.Phone;
 import com.tazine.design.factory.cases.product.ThinkPad;
 
 /**
- * Created by lina on 2018/1/28.
+ * NotebookFactory
  *
  * @author frank
  * @date 2018/1/28

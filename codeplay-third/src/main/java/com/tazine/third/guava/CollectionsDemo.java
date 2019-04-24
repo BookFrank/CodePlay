@@ -1,5 +1,6 @@
 package com.tazine.third.guava;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.common.collect.Lists;
@@ -23,6 +24,12 @@ public class CollectionsDemo {
         NbaPlayer wade = new NbaPlayer("wade", 3, "heat");
 
         List<NbaPlayer> list = Lists.newArrayList(james, kobe, harden, wade);
+
+        // List 的切分
+        List<List<NbaPlayer>> lists = Lists.partition(list, 3);
+        lists.forEach(v -> {
+            System.out.println(JSON.toJSONString(v));
+        });
 
         Collection<NbaPlayer> c = Collections2.filter(list, new Predicate<NbaPlayer>() {
             @Override

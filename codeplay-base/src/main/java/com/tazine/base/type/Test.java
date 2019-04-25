@@ -27,6 +27,8 @@ public class Test {
             System.out.println(o.getClass() == String.class);
         }
 
-
+        AbstractPlayer nbaPlayer = new NbaPlayer();
+        System.out.println(nbaPlayer instanceof NbaPlayer);
+        System.out.println(nbaPlayer instanceof AbstractPlayer);
     }
 }

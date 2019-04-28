@@ -18,18 +18,21 @@ public class StreamTest {
         strings[1] = "peter";
         strings[2] = "kobe";
 
-        //for (int i=0; i<strings.length; i++){
-        //    if (strings[i].equalsIgnoreCase("frank")){
-        //        return;
-        //    }
-        //}
-
-        Arrays.stream(strings).forEach(name -> {
-            if (name.equalsIgnoreCase("frank")){
+        // for 循环中的return 会终止程序执行
+        for (int i=0; i<strings.length; i++){
+            System.out.println(strings[i]);
+            if (strings[i].equalsIgnoreCase("frank")){
                 return;
             }
-            System.out.println(name);
-        });
+        }
+
+        // lambda 中的 return 指的是退出本次循环，不会终止程序执行
+        //Arrays.stream(strings).forEach(name -> {
+        //    if (name.equalsIgnoreCase("frank")){
+        //        return;
+        //    }
+        //    System.out.println(name);
+        //});
         System.out.println("Hello World");
     }
 }

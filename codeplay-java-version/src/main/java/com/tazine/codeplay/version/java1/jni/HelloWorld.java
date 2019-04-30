@@ -53,7 +53,8 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         // 也可以在这里 loadLibrary
-        System.loadLibrary("HelloWorldImpl");
+        //System.loadLibrary("HelloWorldImpl");
+        System.load("/Users/jiaer.ly/codeplay/github/CodePlay/codeplay-java-version/target/classes/libHelloWorldImpl.jnilib");
 
         // 默认 Java 程序会将 . 当前根目录加入到 java.library.path 中
         System.out.println(JSON.toJSONString(System.getProperties()));

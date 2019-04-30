@@ -24,7 +24,7 @@ public class HelloWorld {
         }
 
         // 装载动态链接库
-        System.loadLibrary("HelloWorldImpl");
+        //System.loadLibrary("HelloWorldImpl");
     }
 
     public static void addLibraryDir(String libraryPath) throws IOException {
@@ -52,6 +52,9 @@ public class HelloWorld {
     }
 
     public static void main(String[] args) {
+        // 也可以在这里 loadLibrary
+        System.loadLibrary("HelloWorldImpl");
+
         // 默认 Java 程序会将 . 当前根目录加入到 java.library.path 中
         System.out.println(JSON.toJSONString(System.getProperties()));
 

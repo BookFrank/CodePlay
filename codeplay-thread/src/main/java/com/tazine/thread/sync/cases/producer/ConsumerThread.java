@@ -1,13 +1,12 @@
 package com.tazine.thread.sync.cases.producer;
 
 /**
- * Created by lina on 2018/1/28.
+ * ConsumerThread
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class ConsumerThread extends Thread {
-
 
     private Consumer consumer;
 

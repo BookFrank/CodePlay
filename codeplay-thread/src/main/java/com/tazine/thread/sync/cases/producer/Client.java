@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by lina on 2018/1/28.
+ * Client
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class Client {
-
 
     public static void main(String[] args) {
 
@@ -24,7 +23,5 @@ public class Client {
         new ProducerThread(producer).start();
         new ConsumerThread(consumer).start();
 
-
     }
-
 }

@@ -5,10 +5,10 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * Created by lina on 2018/1/28.
+ * ProduceThread
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class ProduceThread extends Thread {
 

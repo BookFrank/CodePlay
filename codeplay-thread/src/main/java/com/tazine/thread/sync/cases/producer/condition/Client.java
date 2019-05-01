@@ -1,10 +1,10 @@
 package com.tazine.thread.sync.cases.producer.condition;
 
 /**
- * Created by lina on 2018/1/28.
+ * Client
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/1/28
  */
 public class Client {
 

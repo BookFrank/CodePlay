@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Created by frank on 2019-04-18.
+ * Stream MapReduce
  *
  * @author frank
  * @date 2019-04-18

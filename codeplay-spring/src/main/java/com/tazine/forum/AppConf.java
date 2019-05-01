@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 /**
- * Created by lina on 2017/10/9.
+ * AppConf
  *
  * @author frank
  * @date 2017/10/09

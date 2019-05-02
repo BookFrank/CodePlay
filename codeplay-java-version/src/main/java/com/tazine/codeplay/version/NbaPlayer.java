@@ -16,4 +16,11 @@ public class NbaPlayer {
     private String name;
 
     private int num;
+
+    private String team;
+
+    public NbaPlayer(String name, int num) {
+        this.name = name;
+        this.num = num;
+    }
 }

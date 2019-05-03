@@ -1,10 +1,10 @@
 package com.tazine.third.serialization;
 
 /**
- * Created by lina on 2018/12/26.
+ * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/12/26
  */
 public class Test {
 }

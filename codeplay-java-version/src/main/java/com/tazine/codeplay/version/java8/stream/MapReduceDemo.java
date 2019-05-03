@@ -40,11 +40,12 @@ public class MapReduceDemo {
         System.out.println(score);
 
         //计算学生总分
-        Integer totalScore1 = students.stream().map(Student::getScore).reduce(0,(a,b) -> a + b);
-        System.out.println(totalScore1);
+        Integer totalScore = students.stream().map(Student::getScore).reduce(0,(a,b) -> a + b);
+        System.out.println(totalScore);
 
         //计算学生总分，返回Optional类型的数据，改类型是java8中新增的，主要用来避免空指针异常
-        Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce((a, b) -> a + b);
+        //Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce((a, b) -> a + b);
+        Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce(Integer::sum);
         System.out.println(totalScore2.get());
 
         //计算最高分和最低分

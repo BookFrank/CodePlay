@@ -1,7 +1,7 @@
 package com.tazine.thread.cooperate.cases;
 
 /**
- * Created by lina on 2018/1/16.
+ * Test
  *
  * @author frank
  * @date 2017/12/18

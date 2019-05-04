@@ -17,7 +17,11 @@ public class Student {
 
     private int score;
 
-    private String school;
+    private int age;
+
+    //private String school;
+
+    private String province;
 
     public Student(String name, int score) {
         this.name = name;

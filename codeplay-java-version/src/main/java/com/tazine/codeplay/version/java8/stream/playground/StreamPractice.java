@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * StreamPractice
+ *
  * @author frank
  * @date 2019/05/04
  */
@@ -20,7 +22,8 @@ public class StreamPractice {
         List<Integer> numbers = Lists.newArrayList(1, 2, 3, 2, 8, 6, 9, 7, 4, 8);
 
         // 1. Filter - 使用 filter 找出所有上海的考生
-        List<Student> shanghaiList = students.stream().filter(s -> "上海".equals(s.getProvince())).collect(Collectors.toList());
+        List<Student> shanghaiList = students.stream().filter(s -> "上海".equals(s.getProvince())).collect(
+            Collectors.toList());
         System.out.println("来自上海的考生：" + JSON.toJSONString(shanghaiList));
 
         // 2. Distinct - 找出所有偶数并去重
@@ -28,9 +31,9 @@ public class StreamPractice {
         System.out.println("去重偶数为：" + evenNums);
 
         // 3. Limit - 使用 limit 找出2个来自河南的考生
-        List<Student> henanStd = students.stream().filter(s -> "河南".equals(s.getProvince())).limit(2).collect(Collectors.toList());
+        List<Student> henanStd = students.stream().filter(s -> "河南".equals(s.getProvince())).limit(2).collect(
+            Collectors.toList());
         System.out.println("来自河南的2个考生：" + JSON.toJSONString(henanStd));
-
 
     }
 

@@ -24,6 +24,9 @@ public class MapReduceDemo {
         List<Student> students = Lists.newArrayList(zhangsan, lisi, wangwu);
 
 
+        //List<Student> zangZuList = students.stream().filter(s -> "藏族".equals(s.getNation())).peek(s -> s.setScore(s.getScore()+10)).collect(Collectors.toList())
+
+
         // map用来归类，结果一般是一组数据，比如可以将list中的学生分数映射到一个新的stream中。
         // reduce用来计算值，结果是一个值，比如计算最高分
 
@@ -45,6 +48,7 @@ public class MapReduceDemo {
 
         //计算学生总分，返回Optional类型的数据，改类型是java8中新增的，主要用来避免空指针异常
         //Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce((a, b) -> a + b);
+        //Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce(Integer::sum);
         Optional<Integer> totalScore2 = students.stream().map(Student::getScore).reduce(Integer::sum);
         System.out.println(totalScore2.get());
 

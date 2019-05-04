@@ -1,12 +1,11 @@
 package com.tazine.codeplay.version.java8.stream;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import com.tazine.codeplay.version.NbaPlayer;
 import com.tazine.codeplay.version.Student;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.*;
 
 /**
@@ -29,8 +28,16 @@ public class StreamUsages {
         Student zhangsan = new Student("zhangsan", 92);
         Student lisi = new Student("lisi", 89);
         Student wangwu = new Student("wangwu", 98);
+
         List<Student> students = Lists.newArrayList(zhangsan, lisi, wangwu);
-        students.stream().filter(v -> v.getScore() >= 60).mapToInt(Student::getScore).sum();
+
+        // Student 没有实现 Comparator，会报错
+        //List<Student> list = students.stream().sorted().collect(Collectors.toList());
+        //System.out.println(JSON.toJSONString(list));
+
+
+        OptionalDouble avgScore = students.stream().filter(v -> v.getScore() >= 60).mapToInt(Student::getScore).average();
+        System.out.println(avgScore.getAsDouble());
     }
 
     private static void peekDemo() {

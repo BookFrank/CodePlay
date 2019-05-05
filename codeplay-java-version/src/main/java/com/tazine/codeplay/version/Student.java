@@ -23,6 +23,8 @@ public class Student {
 
     private String province;
 
+    private String nation;
+
     public Student(String name, int score) {
         this.name = name;
         this.score = score;

@@ -15,5 +15,7 @@ public class MyLambdaTest {
         player.introduce(v -> {
             System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum());
         });
+
+        player.introduce(v -> System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum()));
     }
 }

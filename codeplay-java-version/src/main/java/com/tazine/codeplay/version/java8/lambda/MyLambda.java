@@ -9,6 +9,6 @@ package com.tazine.codeplay.version.java8.lambda;
 @FunctionalInterface
 public interface MyLambda<T> {
 
-    void desc(T t);
+    String desc(T t);
 
 }

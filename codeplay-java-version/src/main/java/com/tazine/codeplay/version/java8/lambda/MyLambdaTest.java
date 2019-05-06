@@ -12,10 +12,28 @@ public class MyLambdaTest {
 
         LambdaPlayer player = new LambdaPlayer("kobe", 24);
 
-        player.introduce(v -> {
-            System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum());
+        //player.introduce(v -> {
+        //    System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum());
+        //});
+
+        //player.introduce(v -> System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum()));
+        //player.introduce((v1, v2) -> v.getName());
+        player.introduce(new MyLambda<LambdaPlayer>() {
+            @Override
+            public String desc(LambdaPlayer lambdaPlayer) {
+                System.out.println("dsdsdsds");
+                return null;
+            }
         });
 
-        player.introduce(v -> System.out.println("My name is " + v.getName() + ", and my num is " + v.getNum()));
+        player.introduce(v -> {
+            System.out.println("");
+            return v.getName();
+        });
+
+        player.introduce(s -> {
+            System.out.println("dsdsdsd");
+            return "hi";
+        });
     }
 }

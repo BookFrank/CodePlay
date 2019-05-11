@@ -4,7 +4,7 @@ package com.tazine.design.singleton;
  * 懒汉式单例：非线程安全
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/8/10
  */
 public class Singleton01 {
 

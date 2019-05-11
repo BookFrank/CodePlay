@@ -4,7 +4,7 @@ package com.tazine.design.singleton;
  * 静态语句块创建单例
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/8/10
  */
 public class Singleton04 {
 

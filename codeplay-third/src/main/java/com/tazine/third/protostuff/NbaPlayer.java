@@ -4,7 +4,7 @@ package com.tazine.third.protostuff;
  * NbaPlayer
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/03/01
  */
 public class NbaPlayer {
 

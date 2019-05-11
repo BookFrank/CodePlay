@@ -4,7 +4,7 @@ package com.tazine.design.iterator;
  * Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/19
  */
 public class Client {
 
@@ -24,5 +24,4 @@ public class Client {
             System.out.print(it1.next() + " ");
         }
     }
-
 }

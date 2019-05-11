@@ -4,7 +4,7 @@ package com.tazine.design.iterator;
  * 持有 Iterator 的具体容器
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/19
  */
 public class NameContainer implements Container {
 

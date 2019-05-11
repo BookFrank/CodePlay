@@ -6,7 +6,7 @@ import com.tazine.design.strategy.family.FlyingNoWay;
  * RubberDuck
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class RubberDuck extends Duck{
 

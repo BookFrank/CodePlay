@@ -4,7 +4,7 @@ package com.tazine.design.strategy;
  * 策略测试类
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class StrateryTest {
 

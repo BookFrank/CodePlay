@@ -4,7 +4,7 @@ package com.tazine.design.factory.simple;
  * 使用工厂类得到实例
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public class Customer {
 

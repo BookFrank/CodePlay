@@ -4,7 +4,7 @@ package com.tazine.design.factory.simple;
  * 水果类
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public interface Fruit {
 

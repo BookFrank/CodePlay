@@ -4,7 +4,7 @@ package com.tazine.design.template;
  * 子类实现延迟步骤
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class TxBidProcessor extends BidProcessor {
     @Override

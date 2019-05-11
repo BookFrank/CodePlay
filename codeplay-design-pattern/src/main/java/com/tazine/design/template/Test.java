@@ -4,7 +4,7 @@ package com.tazine.design.template;
  * 模板方法测试类
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class Test {
 

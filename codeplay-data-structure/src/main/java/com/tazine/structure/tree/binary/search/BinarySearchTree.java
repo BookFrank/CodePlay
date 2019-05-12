@@ -6,7 +6,7 @@ import java.util.Comparator;
  * BinarySearchTree
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/21
  */
 public class BinarySearchTree<T extends Comparable<? super T>> {
 

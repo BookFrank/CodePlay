@@ -8,7 +8,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * Jedis: 官方首选的 Java 客户端开发包
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/24
  */
 public class JedisDemo {
 

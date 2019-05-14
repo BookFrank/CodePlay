@@ -6,7 +6,7 @@ import com.tazine.design.strategy.family.FlyingWithPlane;
  * 唐老鸭
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class DonaldDuck extends Duck {
 

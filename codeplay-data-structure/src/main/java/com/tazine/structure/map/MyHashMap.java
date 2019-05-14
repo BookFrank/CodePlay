@@ -6,7 +6,7 @@ import java.util.Set;
  * MyHashMap
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/26
  */
 public class MyHashMap<K, V> {
 

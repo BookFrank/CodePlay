@@ -4,7 +4,7 @@ package com.tazine.design.factory.abstraction.product;
  * Green
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public class Green implements Color {
     @Override

@@ -9,7 +9,7 @@ import java.util.List;
  * 冒泡排序的核心部分是双重嵌套循环。不难看出冒泡排序的时间复杂度是O(N2)
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/10/15
  */
 public class BubbleSort {
 
@@ -17,8 +17,6 @@ public class BubbleSort {
      * 双重嵌套循环，核心是弄清楚外层是什么逻辑，内层是什么逻辑
      * N个数排序，外层需要循环N-1次，外层不控制内层的任何东西,内层需循环N-i次
      */
-
-
     public static class Member {
 
         private String name;

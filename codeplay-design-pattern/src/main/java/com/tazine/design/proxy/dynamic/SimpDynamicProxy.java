@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
  * 简单动态代理
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/24
  */
 public class SimpDynamicProxy implements InvocationHandler {
 

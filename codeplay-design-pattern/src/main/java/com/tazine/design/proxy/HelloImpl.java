@@ -4,7 +4,7 @@ package com.tazine.design.proxy;
  * HelloImpl
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/24
  */
 public class HelloImpl implements Hello {
     @Override

@@ -3,11 +3,12 @@ package com.tazine.structure.tree.heap;
 import java.util.Arrays;
 
 /**
+ * BinaryHeap
+ *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/27
  */
 public class BinaryHeap {
-
 
     private int[] heap;
 
@@ -40,7 +41,7 @@ public class BinaryHeap {
     private void percolateDown(int i) {
         int child;
         int tmp = heap[i];
-        for (; i*2 <= currentSize; i = child){
+        for (; i * 2 <= currentSize; i = child) {
             child = i * 2;
         }
     }

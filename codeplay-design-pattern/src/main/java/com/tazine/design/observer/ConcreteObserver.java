@@ -4,7 +4,7 @@ package com.tazine.design.observer;
  * 具体观察者对象：实现更新的方法，使订阅目标与自身状态保持一致
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/10
  */
 public class ConcreteObserver implements Observer {
 

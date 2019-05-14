@@ -4,7 +4,7 @@ package com.tazine.structure.tree.binary.search;
  * SimpleBinTree
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/26
  */
 public class SimpBinSearchTree {
 

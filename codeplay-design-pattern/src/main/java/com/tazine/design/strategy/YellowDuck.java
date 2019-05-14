@@ -6,7 +6,7 @@ import com.tazine.design.strategy.family.FlyingWithWings;
  * 大黄鸭
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/15
  */
 public class YellowDuck extends Duck {
 

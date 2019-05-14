@@ -9,7 +9,7 @@ import io.protostuff.runtime.RuntimeSchema;
  * Protostuff
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/03/01
  */
 public class ProtostuffUtil {
 

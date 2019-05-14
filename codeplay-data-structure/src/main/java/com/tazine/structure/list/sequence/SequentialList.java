@@ -4,7 +4,7 @@ package com.tazine.structure.list.sequence;
  * SequentialList 顺序表
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/19
  */
 public class SequentialList<T> {
 
@@ -53,6 +53,4 @@ public class SequentialList<T> {
             System.out.print(list[i] + ", ");
         }
     }
-
-
 }

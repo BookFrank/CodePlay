@@ -4,7 +4,7 @@ package com.tazine.design.iterator;
  * Iterator
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/19
  */
 public interface Iterator<T> {
 

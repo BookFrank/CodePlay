@@ -7,7 +7,7 @@ import com.tazine.design.proxy.HelloImpl;
  * 静态代理
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/24
  */
 public class HelloProxy implements Hello {
 

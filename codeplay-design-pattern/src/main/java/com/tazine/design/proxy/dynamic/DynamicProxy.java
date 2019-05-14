@@ -8,7 +8,7 @@ import java.lang.reflect.Proxy;
  * DynamicProxy
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/24
  */
 public class DynamicProxy implements InvocationHandler{
 

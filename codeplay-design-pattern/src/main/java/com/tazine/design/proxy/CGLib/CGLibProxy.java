@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * CGLib动态代理：不用接口就能代理，方法级别的代理
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/02/24
  */
 public class CGLibProxy implements MethodInterceptor {
 

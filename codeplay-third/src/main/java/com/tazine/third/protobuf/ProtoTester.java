@@ -2,7 +2,6 @@ package com.tazine.third.protobuf;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.googlecode.protobuf.format.JsonFormat;
-import com.tazine.third.protobuf.compare.PersonDO;
 
 /**
  * ProtoTester

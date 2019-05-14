@@ -7,7 +7,7 @@ import java.util.Stack;
  * LinkedList 实现
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/12/22
  */
 public class MyLinkedList<T> {
 

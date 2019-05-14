@@ -4,7 +4,7 @@ package com.tazine.design.observer;
  * Observer Design Pattern Test
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/10
  */
 public class Test {
 

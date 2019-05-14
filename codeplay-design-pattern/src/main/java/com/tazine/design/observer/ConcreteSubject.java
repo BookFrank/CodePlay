@@ -4,7 +4,7 @@ package com.tazine.design.observer;
  * 具体的观察者对象
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/9/10
  */
 public class ConcreteSubject extends Subject {
 

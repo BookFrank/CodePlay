@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
  * 单例测试类
  *
  * @author frank
- * @since 1.0.0
+ * @date 2017/8/10
  */
 public class ThreadTest extends Thread {
 

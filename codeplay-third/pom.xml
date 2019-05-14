@@ -146,5 +146,12 @@
             <artifactId>jsoup</artifactId>
             <version>1.11.3</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/berkeleydb/je -->
+        <dependency>
+            <groupId>berkeleydb</groupId>
+            <artifactId>je</artifactId>
+            <version>3.2.76</version>
+        </dependency>
     </dependencies>
 </project>

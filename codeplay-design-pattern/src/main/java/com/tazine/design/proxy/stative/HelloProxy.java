@@ -32,10 +32,10 @@ public class HelloProxy implements Hello {
     }
 
     private void before(){
-        System.out.println("代理模式：say() 方法之前逻辑");
+        System.out.println("静态代理：前置通知");
     }
 
     private void after(){
-        System.out.println("代理模式：say() 方法之后逻辑");
+        System.out.println("静待代理：后置通知");
     }
 }

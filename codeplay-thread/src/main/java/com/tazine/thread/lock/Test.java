@@ -1,5 +1,6 @@
 package com.tazine.thread.lock;
 
+import com.tazine.thread.lock.reentrant.ReentrantPrinter;
 import com.tazine.thread.lock.spinlock.SpinPrinter;
 import com.tazine.thread.lock.synchron.SynchronicPrinter;
 
@@ -18,11 +19,11 @@ public class Test {
         // 基于 synchronized 关键字的锁
         //synchronicLock();
 
-
-
         // 自旋锁
         //spinLock();
 
+        // 可重入算
+        reentrantLock();
     }
 
     private static void spinLock(){
@@ -35,5 +36,11 @@ public class Test {
         SynchronicPrinter printer1 = new SynchronicPrinter();
         new Thread(() -> printer1.print(s1)).start();
         new Thread(() -> printer1.print(s2)).start();
+    }
+
+    private static void reentrantLock(){
+        ReentrantPrinter printer = new ReentrantPrinter();
+        new Thread(() -> printer.print(s1)).start();
+        new Thread(() -> printer.print(s2)).start();
     }
 }

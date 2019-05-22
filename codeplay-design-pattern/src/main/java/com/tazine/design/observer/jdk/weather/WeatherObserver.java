@@ -1,4 +1,4 @@
-package com.tazine.design.observer.jdk;
+package com.tazine.design.observer.jdk.weather;
 
 import java.util.Observable;
 import java.util.Observer;

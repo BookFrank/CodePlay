@@ -19,7 +19,6 @@ import java.util.Spliterator;
 public class Jdk8NioFileIO {
 
     public static void main(String[] args) {
-
         try {
 
             Path path = Paths.get("/Users/jiaer.ly/Desktop/test.txt");

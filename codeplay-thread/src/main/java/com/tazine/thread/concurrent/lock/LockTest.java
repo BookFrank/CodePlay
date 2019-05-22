@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * LockTest
  *
  * @author frank
- * @since 1.0.0
+ * @date 2018/01/17
  */
 public class LockTest {
     public static void main(String[] args) {
@@ -42,7 +42,7 @@ class Outputer {
             for (int i = 0; i < words.length(); i++) {
                 System.out.print(words.charAt(i));
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

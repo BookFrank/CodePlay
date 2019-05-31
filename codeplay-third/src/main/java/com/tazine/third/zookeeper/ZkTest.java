@@ -17,5 +17,11 @@ public class ZkTest {
 
         List<String> children = zk.getChildren("/");
         System.out.println(children);
+
+        Thread.sleep(1000);
+
+        zk.getDataAsync("/jiaer");
+
+        Thread.sleep(2000);
     }
 }

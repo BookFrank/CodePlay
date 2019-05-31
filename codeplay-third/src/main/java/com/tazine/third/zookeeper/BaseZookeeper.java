@@ -38,9 +38,18 @@ public class BaseZookeeper implements Watcher {
          * 这就需要我们在SyncConnected同一种连接状态下区分多个事件类型。可以通过watchedEvent.getType()
          * 方法获取具体的事件类型。事件类型的取值包括None、NodeCreated、NodeDeleted、NodeDataChanged和NodeChildrenChanged。
          */
+
+        // 与 zk 服务器处于连接状态
         if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
-            System.out.println("Watch received event " + watchedEvent.getState().name());
-            countDownLatch.countDown();
+            System.out.println("Watcher received event: watchState=" + watchedEvent.getState().name() + " watchType=" + watchedEvent.getType().name());
+            if (countDownLatch.getCount() > 0) {
+                countDownLatch.countDown();
+            }
+            createNodeAsync("/jiaer", "frank");
+
+            if (watchedEvent.getType() == Event.EventType.None && null != watchedEvent.getPath()) {
+                System.out.println("hahaha");
+            }
         }
     }
 
@@ -75,8 +84,27 @@ public class BaseZookeeper implements Watcher {
      * @param data    
      * @throws Exception    
      */
-    public String createNode(String path, String data) throws Exception {
+    public String createNodeSync(String path, String data) throws Exception {
         return this.zooKeeper.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+    }
+
+    /**
+     * 异步创建 node
+     * @param path path
+     * @param data data
+     */
+    public void createNodeAsync(String path, String data) {
+        this.zooKeeper.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT,
+            new AsyncCallback.StringCallback() {
+                @Override
+                public void processResult(int resultCode, String path, Object ctx, String name) {
+                    System.out.println(resultCode);
+                    System.out.println(path);
+                    System.out.println(ctx);
+                    System.out.println(name);
+                    System.out.println("节点创建成功");
+                }
+            }, "同步创建节点");
     }
 
     public List<String> getChildren(String path) throws KeeperException, InterruptedException {
@@ -104,13 +132,31 @@ public class BaseZookeeper implements Watcher {
      * @throws KeeperException
      * @throws InterruptedException
      */
-    public String getData(String path) throws KeeperException, InterruptedException {
+    public String getDataSync(String path) throws KeeperException, InterruptedException {
         byte[] data = zooKeeper.getData(path, false, null);
         if (null == data) {
             return "";
         } else {
             return new String(data);
         }
+    }
+
+    /**
+     * 异步获取数据
+     *
+     * @param path p
+     */
+    public void getDataAsync(String path) {
+        this.zooKeeper.getData(path, true, new AsyncCallback.DataCallback() {
+            @Override
+            public void processResult(int resultCode, String path, Object ctx, byte[] data, Stat stat) {
+                System.out.println(resultCode);
+                System.out.println(path);
+                System.out.println(ctx);
+                System.out.println(path + " 节点数据值：" + new String(data));
+                System.out.println(stat);
+            }
+        }, "异步获取节点数据值");
     }
 
     /**

@@ -13,7 +13,7 @@ public class Test {
 
         //Cont<NbaPlayer, Student> cont1 = new Cont<>();
 
-        SingleGeneric<NbaPlayer> singleGeneric = new SingleGeneric<>();
+        SingleGeneric<NbaPlayer> singleGeneric = new SingleGenericImpl<>();
 
     }
 

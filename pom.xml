@@ -5,7 +5,7 @@
     <groupId>com.tazine.codeplay</groupId>
     <artifactId>CodePlay</artifactId>
     <version>1.0.0</version>
-    
+
     <modules>
         <module>codeplay-algorithm</module>
         <module>codeplay-base</module>

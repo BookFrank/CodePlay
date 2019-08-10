@@ -5,6 +5,7 @@ import com.tazine.codeplay.version.Student;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 在不存在Stream之前使用Iterator，也就是Java8之前是什么样子
@@ -22,16 +23,26 @@ public class IteratorStream {
 
         List<Student> students = Lists.newArrayList(jason, peter, frank);
 
+        //students = students.stream().filter(v -> v.getScore() > 90).collect(Collectors.toList());
+        remove(students);
+
         // 找出考的最好的学生
         for (Student s : students) {
-
+            System.out.println(s.getName());
         }
 
         // 在 Java 8 之前，都是使用外部迭代来实现目的
         // 外部迭代：由客户程序来处理List的迭代过程
-        List<Integer> intList = Lists.newArrayList(59, 89, 92, 98, 67);
-        int passedTotal = sumIterator(intList);
-        System.out.println("及格学生的总分" + passedTotal + ", 平均分" + passedTotal / 4);
+        //List<Integer> intList = Lists.newArrayList(59, 89, 92, 98, 67);
+        //int passedTotal = sumIterator(intList);
+        //System.out.println("及格学生的总分" + passedTotal + ", 平均分" + passedTotal / 4);
+    }
+
+    private static void remove(List<Student> students){
+        students = students.stream().filter(v -> v.getScore() > 90).collect(Collectors.toList());
+        for (Student s : students) {
+            System.out.println(s.getName());
+        }
     }
 
     /**

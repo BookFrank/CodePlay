@@ -10,6 +10,6 @@ public class ThreadDemo extends Thread {
 
     @Override
     public void run() {
-        System.err.println("通过extends Thread创建的线程正在执行");
+        System.err.println(this.getName() + " 通过extends Thread创建的线程正在执行");
     }
 }

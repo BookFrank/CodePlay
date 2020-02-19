@@ -1,5 +1,6 @@
 package com.tazine.codeplay.version.java8.lambda.fun;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import com.tazine.codeplay.version.NbaPlayer;
 
@@ -21,13 +22,22 @@ public class Test {
         NbaPlayer iveson = new NbaPlayer("james", 23);
 
         List<Integer> list = Lists.newArrayList(1,2,3,4,5);
+        list.stream().map(s -> s + 1).forEach(intConsumer());
 
-        list.stream().map(s -> s + 1).forEach(consumer());
-//        list.forEach(consumer());
+        List<NbaPlayer> players = Lists.newArrayList(kobe, james, iveson);
+        players.forEach(playerConsumer());
+        System.out.println(JSON.toJSONString(players));
     }
 
-    public static Consumer<Integer> consumer(){
+    public static Consumer<Integer> intConsumer(){
         Consumer<Integer> consumer = System.out::println;
+        return consumer;
+    }
+
+    public static Consumer<NbaPlayer> playerConsumer(){
+        Consumer<NbaPlayer> consumer = p -> {
+            p.setNum(p.getNum() + 1);
+        };
         return consumer;
     }
 }

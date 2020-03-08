@@ -19,6 +19,7 @@
         <module>codeplay-maven</module>
         <module>codeplay-java-version</module>
         <module>codeplay-database</module>
+        <module>codeplay-gis</module>
     </modules>
 
     <packaging>pom</packaging>
